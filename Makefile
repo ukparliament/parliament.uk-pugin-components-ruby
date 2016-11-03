@@ -43,7 +43,7 @@ css:
 fonts:
 	@echo 'Copying fonts'
 	@mkdir -p $(BASEPATH_DEST_FONTS)
-	@cp -a $(BASEPATH_SRC_FONTS)/. $(BASEPATH_DEST_FONTS)
+	@cp -a $(BASEPATH_SRC_FONTS)/. $(BASEPATH_DEST_FONTS) || :
 	@echo 'Finished copying fonts'
 
 js:
