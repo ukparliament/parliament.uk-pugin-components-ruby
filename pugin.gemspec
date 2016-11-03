@@ -5,7 +5,7 @@ require "pugin/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "Pugin"
+  s.name        = "pugin"
   s.version     = Pugin::VERSION
   s.authors     = ["Jake Mulley"]
   s.email       = ["mulleyjb@parliament.uk"]
