@@ -1,4 +1,6 @@
 // Import settings
+@import 'settings/widths';
+@import 'settings/spacing';
 @import 'settings/breakpoints';
 @import 'settings/colours';
 @import 'settings/fonts';
@@ -7,18 +9,26 @@
 @import 'tools/mixins/breakpoints';
 
 // Vendor files
+@import '../../node_modules/normalize.css/normalize.css';
 
 // Import generic styles
 @import 'generic/box-sizing';
+@import 'generic/typography';
+@import 'generic/layout';
+@import 'generic/shame';
 
 // Import bare-bones elements
 @import 'elements/body';
 @import 'elements/headings';
+@import 'elements/links';
+@import 'elements/lists';
 
 // Import objects
 
 // Import site-wide components
+@import 'components/breadcrumbs';
 @import 'components/footer';
+@import 'components/header';
 
 // Import trumps
 @import 'trumps/clearfix';

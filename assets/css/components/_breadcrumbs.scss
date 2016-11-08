@@ -1,0 +1,12 @@
+.pds-crumb {
+    color: $grey75;
+    a {
+        color: $grey75;
+        &:hover {
+            color: $black;
+        }
+    }
+    &-spacer {
+        padding: 0 $base-spacing-unit-tiny;
+    }
+}
