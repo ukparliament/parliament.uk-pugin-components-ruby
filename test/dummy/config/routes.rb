@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  mount PuginPlugin::Engine => "/pugin_plugin"
+  mount Pugin::Engine => "/pugin"
 
   get '/header', to: 'application#header', as: 'header'
   get '/footer', to: 'application#footer', as: 'footer'

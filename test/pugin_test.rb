@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class PuginPlugin::Test < ActiveSupport::TestCase
+class Pugin::Test < ActiveSupport::TestCase
   test "truth" do
-    assert_kind_of Module, PuginPlugin
+    assert_kind_of Module, Pugin
   end
 end
