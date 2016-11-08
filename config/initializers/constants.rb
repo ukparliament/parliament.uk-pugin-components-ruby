@@ -1,0 +1,2 @@
+ENDPOINT = 'PuginPlugin::Application'
+
