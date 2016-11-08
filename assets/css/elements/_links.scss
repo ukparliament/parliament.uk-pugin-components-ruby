@@ -1,0 +1,11 @@
+a {
+    color: $black;
+    text-decoration: underline;
+    &:hover {
+        color: $blue;
+        text-decoration: none;
+    }
+    &:focus {
+        background-color: $yellow;
+    }
+}

@@ -1,0 +1,12 @@
+ul, ol {
+    margin-left: $base-spacing-unit-small;
+}
+
+dl {
+    width: 100%;
+    padding: $base-spacing-unit-tiny 0;
+}
+
+dt, dd {
+    padding: $base-spacing-unit-tiny 0;
+}

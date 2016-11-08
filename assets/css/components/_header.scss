@@ -1,0 +1,26 @@
+.pds-header {
+    &-wrap {
+        width: 100%;
+        min-width: $min-width;
+        background-color: $black;
+    }
+    &-row {
+        padding: $base-spacing-unit-small;
+    }
+    &-logo {
+        display: inline-block;
+        &:focus {
+            background: none;
+        }
+        img {
+            width: 300px;
+            height: auto;
+        }
+    }
+}
+
+@media print {
+    .pds-header {
+        display: none;
+    }
+}
