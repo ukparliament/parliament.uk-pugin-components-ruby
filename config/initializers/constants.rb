@@ -1,2 +1,2 @@
-ENDPOINT = 'PuginPlugin::Application'
+PUGIN = 'Pugin::Application'
 
