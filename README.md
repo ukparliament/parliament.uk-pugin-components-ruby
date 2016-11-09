@@ -12,7 +12,9 @@ To install:
 5. You're setup!
 
 ## Contributing
-To contribute to Pugin, please fork this repository and create a branch in your fork. Following writing your code, please create a pull request into the Pugin repository. It will be reviewed by a member of the internal Parliamentary Digital Service team.
+To contribute to Pugin, please fork this repository and create a branch in your fork. When installing, specify the submodule repository to your fork to allow you to test whatever you build.
+
+Following writing your code, please create a pull request into the Pugin repository. It will be reviewed by a member of the internal Parliamentary Digital Service team.
 
 ## Licence
 The gem is available under the [Open Parliament Licence](http://www.parliament.uk/site-information/copyright/open-parliament-licence/).
