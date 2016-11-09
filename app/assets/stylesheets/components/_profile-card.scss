@@ -1,12 +1,14 @@
-.pds-members-photo {
+.pds-profcard {
+    &-picture {
     float: left;
     margin: 0 $base-spacing-unit 0 0;
     padding: 0;
     height: auto;
-    img {
+      img {
         width: auto;
+      }
     }
-    &-title {
+    &-detail {
         float: left;
         text-align: left;
     }
