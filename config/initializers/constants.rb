@@ -1,2 +1,2 @@
-PUGIN = 'Pugin::ApplicationController'
+PUGIN = Pugin::ApplicationController
 
