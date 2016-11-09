@@ -5,6 +5,7 @@ Pugin is a component-based pattern design library that holds all of the reusable
 Instead of releasing Pugin on RubyGems.org and versioning twice, at Parliamentary Digital Service we use Pugin as a git submodule to keep versioning in once place.
 
 To install:
+
 1. `cd` into your consuming application directory
 2. On your command line, run: `git submodule add https://github.com/ukpds/pugin.git pugin`. This will version a subfolder called _pugin_ in your consuming application directory.
 3. Add the following into your Gemfile: `gem 'pugin', path: './pugin'`
