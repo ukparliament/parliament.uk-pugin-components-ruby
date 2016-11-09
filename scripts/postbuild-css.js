@@ -7,22 +7,6 @@ const argv             = require('minimist')(process.argv.slice(2)),
       postcss          = require('postcss'),
       pxtorem          = require('postcss-pxtorem'),
 
-      autoprefixerOpts = {
-        browsers: [
-          'last 2 version',
-          '> 1%',
-          'ie >= 9',
-          'ie_mob >= 10',
-          'ff >= 30',
-          'chrome >= 34',
-          'safari >= 7',
-          'opera >= 23',
-          'ios >= 7',
-          'android >= 4',
-          'bb >= 10'
-        ]
-      },
-
       cssnanoOpts      = {
         zindex: false,
         discardUnused: false,
@@ -38,7 +22,7 @@ const argv             = require('minimist')(process.argv.slice(2)),
       },
 
       processor        = postcss([
-        autoprefixer(autoprefixerOpts),
+        autoprefixer(),
         pxtorem(pxtoremOpts),
         mqpacker(),
         cssnano(cssnanoOpts)
