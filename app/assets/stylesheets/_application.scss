@@ -1,15 +1,15 @@
 // Import settings
+@import 'settings/fonts';
 @import 'settings/widths';
 @import 'settings/spacing';
 @import 'settings/breakpoints';
 @import 'settings/colours';
-@import 'settings/fonts';
 
 // Import tools
 @import 'tools/mixins/breakpoints';
 
 // Vendor files
-@import '../../node_modules/normalize.css/normalize.css';
+@import '../../../node_modules/normalize.css/normalize';
 
 // Import generic styles
 @import 'generic/box-sizing';
