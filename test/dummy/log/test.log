@@ -1,0 +1,56 @@
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 26ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 0ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 0ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 0ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 20ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 1ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 1ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 0ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 21ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 1ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 1ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 0ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 0ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 20ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 21ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 22ms
+Processing by ApplicationController#header as HTML
+  Rendered /Users/waszczukc/Desktop/pugin_directory/pugin/app/views/layouts/pugin/modules/_test.html.erb (3.8ms)
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 31ms (Views: 5.6ms)
+Processing by ApplicationController#header as HTML
+  Rendered /Users/waszczukc/Desktop/pugin_directory/pugin/app/views/layouts/pugin/modules/_test.html.erb (1.2ms)
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 24ms (Views: 2.1ms)
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 1ms
+Processing by ApplicationController#header as HTML
+Completed 500 Internal Server Error in 1ms
+Processing by ApplicationController#header as HTML
+  Rendered /Users/waszczukc/Desktop/pugin_directory/pugin/app/views/layouts/pugin/modules/_test.html.erb (1.5ms)
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 25ms (Views: 2.5ms)
+Processing by ApplicationController#test as HTML
+  Rendered layouts/pugin/modules/_test2.html.erb (0.4ms)
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 13ms (Views: 0.4ms)
