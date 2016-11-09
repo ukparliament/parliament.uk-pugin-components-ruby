@@ -5,12 +5,14 @@ NODE_SASS=node ./node_modules/.bin/node-sass
 ESLINT=node ./node_modules/.bin/eslint
 UGLIFY_JS=node ./node_modules/.bin/uglifyjs
 
-build: fonts css js_vendor js_pugin js_lint js
-build_production: fonts css js_vendor js_pugin js
+build: fonts css js_pugin js_lint js
+build_production: fonts css js_pugin js
 clean: clean_css clean_js clean_fonts
 initialise: prepare build
 
+# Prepare a new project
 BASEPATH_RAILS_CSS=../app/assets/stylesheets/application.css
+
 prepare:
 	@mv $(BASEPATH_RAILS_CSS) $(BASEPATH_SRC_CSS)/application.scss
 	@npm i
@@ -31,7 +33,7 @@ fonts:
 
 # CSS
 BASEPATH_DEST_CSS=../public/_css
-BASEPATH_PUGIN_CSS=app/assets/css
+BASEPATH_PUGIN_CSS=app/assets/stylesheets
 BASEPATH_SRC_CSS=../app/assets/stylesheets
 
 clean_css:
@@ -71,4 +73,4 @@ js_lint:
 
 # Watcher
 watch:
-	@node scripts/watch.js "$(BASEPATH_PUGIN_CSS)/**/*" "$(BASEPATH_PUGIN_JS)/**/*"
+	@node scripts/watch.js "$(BASEPATH_PUGIN_CSS)/**/*" "$(BASEPATH_PUGIN_JS)/**/*" "$(BASEPATH_SRC_JS)/**/*" "$(BASEPATH_SRC_CSS)"
