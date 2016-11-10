@@ -24,11 +24,13 @@
 @import 'elements/lists';
 
 // Import objects
+@import 'objects/grid';
 
 // Import site-wide components
 @import 'components/breadcrumbs';
 @import 'components/footer';
 @import 'components/header';
+@import 'components/profile-card';
 
 // Import trumps
 @import 'trumps/clearfix';
