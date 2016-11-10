@@ -68,7 +68,7 @@ $grid-gutter: 4%;
 .col-11-sm { width: ($grid-width / (12 / 11)) - ($grid-gutter * 1 / 12); }
 .col-12-sm { width: $grid-width; }
 
-@media only screen and (min-width: $breakpoint-med) {
+@media only screen and (min-width: $breakpoint-medium) {
   .col-1 { width:($grid-width / 12) - ($grid-gutter * 11 / 12); }
   .col-2 { width: ($grid-width / 6) - ($grid-gutter * 10 / 12); }
   .col-3 { width: ($grid-width / 4) - ($grid-gutter * 9 / 12); }
