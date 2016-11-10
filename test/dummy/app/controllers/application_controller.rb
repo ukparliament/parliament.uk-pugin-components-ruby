@@ -5,10 +5,29 @@ class ApplicationController < ActionController::Base
   		render html: PUGIN.get_component_by_model('modules/header')
   	end
 
-    def test
+    def footer
+        render html: PUGIN.get_component_by_model('modules/footer')
+    end
 
+    def panel
+        render html: PUGIN.get_component_by_model('modules/panel')
+    end
+
+    def profile_card_data
         @person = Person.new
-        render html: PUGIN.get_component_by_model('modules/test2')
+        render html: PUGIN.get_component_by_model('modules/profile-card', @person)
+    end
+
+    def profile_card_no_data
+        render html: PUGIN.get_component_by_model('modules/profile-card')
+    end
+
+    def breadcrumb
+        render html: PUGIN.get_component_by_model('modules/breadcrumb')
+    end
+
+    def definition_list
+        render html: PUGIN.get_component_by_model('modules/definition-list')
     end
 
 end
