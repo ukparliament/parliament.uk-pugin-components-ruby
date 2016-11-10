@@ -10,6 +10,7 @@ require "active_job/railtie" # Only for Rails >= 4.2
 require "action_cable/engine" # Only for Rails >= 5.0
 require "sprockets/railtie"
 require "rails/test_unit/railtie"
+require "slim"
 
 Bundler.require(*Rails.groups)
 require "pugin"
