@@ -12,6 +12,29 @@ To install:
 4. On your command line, run: `bundle`
 5. You're setup!
 
+## Usage
+The Pattern library engine works through a simple request that can be called from within your Rails applications. Dependant on the data that you wish to pass with your requests, there are two methods that can be used. 
+
+### Requests
+
+PUGIN.get_component_by_model(template name, data to be passed)
+
+PUGIN.get_component_by_single(template name, data to be passed)
+
+### Data Requirements
+
+**get_component_by_model:** data passed as objects
+
+**get_component_by_single:** data passed as singular hashes
+
+*NOTE: Both methods accept empty data inputs*
+
+### Example Requests 
+
+PUGIN.get_component_by_model('modules/profile-card', @person)
+
+PUGIN.get_component_by_single('modules/profile-card', {member_name: "Jane Ivy"})
+
 ## Contributing
 To contribute to Pugin, please fork this repository and create a branch in your fork. When installing, specify the submodule repository to your fork to allow you to test whatever you build.
 
