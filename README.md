@@ -10,7 +10,7 @@ To install:
 2. On your command line, run: `git submodule add https://github.com/ukpds/pugin.git pugin`. This will version a subfolder called _pugin_ in your consuming application directory.
 3. Add the following into your Gemfile: `gem 'pugin', path: './pugin'`
 4. On your command line, run: `bundle`
-5. You're setup!
+5. Run `make initialise -C pugin` from your application directory
 
 ## Contributing
 To contribute to Pugin, please fork this repository and create a branch in your fork. When installing, specify the submodule repository to your fork to allow you to test whatever you build.
