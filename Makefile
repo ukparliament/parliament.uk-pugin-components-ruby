@@ -8,14 +8,17 @@ UGLIFY_JS=node ./node_modules/.bin/uglifyjs
 build: fonts css js_pugin js_lint js
 build_production: fonts css js_pugin js
 clean: clean_css clean_js clean_fonts
-initialise: prepare build
+initialise: install prepare build
+
+install:
+	@bundle i
+	@npm i
 
 # Prepare a new project
 BASEPATH_RAILS_CSS=../app/assets/stylesheets/application.css
 
 prepare:
 	@mv $(BASEPATH_RAILS_CSS) $(BASEPATH_SRC_CSS)/application.scss
-	@npm i
 
 # Fonts
 BASEPATH_DEST_FONTS=../public/_fonts
