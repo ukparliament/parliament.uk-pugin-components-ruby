@@ -13,9 +13,14 @@ class ApplicationController < ActionController::Base
         render html: PUGIN.get_component_by_model('modules/panel')
     end
 
-    def profile_card_data
+    def profile_card_data_model
         @person = Person.new
         render html: PUGIN.get_component_by_model('modules/profile-card', @person)
+    end
+
+    def profile_card_data_hash
+        person = {name: "Diane"}
+        render html: PUGIN.get_component_by_single('modules/profile-card', person)
     end
 
     def profile_card_no_data

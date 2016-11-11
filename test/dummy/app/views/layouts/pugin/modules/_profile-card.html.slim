@@ -4,8 +4,8 @@ div.pds-cont-wrap
       div.pds-profcard-picture
         img[alt="#" src="#" width="#" height="#"]
       div.pds-profcard-detail
-        = if defined?(object.name)
-          h2
-            = object.name
+        = if defined?(object.name) || defined?(properties[:name])
+        h2
+          = defined?(object.name) ? object.name : properties[:name]
           p
             |

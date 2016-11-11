@@ -69,9 +69,33 @@ describe ApplicationController do
         end
     end
 
-    describe 'profile card partial with data' do
+    describe 'profile card partial with data (object)' do
         before(:each) do
-            get :profile_card_data
+            get :profile_card_data_model
+        end
+        it 'has a div selector with the class pds-cont-wrap' do
+            expect(response.body).to have_selector('div', class: 'pds-cont-wrap')
+        end
+        it 'has a div selector with the class pds-cont-row' do
+            expect(response.body).to have_selector('div', class: 'pds-cont-row')
+        end
+        it 'has a div selector with the class pds-profcard' do
+            expect(response.body).to have_selector('div', class: 'pds-profcard')
+        end
+        it 'has a div selector with the class pds-profcard-picture' do
+            expect(response.body).to have_selector('div', class: 'pds-profcard-picture')
+        end
+        it 'has a div selector with the class pds-profcard-detail' do
+            expect(response.body).to have_selector('div', class: 'pds-profcard-detail')
+        end
+        it 'has a h2 tag with the text "Steve" in it' do
+            expect(response.body).to have_selector('h2', text: 'Steve')
+        end
+    end
+
+    describe 'profile card partial with data (hashes)' do
+        before(:each) do
+            get :profile_card_data_hash
         end
         it 'has a div selector with the class pds-cont-wrap' do
             expect(response.body).to have_selector('div', class: 'pds-cont-wrap')
