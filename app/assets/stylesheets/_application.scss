@@ -9,7 +9,7 @@
 @import 'tools/mixins/breakpoints';
 
 // Vendor files
-@import '../../../node_modules/normalize.css/normalize';
+@import 'vendors/normalize';
 
 // Import generic styles
 @import 'generic/box-sizing';
