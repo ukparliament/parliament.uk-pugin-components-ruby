@@ -1,0 +1,18 @@
+doctype html
+html lang="en"
+  head
+    meta charset="UTF-8"
+    meta content="width=device-width, initial-scale=1.0" name="viewport"
+    meta content="ie=edge" http-equiv="X-UA-Compatible"
+    title Pugin
+    link rel="stylesheet" href="/_css/application.css"
+    = csrf_meta_tags
+
+  body
+    = render 'layouts/pugin/modules/header.html.slim'
+    = yield
+
+    = "\n"
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+    = render 'layouts/pugin/modules/footer.html.slim'
