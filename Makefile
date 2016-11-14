@@ -5,9 +5,12 @@ NODE_SASS=node ./node_modules/.bin/node-sass
 ESLINT=node ./node_modules/.bin/eslint
 UGLIFY_JS=node ./node_modules/.bin/uglifyjs
 
-build: fonts css js_pugin js_lint js
-build_production: fonts css js_pugin js
-clean: clean_css clean_js clean_fonts
+# Node modules for images
+SVGO= node ./node_modules/.bin/svgo
+
+build: fonts css js_pugin js_lint js images
+build_production: fonts css js_pugin js images
+clean: clean_css clean_js clean_fonts clean_images
 initialise: install prepare build
 
 install:
@@ -73,6 +76,22 @@ js_lint:
 	@echo 'Linting JS'
 	@$(ESLINT) $(BASEPATH_SRC_JS)/**/*.js -c .eslintrc.js
 	@echo 'Finished linting JS'
+
+# Images
+BASEPATH_DEST_IMAGES=../public/_img
+BASEPATH_PUGIN_IMAGES=app/assets/images/pugin
+BASEPATH_SRC_IMAGES=../app/assets/images
+
+clean_images:
+	@rm -rf $(BASEPATH_DEST_IMAGES)/pugin
+
+images:
+	@echo 'Copying images'
+	@mkdir -p $(BASEPATH_DEST_IMAGES)
+	@cp -a $(BASEPATH_PUGIN_IMAGES)/. $(BASEPATH_DEST_IMAGES)/pugin || :
+	@cp -a $(BASEPATH_SRC_IMAGES)/. $(BASEPATH_DEST_IMAGES) || :
+	@$(SVGO) -f $(BASEPATH_DEST_IMAGES)/** --enable=removeTitle
+	@echo 'Finished copying images'
 
 # Watcher
 watch:
