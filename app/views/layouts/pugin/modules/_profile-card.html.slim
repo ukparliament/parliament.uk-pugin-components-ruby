@@ -4,8 +4,9 @@ div.pds-cont-wrap
       div.pds-profcard-picture
         img[alt="#" src="#" width="#" height="#"]
       div.pds-profcard-detail
+        -  if !defined?(object.name).nil?
           h2
             = object.name
-          p
+        p
 
 
