@@ -8,8 +8,8 @@ UGLIFY_JS=node ./node_modules/.bin/uglifyjs
 # Node modules for images
 SVGO= node ./node_modules/.bin/svgo
 
-build: fonts css js_pugin js_lint js
-build_production: fonts css js_pugin js
+build: fonts css js_pugin js_lint js images
+build_production: fonts css js_pugin js images
 clean: clean_css clean_js clean_fonts clean_images
 initialise: install prepare build
 
