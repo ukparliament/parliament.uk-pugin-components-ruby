@@ -10,7 +10,7 @@ SVGO= node ./node_modules/.bin/svgo
 
 build: fonts css js_pugin js_lint js
 build_production: fonts css js_pugin js
-clean: clean_css clean_js clean_fonts
+clean: clean_css clean_js clean_fonts clean_images
 initialise: install prepare build
 
 install:
@@ -83,14 +83,14 @@ BASEPATH_PUGIN_IMAGES=app/assets/images/pugin
 BASEPATH_SRC_IMAGES=../app/assets/images
 
 clean_images:
-	@rm -rf $(BASEPATH_DEST_IMAGES)
+	@rm -rf $(BASEPATH_DEST_IMAGES)/pugin
 
 images:
 	@echo 'Copying images'
 	@mkdir -p $(BASEPATH_DEST_IMAGES)
 	@cp -a $(BASEPATH_PUGIN_IMAGES)/. $(BASEPATH_DEST_IMAGES)/pugin || :
-	@$(SVGO) -f $(BASEPATH_DEST_IMAGES)/** --enable=removeTitle
 	@cp -a $(BASEPATH_SRC_IMAGES)/. $(BASEPATH_DEST_IMAGES) || :
+	@$(SVGO) -f $(BASEPATH_DEST_IMAGES)/** --enable=removeTitle
 	@echo 'Finished copying images'
 
 # Watcher
