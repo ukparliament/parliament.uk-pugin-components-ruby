@@ -4,6 +4,11 @@
         min-width: $min-width;
         background-color: $white;
         border-top: 4px solid $grey20;
+        &:after {
+          clear: both;
+          display: block;
+          content: '';  
+        }
     }
     &-row {
         padding: $base-spacing-unit-small;
