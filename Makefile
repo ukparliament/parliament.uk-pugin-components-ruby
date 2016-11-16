@@ -90,7 +90,7 @@ images:
 	@mkdir -p $(BASEPATH_DEST_IMAGES)
 	@cp -a $(BASEPATH_PUGIN_IMAGES)/. $(BASEPATH_DEST_IMAGES)/pugin || :
 	@cp -a $(BASEPATH_SRC_IMAGES)/. $(BASEPATH_DEST_IMAGES) || :
-	@$(SVGO) -f $(BASEPATH_DEST_IMAGES)/** --enable=removeTitle
+	@$(SVGO) -f $(BASEPATH_DEST_IMAGES)/**/*.svg --enable=removeTitle
 	@echo 'Finished copying images'
 
 # Watcher
