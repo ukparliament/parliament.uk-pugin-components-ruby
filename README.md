@@ -40,34 +40,6 @@ Then run `make css -C pugin`, and in your layout HTML:
 <link rel="stylesheet" type="text/css" href="/_css/application.css">
 ```
 
-## Usage
-### Partials
-To render a component partial, you can call either of the following:
-```ruby
-PUGIN.get_component_by_model('template_name', object)
-PUGIN.get_component_by_single('template_name', singular_hash)
-```
-An example is:
-```ruby
-PUGIN.get_component_by_model('modules/profile-card', @person)
-PUGIN.get_component_by_single('modules/profile-card', {member_name: "Jane Ivy"})
-```
-N.B. Both methods accept empty data inputs.
-
-### CSS
-When running `make initialise`, a Sass file is created in your application. You can import CSS from Pugin in here, which will be compiled when running `make css -C pugin` into your application root in a folder called `/public/_css`. Pugin replaces the Sprockets asset pipeline. You will need to reference the CSS file in your template.
-
-For example, in your Sass file:
-```css
-@import "../../../pugin/app/assets/stylesheets/application";
-@import "../../../pugin/app/assets/stylesheets/components/profile-card";
-```
-
-Then run `make css -C pugin`, and in your layout HTML:
-```html
-<link rel="stylesheet" type="text/css" href="/_css/application.css">
-```
-
 ## Contributing
 To contribute to Pugin, please fork this repository and create a branch in your fork. When installing, specify the submodule repository to your fork to allow you to test whatever you build.
 
