@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+}
+th, td {
+    padding: $base-spacing-unit-tiny 0 $base-spacing-unit-tiny $base-spacing-unit-tiny;
+}
+
+thead th, tfoot td {
+    background-color: $grey20;
+    border: solid 1px $grey30;
+    text-align: left;
+}
+
+td {
+    border: solid 1px $grey20;
+}
