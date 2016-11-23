@@ -3,9 +3,8 @@ div.pds-cont-wrap
     div.pds-profcard
       h2
         = properties[:name]
-      p
-        strong Constituency:
-        = properties[:constituency]
+      - if !properties[:constituency].nil?
+        = is_link?(properties[:constituency],properties[:constituency_link]).html_safe
       div.pds-profcard-picture
         img[alt="#{properties[:name]}" src="#{properties[:img_src]}"]
       div.pds-profcard-detail
