@@ -2,6 +2,7 @@ div.pds-cont-wrap
   div.pds-cont-row
     div.pds-panel
       h3
-        | 
-      p
-        | 
+        = properties[:title]
+      = is_link?(properties[:description],properties[:link]).html_safe
+
+
