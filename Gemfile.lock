@@ -3,6 +3,8 @@ PATH
   specs:
     pugin (0.1.0)
       rails (~> 5.0.0, >= 5.0.0.1)
+      sass
+      slim-rails
 
 GEM
   remote: https://rubygems.org/
@@ -167,8 +169,6 @@ DEPENDENCIES
   pugin!
   rspec-rails (~> 3.5)
   rubocop
-  sass
-  slim-rails
 
 BUNDLED WITH
    1.13.5
