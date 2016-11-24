@@ -1,8 +1,8 @@
 a {
-    color: $black;
+    color: $blue-light;
     text-decoration: underline;
     &:hover {
-        color: $blue;
+        color: $blue-dark;
         text-decoration: none;
     }
     &:focus {

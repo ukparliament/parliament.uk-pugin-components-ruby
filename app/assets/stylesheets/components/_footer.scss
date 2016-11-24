@@ -1,36 +1,24 @@
-.pds-footer {
-    &-wrap {
-        width: 100%;
-        min-width: $min-width;
-        background-color: $white;
-        border-top: 4px solid $grey20;
-        &:after {
-          clear: both;
-          display: block;
-          content: '';  
-        }
+.ftr {
+    border-top: solid 4px $grey20;
+    padding: $base-spacing-unit-small 0 0 0;
+    &-cpy {
+        @include span-columns(8);
     }
-    &-row {
-        padding: $base-spacing-unit-small;
-    }
-    &-copy {
-        float: left;
-        width: 60%;
-        padding-top: $base-spacing-unit-small;
-    }
-    &-logo {
-        float: right;
-        width: 39%;
-        text-align: right;
-        img {
-            max-width: 50px;
-            opacity: 0.7;
-        }
-    }
+    &-lgo {
+        @include span-columns(4);
+            &-icn {
+                float: right;
+                display: block;
+                background: url('../_img/pugin/portcullis--black.png') no-repeat;
+                background: url('../_img/pugin/portcullis--black.svg') no-repeat;
+                width: 50px;
+                height: 58px;
+            }
+      }
 }
 
 @media print {
-    .pds-footer {
+    .ftr {
         display: none;
     }
 }

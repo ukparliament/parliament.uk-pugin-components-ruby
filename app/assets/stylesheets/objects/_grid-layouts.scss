@@ -1,0 +1,11 @@
+// Full Screen Container
+
+.c-fs {
+    @include outer-container(100%);
+}
+
+// Full Grid Width Container
+
+.c-fg {
+    @include outer-container;
+}
