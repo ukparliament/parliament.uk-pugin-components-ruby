@@ -1,8 +1,6 @@
 // Import settings
 @import 'settings/fonts';
-@import 'settings/widths';
 @import 'settings/spacing';
-@import 'settings/breakpoints';
 @import 'settings/colours';
 
 // Import tools
@@ -14,7 +12,6 @@
 // Import generic styles
 @import 'generic/box-sizing';
 @import 'generic/typography';
-@import 'generic/layout';
 @import 'generic/tables';
 @import 'generic/shame';
 
@@ -25,13 +22,12 @@
 @import 'elements/lists';
 
 // Import objects
-@import 'objects/grid';
+@import "objects/grid-settings";
+@import "neat/neat";
+@import "objects/grid-layouts";
 
 // Import site-wide components
 @import 'components/breadcrumbs';
 @import 'components/footer';
 @import 'components/header';
 @import 'components/profile-card';
-
-// Import trumps
-@import 'trumps/clearfix';
