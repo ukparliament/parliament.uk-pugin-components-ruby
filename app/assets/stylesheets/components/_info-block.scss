@@ -1,0 +1,8 @@
+.info-blk {
+    & > dl {
+      display: inline-block;
+        & > dt {
+            font-weight: bold;
+        }
+    }
+}
