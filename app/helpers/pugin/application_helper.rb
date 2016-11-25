@@ -6,7 +6,7 @@ module Pugin
     end
 
     def is_link?(description, link_address)
-      return link_address.nil? ? '<p>' + description + '</p>' : '<a href="' + link_address + '" target="_blank">' + description + "</a>"
+      return link_address.nil? ? content_tag("p", description) : content_tag("a", description, {target: "_blank", href: link_address})
     end
   end
 end
