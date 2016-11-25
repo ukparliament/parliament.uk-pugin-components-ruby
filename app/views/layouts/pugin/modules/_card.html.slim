@@ -3,8 +3,8 @@
     .prf-name
       h1
         = properties[:name]
-    .prf-info    
-      - if !properties[:constituency].nil?
-        = is_link?(properties[:constituency],properties[:constituency_link]).html_safe
+    .prf-info
+      - if !properties[:info_title].nil?
+        = PUGIN.get_component('modules/info-block', {info_title: properties[:info_title], info_url: properties[:info_url], info_description: properties[:info_description]})
     .prf-pict
         img[alt="#{properties[:name]}" src="#{properties[:img_src]}"]
