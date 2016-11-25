@@ -1,7 +1,9 @@
 body {
+    margin: 0;
+    padding: 0;
     background: $white;
     direction: ltr;
     font-family: $base-font-stack;
     font-size: $base-font-size;
-    line-height: ($base-font-size * 1.5);
+    line-height: $base-line-height;
 }

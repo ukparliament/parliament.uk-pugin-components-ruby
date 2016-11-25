@@ -1,0 +1,18 @@
+// Generic Card
+
+.u-card {
+    padding: $base-spacing-unit-small;
+}
+
+// Profile Card Only
+
+.prf-name {
+
+}
+
+.prf-pic {
+    & img {
+        height: auto;
+        width: auto;
+    }
+}

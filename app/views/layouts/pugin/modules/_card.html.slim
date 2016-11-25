@@ -1,10 +1,10 @@
-div.pds-cont-wrap
-  div.pds-cont-row
-    div.pds-profcard
-      h2
+.c-fg
+  .u-card
+    .prf-name
+      h1
         = properties[:name]
+    .prf-info    
       - if !properties[:constituency].nil?
         = is_link?(properties[:constituency],properties[:constituency_link]).html_safe
-      div.pds-profcard-picture
+    .prf-pict
         img[alt="#{properties[:name]}" src="#{properties[:img_src]}"]
-      div.pds-profcard-detail

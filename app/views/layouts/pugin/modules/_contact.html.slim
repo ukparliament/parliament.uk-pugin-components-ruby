@@ -1,14 +1,15 @@
 .c-fg
-  .cnt
+  .u-panel
     h2 Contact
-    .mp-cnt
+    .cnt-default
       a[href="http://google.com"] Who should I contact?
       p Your MP can only help with certain matters. Find out if they're the best person to contact
+    .cnt-details  
     - properties[:address].each do |address|
       - address.each do |key, value|
         - if render_if_exists(key)
           - if key.to_s == "title"
-            h2 = value
+            h3 = value
           - else
             dl
               dt = key
