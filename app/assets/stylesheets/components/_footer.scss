@@ -1,6 +1,7 @@
 .ftr {
+    @include clearfix;
     border-top: solid 4px $grey20;
-    padding: $base-spacing-unit-small 0 0 0;
+    padding: $base-spacing-unit-small 0;
     &-cpy {
         @include span-columns(8);
     }
