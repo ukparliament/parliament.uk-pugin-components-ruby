@@ -9,3 +9,33 @@
 .c-fg {
     @include outer-container;
 }
+
+// Standard Row
+
+.r {
+    @include row();
+}
+
+// 8 Column Grid
+
+.l-8 {
+  @include span-columns (8);
+}
+
+// 6 Column Grid
+
+.l-6 {
+  @include span-columns (6);
+}
+
+// 4 Column Grid
+
+.l-4 {
+  @include span-columns (4);
+}
+
+// 2 Column Grid
+
+.l-2 {
+  @include span-columns (2);
+}

@@ -1,18 +1,23 @@
 .crumb {
     list-style: none;
-    display: inline-block;
     margin: 0;
     padding: 0;
     color: $grey75;
-    li a {
-        color: $grey75;
-        &:hover {
-            color: $black;
+    li {
+        display: inline;
+        & > a {
+            color: $grey75;
+            text-decoration: underline;
+            &:hover, :active {
+                color: $black;
+            }
+            &:visited {
+                color: $grey75;
+            }
         }
     }
     li:after {
         content: '/';
-        display: block;
         padding: 0 $base-spacing-unit-tiny;
     }
 }
