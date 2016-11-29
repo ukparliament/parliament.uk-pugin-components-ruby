@@ -1,0 +1,10 @@
+.c-fg
+  .u-card
+    .prf-name
+      h1
+        = properties[:name]
+    .prf-info
+      - if !properties[:info_title].nil?
+        = PUGIN.get_component('modules/info-block', {info_title: properties[:info_title], info_url: properties[:info_url], info_description: properties[:info_description]})
+    .prf-pict
+        img[alt="#{properties[:name]}" src="#{properties[:img_src]}"]

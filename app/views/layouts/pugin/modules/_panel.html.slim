@@ -1,9 +1,5 @@
-div.pds-cont-wrap
-  div.pds-cont-row
-    div.pds-panel
-      h3
-        = properties[:title]
-      p
-        = properties[:description]
-
-
+.c-fg
+  .u-panel
+    h2
+      = properties[:title]
+    = is_link?(properties[:description],properties[:url]).html_safe

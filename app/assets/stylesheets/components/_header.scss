@@ -1,26 +1,18 @@
-.pds-header {
-    &-wrap {
-        width: 100%;
-        min-width: $min-width;
-        background-color: $black;
-    }
-    &-row {
-        padding: $base-spacing-unit-small;
-    }
-    &-logo {
-        display: inline-block;
-        &:focus {
-            background: none;
-        }
-        img {
-            width: 300px;
-            height: auto;
-        }
+.hdr {
+    background-color: $black;
+    padding: $base-spacing-unit-small 0;
+    &-lgo {
+        display: block;
+        margin: 0 0 0 $base-spacing-unit-small;
+        background: url('../_img/pugin/parliament-uk--white.png') no-repeat;
+        background: url('../_img/pugin/parliament-uk--white.svg') no-repeat;
+        width: 300px;
+        height: 56px;
     }
 }
 
 @media print {
-    .pds-header {
+    .hdr {
         display: none;
     }
 }

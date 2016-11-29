@@ -1,5 +1,6 @@
 ul, ol {
-    margin-left: $base-spacing-unit-small;
+    margin: 0 0 0 $base-spacing-unit-small;
+    padding: 0;
 }
 
 li {
@@ -8,10 +9,11 @@ li {
 
 dl {
     width: 100%;
+    margin: 0;
     padding: $base-spacing-unit-tiny 0;
 }
 
 dt, dd {
+    margin: 0;
     padding: $base-spacing-unit-tiny 0;
-    margin-left: 0;
 }

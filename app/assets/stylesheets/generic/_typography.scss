@@ -1,51 +1,49 @@
-body {
-    font-family: $base-font-stack;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-}
-
 h1 {
     font-size: 40px;
-    padding: 0.5em 0;
+    padding: $base-spacing-unit-small 0;
 }
 
 h2 {
     font-size: 32px;
-    padding: 0.5em 0;
+    padding: $base-spacing-unit-small 0;
 }
 
 h3 {
     font-size: 28px;
-    padding: 0.5em 0;
+    padding: $base-spacing-unit-small 0;
 }
 
 h4 {
     font-size: 24px;
-    padding: 0.5em 0;
+    padding: $base-spacing-unit-small 0;
 }
 
 h5 {
     font-size: 22px;
-    padding: 0.5em 0;
+    padding: $base-spacing-unit-tiny 0;
 }
 
 h6 {
     font-size: 18px;
-    padding: 0.5em 0;
+    padding: $base-spacing-unit-tiny 0;
 }
 
 p {
     font-size: 16px;
-    padding: 0.25em 0;
+    padding: $base-spacing-unit-tiny 0;
     margin: 0;
 }
 
 li {
     font-size: 16px;
+    padding: $base-spacing-unit-tiny 0;
+    margin: 0;
 }
 
 dt, dd {
     font-size: 16px;
+    padding: $base-spacing-unit-tiny 0;
+    margin: 0;
 }
 
 dt {

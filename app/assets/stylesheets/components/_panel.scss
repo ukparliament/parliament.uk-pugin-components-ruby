@@ -1,0 +1,4 @@
+.u-panel {
+  @include clearfix;
+  padding: $base-spacing-unit-small 0;
+}

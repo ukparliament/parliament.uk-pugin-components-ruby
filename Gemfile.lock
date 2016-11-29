@@ -3,6 +3,8 @@ PATH
   specs:
     pugin (0.1.0)
       rails (~> 5.0.0, >= 5.0.0.1)
+      sass
+      slim-rails
 
 GEM
   remote: https://rubygems.org/
@@ -72,6 +74,9 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.1)
+    neat (1.8.0)
+      sass (>= 3.3)
+      thor (~> 0.19)
     nio4r (1.2.1)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
@@ -164,11 +169,10 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  neat
   pugin!
   rspec-rails (~> 3.5)
   rubocop
-  sass
-  slim-rails
 
 BUNDLED WITH
    1.13.5

@@ -1,12 +1,23 @@
-.pds-crumb {
+.crumb {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     color: $grey75;
-    a {
-        color: $grey75;
-        &:hover {
-            color: $black;
+    li {
+        display: inline;
+        & > a {
+            color: $grey75;
+            text-decoration: underline;
+            &:hover, :active {
+                color: $black;
+            }
+            &:visited {
+                color: $grey75;
+            }
         }
     }
-    &-spacer {
+    li:after {
+        content: '/';
         padding: 0 $base-spacing-unit-tiny;
     }
 }

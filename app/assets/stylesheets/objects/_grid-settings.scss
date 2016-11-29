@@ -1,0 +1,16 @@
+@import "../neat/neat-helpers";
+
+// Base Grid Settings
+$column: 85px;
+$gutter: 20px;
+$grid-columns: 12;
+$max-width: 1280px;
+$min-width: 320px;
+
+// Breakpoints
+$desktop: new-breakpoint(max-width 960px 10);
+$tablet: new-breakpoint(max-width 740px 8);
+$mobile: new-breakpoint(max-width 480px 4);
+
+// Visualise Grid
+$visual-grid: false;

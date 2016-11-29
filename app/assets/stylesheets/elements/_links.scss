@@ -1,11 +1,14 @@
 a {
-    color: $black;
+    color: $blue-light;
     text-decoration: underline;
-    &:hover {
-        color: $blue;
+    &:hover, :active {
+        color: $blue-dark;
         text-decoration: none;
     }
     &:focus {
         background-color: $yellow;
+    }
+    &:visited {
+        color: $purple;
     }
 }

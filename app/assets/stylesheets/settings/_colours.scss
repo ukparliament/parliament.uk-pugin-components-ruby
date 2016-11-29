@@ -1,29 +1,30 @@
-// $black: #000;
-// $white: #FFF;
+// PDS Base Colours
 
-// $hoc-green: #008852; // "tropical rain forest"
-// $hol-red: #971b2f; // "old brick"
-
-/* PDS Base Colours */
 $black: #000;
-$white: #fff;
-$blue: #00f;
+$white: #FFF;
+$blue-light: #4272A0;
+$blue-dark: #205282;
 $purple: #6e6095;
-$yellow: #fcd116;
+$yellow: #FCD116;
 
-/* PDS Grey Palette */
+// PDS Grey Palette
+
 $grey100: #333333;
-$grey80: #5c5c5c;
+$grey80: #5C5C5C;
 $grey75: #666666;
 $grey60: #858585;
-$grey40: #adadad;
-$grey30: #c1c1c1;
-$grey20: #d6d6d6;
-$grey15: #e1e1e1;
-$grey10: #eaeaea;
-$grey05: #f5f5f5;
+$grey40: #ADADAD;
+$grey30: #C1C1C1;
+$grey20: #D6D6D6;
+$grey15: #E1E1E1;
+$grey10: #EAEAEA;
+$grey05: #F5F5F5;
 
-/* Current Parliament Colours */
-$parl-blue: #085196; /* parliament.uk header blue */
-$parl-green: #016131; /* parliament.uk HoC green */
-$parl-red: #b2200d; /* parliament.uk HoL red */
+// Current Parliament Colours
+
+$parl-blue: #085196; // parliament.uk header blue
+$parl-green: #016131; // parliament.uk HoC green
+$parl-red: #B2200D; // parliament.uk HoL red
+
+// $hoc-green: #008852; // "tropical rain forest"
+// $hol-red: #971B2F; // "old brick"

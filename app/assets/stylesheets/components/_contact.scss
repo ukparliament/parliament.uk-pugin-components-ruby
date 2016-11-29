@@ -1,0 +1,14 @@
+.cnt-default {
+    background-color: $grey05;
+    padding: $base-spacing-unit-small;
+    & > a {
+        font-weight: bold;
+    }
+}
+
+.cnt-details {
+    padding: $base-spacing-unit-tiny 0;
+    & > dl {
+      display: inline-block;
+    }
+}
