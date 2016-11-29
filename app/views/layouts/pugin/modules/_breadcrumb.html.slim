@@ -1,8 +1,8 @@
 .c-fg
   ol.crumb
-    li
-      a[href="#" title="#"]
-        |
-    li    
-      a[href="#" title="#"]
-        |
+    - url = ""
+    - properties[:breadcrumbs].each_with_index do |breadcrumb, index|
+      - (url ||= "") << "/" << breadcrumb[:slug]
+      li
+        a[href="#{url}" title="#"]
+          = breadcrumb[:place]
