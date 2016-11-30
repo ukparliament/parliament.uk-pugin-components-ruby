@@ -25,6 +25,7 @@
     "uglify-js": "^2.7.4"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.2",
     "chokidar": "^1.6.1",
     "eslint": "^3.9.1"
   }

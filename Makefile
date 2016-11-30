@@ -6,12 +6,12 @@ ESLINT=node ./node_modules/.bin/eslint
 UGLIFY_JS=node ./node_modules/.bin/uglifyjs
 
 # Node modules for images
-SVGO= node ./node_modules/.bin/svgo
+SVGO=node ./node_modules/.bin/svgo
 
 install:
 	@bundle i
 	@npm i
-	@make loader
+	@make build
 
 # JS
 BASEPATH_DEST_JS=../public/_js
@@ -28,7 +28,7 @@ js:
 js_vendor:
 	@echo 'Compiling vendor JS'
 	@mkdir -p $(BASEPATH_DEST_JS)
-	@$(UGLIFY_JS) $(GET_FROM) -o $(BASEPATH_DEST_JS)/vendor.js --screw-ie8 --source-map $(BASEPATH_DEST_JS)/vendor.js.map --prefix 1 --source-map-url vendor.js.map
+	@$(UGLIFY_JS) {$(GET_FROM)} -o $(BASEPATH_DEST_JS)/vendor.js --screw-ie8 --source-map $(BASEPATH_DEST_JS)/vendor.js.map --prefix 1 --source-map-url vendor.js.map
 	@echo 'Finished compiling vendor JS'
 
 # Images
@@ -69,6 +69,10 @@ css: clean_css
 	@node scripts/postbuild-css.js --directory $(BASEPATH_DEST_CSS)/**/*
 	@echo 'Finished compiling CSS'
 
-# MANIFEST POC
-loader:
-	@node scripts/pugin-loader.js
+# Browsersync
+browsersync:
+	@node scripts/browsersync.js "${BASEPATH_DEST_JS}" "${BASEPATH_DEST_CSS}" "${BASEPATH_DEST_FONTS}" "${BASEPATH_DEST_IMAGES}"
+
+# Manifest builder
+build:
+	@node scripts/pugin-loader.js --task="${TASK}"

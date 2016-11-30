@@ -1,12 +1,18 @@
-const fs = require('fs'),
-      exec = require('child_process').exec,
+const argv  = require('minimist')(process.argv.slice(2)),
+      fs    = require('fs'),
+      exec  = require('child_process').exec,
       pugin = require('../../pugin.json'),
-      path = require('path');
+      path  = require('path');
 
 let count = Object.keys(pugin).length;
 
 for (const k in pugin) {
-  if(count -= 1, pugin.hasOwnProperty(k)) {
+  if(argv.task && argv.task !== k) {
+    count = count - 1;
+    delete pugin[k];
+  }
+  if(pugin.hasOwnProperty(k)) {
+    count = count - 1;
     for (let i = 0; i < pugin[k].length; i++) {
       const wholepath = path.resolve(__dirname, `../../${pugin[k][i]}`);
       if (fs.lstatSync(wholepath).isFile()) {
