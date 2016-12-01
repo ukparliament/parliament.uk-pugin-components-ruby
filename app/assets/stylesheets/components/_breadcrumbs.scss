@@ -1,6 +1,6 @@
 .crumb {
     list-style: none;
-    margin: 0;
+    margin: $base-spacing-unit-tiny 0 0 0;
     padding: 0;
     color: $grey75;
     li {
@@ -11,13 +11,14 @@
             &:hover, :active {
                 color: $black;
             }
-            &:visited {
-                color: $grey75;
-            }
         }
     }
     li:after {
         content: '/';
+        padding: 0 $base-spacing-unit-tiny;
+    }
+    li:last-child:after{
+        content: '';
         padding: 0 $base-spacing-unit-tiny;
     }
 }
