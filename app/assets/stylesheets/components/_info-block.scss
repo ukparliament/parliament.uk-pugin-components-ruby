@@ -1,8 +1,15 @@
 .info-blk {
     & > dl {
-      display: inline-block;
+        & > dt,& > dd {
+            display: inline;
+        }
         & > dt {
-            font-weight: bold;
+          font-weight: bold;
+          text-transform: capitalize;
+          &:after {
+              content: ':';
+              padding: 0 $base-spacing-unit-tiny;
+          }
         }
     }
 }
