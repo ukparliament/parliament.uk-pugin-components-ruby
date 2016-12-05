@@ -1,4 +1,7 @@
+// Create uniform spacing value by setting it equal to line height set in the fonts.scss file
 $base-spacing-unit: $base-line-height;
+
+// Using base spacing value create consistent spacing variations
 $base-spacing-unit-tiny: round($base-line-height / 4);
 $base-spacing-unit-small: round($base-line-height / 2);
 $base-spacing-unit-large: round($base-line-height * 2);
