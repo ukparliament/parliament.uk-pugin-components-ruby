@@ -1,6 +1,6 @@
 .info-blk {
     & > dl {
-        & > dt,& > dd {
+        & > dt, & > dd {
             display: inline;
         }
         & > dt {
@@ -10,6 +10,9 @@
               content: ':';
               padding: 0 $base-spacing-unit-tiny;
           }
+        }
+        & > dd > p {
+            display: inline;
         }
     }
 }
