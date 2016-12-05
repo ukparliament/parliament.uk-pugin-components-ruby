@@ -1,5 +1,6 @@
 .cnt-default {
     background-color: $grey05;
+    margin: $base-spacing-unit-small 0 0 0;
     padding: $base-spacing-unit-small;
     & > a {
         font-weight: bold;
