@@ -1,3 +1,8 @@
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    line-height: 1.5;
+}
+
 h1 {
     font-size: 40px;
     padding: $base-spacing-unit-small 0;
@@ -29,23 +34,6 @@ h6 {
 }
 
 p {
-    font-size: 16px;
+    font-size: $base-font-size;
     padding: $base-spacing-unit-tiny 0;
-    margin: 0;
-}
-
-li {
-    font-size: 16px;
-    padding: $base-spacing-unit-tiny 0;
-    margin: 0;
-}
-
-dt, dd {
-    font-size: 16px;
-    padding: $base-spacing-unit-tiny 0;
-    margin: 0;
-}
-
-dt {
-    font-weight: 700;
 }

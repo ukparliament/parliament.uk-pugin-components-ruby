@@ -8,15 +8,13 @@
 
 // Import generic styles
 @import 'generic/box-sizing';
-@import 'generic/typography';
-@import 'generic/tables';
-@import 'generic/shame';
 
 // Import bare-bones elements
 @import 'elements/body';
-@import 'elements/headings';
 @import 'elements/links';
 @import 'elements/lists';
+@import 'elements/tables';
+@import 'elements/typography';
 
 // Import objects
 @import "objects/grid-settings";
@@ -29,5 +27,8 @@
 @import 'components/contact';
 @import 'components/footer';
 @import 'components/header';
-@import 'components/panel';
 @import 'components/info-block';
+@import 'components/panel';
+
+// Import Trumps
+@import 'trumps/helpers';
