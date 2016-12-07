@@ -5,13 +5,14 @@ NODE_SASS=node ./node_modules/.bin/node-sass
 ESLINT=node ./node_modules/.bin/eslint
 UGLIFY_JS=node ./node_modules/.bin/uglifyjs
 
-# Node modules for images
-SVGO=node ./node_modules/.bin/svgo
-
-install:
+install: prepare
 	@bundle i
 	@npm i
 	@make build
+
+prepare:
+	@cp pugin.example.json ../pugin.json
+	@cp app/assets/stylesheets/_application.example.scss ../app/assets/stylesheets/application.scss
 
 # JS
 BASEPATH_DEST_JS=../public/_js
@@ -24,6 +25,11 @@ js:
 	@mkdir -p $(BASEPATH_DEST_JS)
 	@$(UGLIFY_JS) `find {$(GET_FROM)} -type f -name "*.js"` -o $(BASEPATH_DEST_JS)/application.js --source-map $(BASEPATH_DEST_JS)/application.js.map --source-map-url application.js.map
 	@echo 'Finished compiling JS'
+
+js_lint:
+	@echo 'Linting JS'
+	@$(ESLINT) {$(GET_FROM)} -c .eslintrc.js
+	@echo 'Finished linting JS'
 
 js_vendor:
 	@echo 'Compiling vendor JS'
@@ -41,7 +47,6 @@ images: clean_images
 	@echo 'Copying images'
 	@mkdir -p $(BASEPATH_DEST_IMAGES)
 	@cp -r {$(GET_FROM)} $(BASEPATH_DEST_IMAGES)
-	@$(SVGO) -f $(BASEPATH_DEST_IMAGES) --enable=removeTitle
 	@echo 'Finished copying images'
 
 # Fonts
@@ -75,4 +80,4 @@ browsersync:
 
 # Manifest builder
 build:
-	@node scripts/pugin-loader.js --task="${TASK}"
+	@node scripts/pugin-loader.js --task="${TASK}" --env="${ENV}"

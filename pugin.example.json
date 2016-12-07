@@ -1,0 +1,16 @@
+{
+  "images": [
+    "./pugin/app/assets/images"
+  ],
+  "js": [
+    "./pugin/app/assets/javascripts"
+  ],
+  "js_vendor": [
+  ],
+  "fonts": [
+    "./pugin/app/assets/fonts"
+  ],
+  "css": [
+    "./app/assets/stylesheets"
+  ]
+}

@@ -29,8 +29,16 @@ for (const k in pugin) {
 }
 
 function call() {
-  for (const task in pugin) {
-    exec(`make ${task} GET_FROM=${pugin[task]}`, (error, stdout, stderr) => {
+  if(!argv.env && typeof pugin.js !== 'undefined') {
+    const lintFolders = [];
+    for (let a = pugin.js.length - 1; a >= 0; a--) {
+      if(pugin.js[a].substring(pugin.js[a].length - 2) == '/.') {
+        lintFolders.push(`${pugin.js[a].slice(0, -2)}/**/*`);
+      } else {
+        lintFolders.push(`${pugin.js[a]}/**/*`);
+      }
+    }
+    exec(`make js_lint GET_FROM=${lintFolders}`, (error, stdout, stderr) => {
       if (error) {
         console.log('Error:', error);
       }
@@ -41,5 +49,20 @@ function call() {
         console.log('Stderr:', stderr);
       }
     });
+  }
+  for (const task in pugin) {
+    if(pugin[task].length) {
+      exec(`make ${task} GET_FROM=${pugin[task]}`, (error, stdout, stderr) => {
+        if (error) {
+          console.log('Error:', error);
+        }
+        if (stdout) {
+          console.log(stdout);
+        }
+        if (stderr) {
+          console.log('Stderr:', stderr);
+        }
+      });
+    }
   }
 }
