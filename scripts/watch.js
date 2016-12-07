@@ -26,12 +26,11 @@ function initialise(directoriesToWatch) {
 watcher
   .on('ready', () => console.log('Watching files...'))
   .on('error', error => console.log(`Watcher error: ${error}`))
-  .on('addDir', path => console.log(`Has been added: ${path}`))
   .on('change', recompile)
   .on('unlink', recompile);
 
 function recompile(path) {
-  console.log('File changed:', path);
+  console.log('File changed: ' + path);
   task = 'make build TASK=';
   for(k in pugin) {
     for (let normalised of pugin[k]) {
