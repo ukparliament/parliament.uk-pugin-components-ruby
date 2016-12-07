@@ -1,33 +1,53 @@
-const argv = require('minimist')(process.argv.slice(2)),
+const argv     = require('minimist')(process.argv.slice(2)),
       chokidar = require('chokidar'),
-      exec = require('child_process').exec,
-      log = console.log.bind(console),
-      watcher = chokidar.watch(argv._, { ignored: /[\/\\]\./ });
+      exec     = require('child_process').exec,
+      path     = require('path'),
+      pugin    = require('../../pugin.json');
 
-let task;
+let keyCount = Object.keys(pugin).length,
+    task,
+    watcher;
+
+const directoriesToWatch = [];
+for(k in pugin) {
+  for (let i = 0; i < pugin[k].length; i++) {
+    directoriesToWatch.push(path.resolve(__dirname, `../../${pugin[k][i]}`));
+  }
+  keyCount = keyCount - 1;
+  if(keyCount === 0) {
+    initialise(directoriesToWatch);
+  }
+}
+
+function initialise(directoriesToWatch) {
+  watcher = chokidar.watch(directoriesToWatch, { ignored: /[\/\\]\./ });
+}
 
 watcher
-  .on('ready', () => log(`Initialised watching for: ${argv._}`))
+  .on('ready', () => console.log('Watching files...'))
+  .on('error', error => console.log(`Watcher error: ${error}`))
   .on('change', recompile)
-  .on('unlink', recompile)
-  .on('error', error => log(`Watcher error: ${error}`))
+  .on('unlink', recompile);
 
 function recompile(path) {
-  const fileExt = path.split('.').pop();
-  if(fileExt === 'scss') {
-    task = 'make css';
-  }
-  if(fileExt === 'js') {
-    task = 'make js';
-  }
-  if(task) {
-    exec(task, (error, stdout, stderr) => {
-      if(error === null && stdout) {
-        log(stdout);
-      } else {
-        log(`Task "${task}" failed:`);
-        log(error);
+  console.log('File changed: ' + path);
+  task = 'make build TASK=';
+  for(k in pugin) {
+    for (let normalised of pugin[k]) {
+      if(normalised.startsWith('./')) {
+        normalised = normalised.substring(2);
       }
-    });
+      if(path.includes(normalised)) {
+        task = task + k;
+        exec(task, (error, stdout, stderr) => {
+          if(error === null && stdout) {
+            console.log(stdout);
+          } else {
+            console.log(`Task "${task}" failed:`);
+            console.log(error);
+          }
+        });
+      }
+    }
   }
 }

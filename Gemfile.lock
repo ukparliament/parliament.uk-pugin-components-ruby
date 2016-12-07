@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     pugin (0.1.0)
+      neat
       rails (~> 5.0.0, >= 5.0.0.1)
       sass
       slim-rails
@@ -169,10 +170,9 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  neat
   pugin!
   rspec-rails (~> 3.5)
   rubocop
 
 BUNDLED WITH
-   1.13.5
+   1.13.6
