@@ -78,6 +78,10 @@ css: clean_css
 browsersync:
 	@node scripts/browsersync.js "${BASEPATH_DEST_JS}" "${BASEPATH_DEST_CSS}" "${BASEPATH_DEST_FONTS}" "${BASEPATH_DEST_IMAGES}"
 
+# Watch
+watch:
+	@node scripts/watch.js
+
 # Manifest builder
 build:
 	@node scripts/pugin-loader.js --task="${TASK}" --env="${ENV}"

@@ -1,57 +1,55 @@
-// const argv     = require('minimist')(process.argv.slice(2)),
-//       chokidar = require('chokidar'),
-//       exec     = require('child_process').exec,
-//       log      = console.log.bind(console),
-//       pathn    = require('path'),
-//       pugin    = require('../../pugin.json');
+const argv     = require('minimist')(process.argv.slice(2)),
+      chokidar = require('chokidar'),
+      exec     = require('child_process').exec,
+      path     = require('path'),
+      pugin    = require('../../pugin.json');
 
-// let keyCount = Object.keys(pugin).length;
-// let task;
-// let watcher;
+let keyCount = Object.keys(pugin).length,
+    task,
+    watcher;
 
-// var directoriesToWatch = [];
-// for(k in pugin) {
-//   keyCount = keyCount - 1;
-//   directoriesToWatch = directoriesToWatch.concat(pugin[k]);
-//   if(keyCount === 0) {
-//     initialise(directoriesToWatch);
-//   }
-// }
+var directoriesToWatch = [];
+for(k in pugin) {
+  for (var i = 0; i < pugin[k].length; i++) {
+    directoriesToWatch.push(path.resolve(__dirname, `../../${pugin[k][i]}`));
+  }
+  keyCount = keyCount - 1;
+  if(keyCount === 0) {
+    initialise(directoriesToWatch);
+  }
+}
 
-// function initialise(directoriesToWatch) {
-//   watcher = chokidar.watch(directoriesToWatch, { ignored: /[\/\\]\./ });
-// }
-
-// function getTaskByDirectory(directory, path) {
-//   console.log(directory, path);
-// }
-
-// function test(path) {
-//   console.log(path);
-// }
+function initialise(directoriesToWatch) {
+  watcher = chokidar.watch(directoriesToWatch, { ignored: /[\/\\]\./ });
+}
 
 watcher
-  .on('ready', () => log('Watching files...'))
-  .on('error', error => log(`Watcher error: ${error}`))
-  .on('addDir', test)
-  // .on('addDir', path => log(`Has been added: ${pathn.resolve(__dirname, `${path}`)}`))
-  .on('change', path => log(`Changed: ${path}`));
-  // .on('change', recompile)
-  // .on('unlink', recompile)
+  .on('ready', () => console.log('Watching files...'))
+  .on('error', error => console.log(`Watcher error: ${error}`))
+  .on('addDir', path => console.log(`Has been added: ${path}`))
+  .on('change', recompile)
+  .on('unlink', recompile);
 
-// // function recompile(path) {
-// //   const fileExt = path.split('.').pop();
-// //   if(fileExt === 'scss') {
-// //     task = 'make loader TASK=css';
-// //   }
-// //   if(task) {
-// //     exec(task, (error, stdout, stderr) => {
-// //       if(error === null && stdout) {
-// //         log(stdout);
-// //       } else {
-// //         log(`Task "${task}" failed:`);
-// //         log(error);
-// //       }
-// //     });
-// //   }
-// // }
+function recompile(path) {
+  console.log('File changed:', path);
+  task = 'make build TASK=';
+  for(k in pugin) {
+    for (var i = 0; i < pugin[k].length; i++) {
+      var normalised = pugin[k][i];
+      if(normalised.startsWith('./')) {
+        normalised = normalised.substring(2);
+      }
+      if(path.indexOf(normalised) !== -1) {
+        task = task + k;
+        exec(task, (error, stdout, stderr) => {
+          if(error === null && stdout) {
+            console.log(stdout);
+          } else {
+            console.log(`Task "${task}" failed:`);
+            console.log(error);
+          }
+        });
+      }
+    }
+  }
+}
