@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^6.5.3",
+    "bourbon-neat": "^1.8.0",
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.8.1",
     "glob": "^7.1.1",
