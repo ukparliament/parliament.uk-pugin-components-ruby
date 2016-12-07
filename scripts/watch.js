@@ -8,9 +8,9 @@ let keyCount = Object.keys(pugin).length,
     task,
     watcher;
 
-var directoriesToWatch = [];
+const directoriesToWatch = [];
 for(k in pugin) {
-  for (var i = 0; i < pugin[k].length; i++) {
+  for (let i = 0; i < pugin[k].length; i++) {
     directoriesToWatch.push(path.resolve(__dirname, `../../${pugin[k][i]}`));
   }
   keyCount = keyCount - 1;
@@ -34,12 +34,11 @@ function recompile(path) {
   console.log('File changed:', path);
   task = 'make build TASK=';
   for(k in pugin) {
-    for (var i = 0; i < pugin[k].length; i++) {
-      var normalised = pugin[k][i];
+    for (let normalised of pugin[k]) {
       if(normalised.startsWith('./')) {
         normalised = normalised.substring(2);
       }
-      if(path.indexOf(normalised) !== -1) {
+      if(path.includes(normalised)) {
         task = task + k;
         exec(task, (error, stdout, stderr) => {
           if(error === null && stdout) {
