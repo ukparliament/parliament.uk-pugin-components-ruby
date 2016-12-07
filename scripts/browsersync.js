@@ -5,5 +5,9 @@ let extraDirs = ['../app/views'];
 
 bs.init({
   proxy: 'localhost:3000',
-  files: argv._.concat(extraDirs)
+  files: argv._.concat(extraDirs),
+  watchOptions: {
+    ignored: '*.map',
+    ignoreInitial: true
+  }
 });
