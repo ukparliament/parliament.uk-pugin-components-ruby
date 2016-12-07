@@ -11,8 +11,8 @@ install: prepare
 	@make build
 
 prepare:
-	@cp -n pugin.example.json ../pugin.json
-	@cp -n app/assets/stylesheets/_application.example.scss ../app/assets/stylesheets/application.scss
+	@cp -n pugin.example.json ../pugin.json || :
+	@cp -n app/assets/stylesheets/_application.example.scss ../app/assets/stylesheets/application.scss || :
 
 # JS
 BASEPATH_DEST_JS=../public/_js
