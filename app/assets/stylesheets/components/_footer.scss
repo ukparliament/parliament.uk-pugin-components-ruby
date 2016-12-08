@@ -3,10 +3,12 @@
     border-top: solid 4px $grey20;
     padding: $base-spacing-unit-small 0;
     &-cpy {
-        @include span-columns(8);
+        @include span-columns(7.9);
+        @include shift(0.1);
     }
     &-lgo {
-        @include span-columns(4);
+        @include span-columns(3.95);
+        @include shift(-0.05)
             &-icn {
                 float: right;
                 display: block;
