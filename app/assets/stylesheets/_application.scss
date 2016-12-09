@@ -3,6 +3,9 @@
 @import 'settings/spacing';
 @import 'settings/colours';
 
+// Import tools
+@import 'tools/helpers';
+
 // Vendor files
 @import '../../../node_modules/normalize.css/normalize';
 @import '../../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
@@ -12,6 +15,7 @@
 
 // Import bare-bones elements
 @import 'elements/body';
+@import 'elements/form';
 @import 'elements/links';
 @import 'elements/lists';
 @import 'elements/tables';
