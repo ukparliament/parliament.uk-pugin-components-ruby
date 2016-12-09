@@ -1,0 +1,55 @@
+.alert {
+  border: solid 1px transparent;
+  padding: $base-spacing-unit-tiny;
+  & > p > i {
+    margin: 0 $base-spacing-unit-small 0 $base-spacing-unit-tiny;
+  }
+  & .close {
+    float: right;
+    border: none;
+    padding: 0;
+    margin: 0 $base-spacing-unit-tiny 0 0;
+    background: none;
+    cursor: pointer;
+  }
+  &.standard {
+    background: $grey05;
+    border-color: $grey20;
+    color: $grey100;
+    & .close {
+      color: $grey100;
+    }
+  }
+  &.information {
+    background: $info-back;
+    border-color: $info-border;
+    color: $info-text;
+    & .close {
+      color: $info-text;
+    }
+  }
+  &.success {
+    background: $succ-back;
+    border-color: $succ-border;
+    color: $succ-text;
+    & .close {
+      color: $succ-text;
+    }
+  }
+  &.warning {
+    background: $warn-back;
+    border-color: $warn-border;
+    color: $warn-text;
+    & .close {
+      color: $warn-text;
+    }
+  }
+  &.error {
+    background: $eror-back;
+    border-color: $eror-border;
+    color: $eror-text;
+    & .close {
+      color: $eror-text;
+    }
+  }
+}
