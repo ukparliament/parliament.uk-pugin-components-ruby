@@ -28,13 +28,13 @@ js:
 
 js_lint:
 	@echo 'Linting JS'
-	@$(ESLINT) {$(GET_FROM)} -c .eslintrc.js
+	@$(ESLINT) `echo $(GET_FROM) | sed -e 's/,/ /g'` -c .eslintrc.js
 	@echo 'Finished linting JS'
 
 js_vendor:
 	@echo 'Compiling vendor JS'
 	@mkdir -p $(BASEPATH_DEST_JS)
-	@$(UGLIFY_JS) {$(GET_FROM)} -o $(BASEPATH_DEST_JS)/vendor.js --screw-ie8 --source-map $(BASEPATH_DEST_JS)/vendor.js.map --prefix 1 --source-map-url vendor.js.map
+	@$(UGLIFY_JS) `echo $(GET_FROM) | sed -e 's/,/ /g'` -o $(BASEPATH_DEST_JS)/vendor.js --screw-ie8 --source-map $(BASEPATH_DEST_JS)/vendor.js.map --prefix 1 --source-map-url vendor.js.map
 	@echo 'Finished compiling vendor JS'
 
 # Images
@@ -46,7 +46,7 @@ clean_images:
 images: clean_images
 	@echo 'Copying images'
 	@mkdir -p $(BASEPATH_DEST_IMAGES)
-	@cp -r {$(GET_FROM)} $(BASEPATH_DEST_IMAGES)
+	@cp -r `echo $(GET_FROM) | sed -e 's/,/ /g'` $(BASEPATH_DEST_IMAGES)
 	@echo 'Finished copying images'
 
 # Fonts
@@ -58,7 +58,7 @@ clean_fonts:
 fonts: clean_fonts
 	@echo 'Copying fonts'
 	@mkdir -p $(BASEPATH_DEST_FONTS)
-	@cp -r {$(GET_FROM)} $(BASEPATH_DEST_FONTS)
+	@cp -r `echo $(GET_FROM) | sed -e 's/,/ /g'` $(BASEPATH_DEST_FONTS)
 	@echo 'Finished copying fonts'
 
 # CSS
@@ -70,7 +70,7 @@ clean_css:
 css: clean_css
 	@echo 'Compiling CSS'
 	@mkdir -p $(BASEPATH_DEST_CSS)
-	@$(NODE_SASS) $(GET_FROM) -o $(BASEPATH_DEST_CSS) --source-map $(BASEPATH_DEST_CSS) --quiet
+	@$(NODE_SASS) `echo $(GET_FROM) | sed -e 's/,/ /g'` -o $(BASEPATH_DEST_CSS) --source-map $(BASEPATH_DEST_CSS) --quiet
 	@node scripts/postbuild-css.js --directory $(BASEPATH_DEST_CSS)/**/*
 	@echo 'Finished compiling CSS'
 
