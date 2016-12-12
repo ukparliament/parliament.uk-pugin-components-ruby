@@ -1,0 +1,43 @@
+.pagination{
+  @include outer-container;
+  list-style-type: none;
+
+  li {
+    @include span-columns (1);
+
+    background: $black;
+    border: solid 1px $black;
+    text-align: center;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+
+    // Mobile View
+    @include media($mobile) {
+      display: none;
+    }
+  }
+
+  li.prev,
+  li.next {
+    @include span-columns (2);
+
+    // Mobile View
+    @include media($mobile) {
+      @include span-columns (2);
+    }
+  }
+
+  li.active,
+  li:hover {
+    background: $white;
+    cursor: pointer;
+
+    a {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+}
