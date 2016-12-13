@@ -29,7 +29,7 @@ const argv             = require('minimist')(process.argv.slice(2)),
       ]);
 
 function init(directory) {
-  glob(`${directory}.css`, {}, render);
+  glob(`${directory}/**/*.css`, {}, render);
 }
 
 function processCss(filePath) {

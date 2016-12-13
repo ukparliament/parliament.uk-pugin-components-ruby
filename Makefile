@@ -47,6 +47,7 @@ images: clean_images
 	@echo 'Copying images'
 	@mkdir -p $(BASEPATH_DEST_IMAGES)
 	@cp -r `echo $(GET_FROM) | sed -e 's/,/ /g'` $(BASEPATH_DEST_IMAGES)
+	@node scripts/svg2png.js --directory $(BASEPATH_DEST_IMAGES)
 	@echo 'Finished copying images'
 
 # Fonts
@@ -71,7 +72,7 @@ css: clean_css
 	@echo 'Compiling CSS'
 	@mkdir -p $(BASEPATH_DEST_CSS)
 	@$(NODE_SASS) `echo $(GET_FROM) | sed -e 's/,/ /g'` -o $(BASEPATH_DEST_CSS) --source-map $(BASEPATH_DEST_CSS) --quiet
-	@node scripts/postbuild-css.js --directory $(BASEPATH_DEST_CSS)/**/*
+	@node scripts/postbuild-css.js --directory $(BASEPATH_DEST_CSS)
 	@echo 'Finished compiling CSS'
 
 # Browsersync
