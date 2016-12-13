@@ -1,24 +1,24 @@
 .crumb {
-    list-style: none;
-    margin: $base-spacing-unit-tiny 0 0 0;
-    padding: 0;
-    color: $grey75;
-    li {
-        display: inline;
-        & > a {
-            color: $grey75;
-            text-decoration: underline;
-            &:hover, :active {
-                color: $black;
-            }
-        }
+  list-style: none;
+  margin: $base-spacing-unit-tiny 0 0 0;
+  padding: 0;
+  color: $grey75;
+  li {
+    display: inline;
+    & > a {
+      color: $grey75;
+      text-decoration: underline;
+      &:hover, :active {
+        color: $black;
+      }
     }
-    li:after {
-        content: '/';
-        padding: 0 $base-spacing-unit-tiny;
-    }
-    li:last-child:after{
-        content: '';
-        padding: 0 $base-spacing-unit-tiny;
-    }
+  }
+  li:after {
+    content: '/';
+    padding: 0 $base-spacing-unit-tiny;
+  }
+  li:last-child:after{
+    content: '';
+    padding: 0 $base-spacing-unit-tiny;
+  }
 }
