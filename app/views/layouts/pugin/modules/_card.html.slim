@@ -1,12 +1,15 @@
-.card class = (properties[:house] == "HouseOfCommons" ? "member" : "lord")
-  img[alt="#{properties[:title]}" src="#{properties[:img_src]}"]
-  .info
-      h2
-        = properties[:title]
-      ul
-          - if properties.has_key?(:details)
-            - properties[:details].each do |hash|
-              li
-                - hash.each do |key, value|
-                  => value
+.r
+  .card class = (properties[:house] == "HouseOfCommons" ? "member" : "lord")
+    - if properties.has_key?(:image)
+      - properties[:image].each do |image|
+        img[alt="#{image[:alt]}" src="#{image[:src]}"]
+    .info
+        h2
+          = properties[:title]
+        ul
+            - if properties.has_key?(:details)
+              - properties[:details].each do |hash|
+                li
+                  - hash.each do |key, value|
+                    => value
 

@@ -1,15 +1,14 @@
-// Generic Card
 .card {
-  padding: $base-spacing-unit-small 0;
   & > img {
-    height: auto;
-    max-width: 200px;
     vertical-align: bottom;
   }
   .info {
     display: inline-block;
     padding: 0 10px;
     vertical-align: top;
+    h2 {
+      padding: 0;
+    }
     ul {
       margin: 0;
       list-style: none;
@@ -18,10 +17,6 @@
         display: block;
       }
     }
-    h2 {
-      padding: 0;
-      font-weight: 600;
-    }
   }
 }
 
@@ -29,30 +24,25 @@ ul.people-list {
   margin: 0;
   padding: 0;
   list-style: none;
-
   li {
-    padding: inherit;
+    padding: 0;
   }
   .card {
     border-bottom: 1px solid #D6D6D6;
-
-    &.member > img {
-      border-left: $base-spacing-unit-tiny solid $parl-green;
-      padding-left: $base-spacing-unit-small;
-    }
-
-    &.lord > img {
-      border-left: $base-spacing-unit-tiny solid $parl-red;
-      padding-left: $base-spacing-unit-small;
-    }
-
     & > :last-child {
       border-bottom: none;
     }
-
-    & > img {
-      max-height: 120px;
-      width: auto;
+    li {
+      padding: inherit;
+    }
+    &.member > img {
+      border-left: $base-spacing-unit-tiny solid $parl-green;
+    }
+    &.lord > img {
+      border-left: $base-spacing-unit-tiny solid $parl-red;
+    }
+    & > :last-child {
+      border-bottom: none;
     }
     .info {
       ul {
@@ -70,7 +60,81 @@ ul.people-list {
         }
       }
     }
+
   }
 }
 
+@include media($mobile) {
+  .card {
+    padding: $base-spacing-unit-tiny 0;
+    & > img {
+      height: auto;
+      width: 25%;
+    }
+    .info {
+      width: 75%;
+    }
+  }
+  ul.people-list {
+    .card {
+      & > img {
+        height: auto;
+        width: 25%;
+      }
+      &.member > img {
+        padding-left: $base-spacing-unit-tiny;
+      }
+      &.lord > img {
+        padding-left: $base-spacing-unit-tiny;
+      }
+      .info {
+        width: 75%;
+      }
+    }
+  }
+}
 
+@include media($tablet) {
+  .card {
+    & > img {
+      max-height: 120px;
+      width: auto;
+    }
+  }
+  ul.people-list {
+    .card {
+      padding: $base-spacing-unit-tiny 0;
+      &.member > img {
+        padding-left: $base-spacing-unit-tiny;
+      }
+      &.lord > img {
+        padding-left: $base-spacing-unit-tiny;
+      }
+    }
+  }
+}
+
+@include media($desktop) {
+  // Generic Card
+  .card {
+    padding: $base-spacing-unit-small 0;
+    .info {
+      height: auto;
+      width: auto;
+    }
+  }
+  ul.people-list {
+    .card {
+      &.member > img {
+        padding-left: $base-spacing-unit-small;
+      }
+      &.lord > img {
+        padding-left: $base-spacing-unit-small;
+      }
+    }
+  }
+}
+
+@include media($widescreen) {
+
+}
