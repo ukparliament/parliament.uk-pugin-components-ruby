@@ -7,10 +7,14 @@
 
     background: $black;
     border: solid 1px $black;
+    display: list-item;
+    padding: 0;
     text-align: center;
 
     a {
       color: $white;
+      display: block;
+      padding: $base-spacing-unit-small;
       text-decoration: none;
     }
 
@@ -33,11 +37,9 @@
   li.active,
   li:hover {
     background: $white;
-    cursor: pointer;
 
     a {
       color: $black;
-      text-decoration: none;
     }
   }
 }
