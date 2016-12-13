@@ -1,0 +1,18 @@
+.badge {
+  display: inline-block;
+  padding: $base-spacing-unit-tiny;
+  background: $black;
+  color: $white;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  &.small {
+    font-size: 10px;
+  }
+  &.large {
+    font-size: 14px;
+  }
+  @include border-radius($base-spacing-unit-tiny);
+}
