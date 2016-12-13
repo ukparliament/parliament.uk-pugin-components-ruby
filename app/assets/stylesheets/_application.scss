@@ -3,8 +3,9 @@
 @import 'settings/spacing';
 @import 'settings/colours';
 
-// Import tools
-@import 'tools/helpers';
+// Import tools & mixins
+@import 'tools/mixins/border-radius';
+@import 'tools/mixins/screenreader';
 
 // Vendor files
 @import '../../../node_modules/normalize.css/normalize';
@@ -30,12 +31,14 @@
 // Import site-wide components
 @import 'components/alerts';
 @import 'components/atoz';
+@import 'components/badges';
 @import 'components/breadcrumbs';
 @import 'components/card';
 @import 'components/contact';
 @import 'components/footer';
 @import 'components/header';
 @import 'components/info-block';
+@import 'components/pagination';
 @import 'components/panel';
 
 // Import Trumps
