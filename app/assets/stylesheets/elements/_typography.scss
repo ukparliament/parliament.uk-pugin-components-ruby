@@ -1,39 +1,81 @@
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+  padding: 0;
   line-height: 1.5;
 }
 
-h1 {
-  font-size: 40px;
-  padding: $base-spacing-unit-small 0;
+// Mobile Typography Settings
+@include media($mobile) {
+  h1 {
+    font-size: 22px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  p, li {
+    font-size: 12px;
+  }
 }
 
-h2 {
-  font-size: 32px;
-  padding: $base-spacing-unit-small 0;
+// Tablet Typography Settings
+@include media($tablet) {
+  h1 {
+    font-size: 34px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  p, li {
+    font-size: $base-font-size;
+  }
 }
 
-h3 {
-  font-size: 28px;
-  padding: $base-spacing-unit-small 0;
+// Small Desktop Typography Settings
+@include media($desktop) {
+  h1 {
+    font-size: 40px;
+    padding: $base-spacing-unit-small 0;
+  }
+
+  h2 {
+    font-size: 32px;
+    padding: $base-spacing-unit-small 0;
+  }
+
+  h3 {
+    font-size: 28px;
+    padding: $base-spacing-unit-small 0;
+  }
+
+  h4 {
+    font-size: 24px;
+    padding: $base-spacing-unit-small 0;
+  }
+
+  h5 {
+    font-size: 22px;
+    padding: $base-spacing-unit-tiny 0;
+  }
+
+  h6 {
+    font-size: 18px;
+    padding: $base-spacing-unit-tiny 0;
+  }
+
+  p, li {
+    font-size: $base-font-size;
+    padding: $base-spacing-unit-tiny 0;
+  }
 }
 
-h4 {
-  font-size: 24px;
-  padding: $base-spacing-unit-small 0;
+// Default Typography Settings
+@include media($widescreen) {
+
 }
 
-h5 {
-  font-size: 22px;
-  padding: $base-spacing-unit-tiny 0;
-}
-
-h6 {
-  font-size: 18px;
-  padding: $base-spacing-unit-tiny 0;
-}
-
-p {
-  font-size: $base-font-size;
-  padding: $base-spacing-unit-tiny 0;
-}
