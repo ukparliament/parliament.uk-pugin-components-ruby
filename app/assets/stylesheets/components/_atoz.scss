@@ -3,27 +3,34 @@
   list-style-type: none;
 
   li {
-    @include span-columns (.86);
+    @include span-columns (.905);
 
     background: $black;
     border: solid 1px $black;
+    display: list-item;
+    float: left;
     margin-bottom: $base-spacing-unit-tiny;
+    padding: 0;
     text-align: center;
 
     a {
       color: $white;
+      display: block;
+      padding: $base-spacing-unit-small;
       text-decoration: none;
+    }
+
+    @include media($mobile) {
+      @include span-columns (.95);
     }
   }
 
   li.active,
   li:hover {
     background: $white;
-    cursor: pointer;
 
     a {
       color: $black;
-      text-decoration: none;
     }
   }
 }
