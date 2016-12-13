@@ -5,9 +5,9 @@ const argv    = require('minimist')(process.argv.slice(2)),
 
 function processImage(filePath) {
   fs.readFile(filePath, (error, data) => {
-    console.log('Generating PNG from SVG located in: ' + filePath)
+    console.log(`Generating PNG from SVG located in: ${filePath}`);
     svg2png(data, { width: 300 })
-      .then(buffer => fs.writeFile(filePath + '.png', buffer))
+      .then(buffer => fs.writeFile(`${filePath}.png`, buffer))
       .catch(e => console.error(e));
   });
 }
