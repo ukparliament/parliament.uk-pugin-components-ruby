@@ -1,22 +1,76 @@
 // Generic Card
-
-.u-card {
+.card {
   padding: $base-spacing-unit-small 0;
-}
-
-// Profile Card Only
-
-.prf-name {
-  text-transform: capitalize;
-}
-
-.prf-info {
-  padding: 0 0 $base-spacing-unit-small 0;
-}
-
-.prf-pic {
-  & img {
+  & > img {
     height: auto;
-    width: auto;
+    max-width: 200px;
+    vertical-align: bottom;
+  }
+  .info {
+    display: inline-block;
+    padding: 0 10px;
+    vertical-align: top;
+    ul {
+      margin: 0;
+      list-style: none;
+      line-height: 1.7;
+      & > li {
+        display: block;
+      }
+    }
+    h2 {
+      padding: 0;
+      font-weight: 600;
+    }
   }
 }
+
+ul.people-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: inherit;
+  }
+  .card {
+    border-bottom: 1px solid #D6D6D6;
+
+    &.member > img {
+      border-left: $base-spacing-unit-tiny solid $parl-green;
+      padding-left: $base-spacing-unit-small;
+    }
+
+    &.lord > img {
+      border-left: $base-spacing-unit-tiny solid $parl-red;
+      padding-left: $base-spacing-unit-small;
+    }
+
+    & > :last-child {
+      border-bottom: none;
+    }
+
+    & > img {
+      max-height: 120px;
+      width: auto;
+    }
+    .info {
+      ul {
+        & > li:not(:first-child) {
+          display: inline;
+        }
+        & > li:nth-child(2) {
+          &:after {
+            content: "|";
+            padding: 0 $base-spacing-unit-tiny;
+          }
+          a {
+            float: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+
