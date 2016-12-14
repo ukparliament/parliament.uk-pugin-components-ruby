@@ -97,7 +97,7 @@ ul.people-list {
 @include media($tablet) {
   .card {
     & > img {
-      max-height: 120px;
+      max-height: 180px;
       width: auto;
     }
   }
