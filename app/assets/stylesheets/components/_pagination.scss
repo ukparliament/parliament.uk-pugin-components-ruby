@@ -1,6 +1,8 @@
 .pagination{
   @include outer-container;
   list-style-type: none;
+  margin-top: $base-spacing-unit-tiny;
+  margin-bottom: $base-spacing-unit-tiny;
 
   li {
     @include span-columns (1);
