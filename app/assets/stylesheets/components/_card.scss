@@ -55,7 +55,7 @@ ul.people-list {
             padding: 0 $base-spacing-unit-tiny;
           }
           a {
-            float: left;
+            //float: left;
           }
         }
       }
@@ -69,10 +69,16 @@ ul.people-list {
     padding: $base-spacing-unit-tiny 0;
     & > img {
       height: auto;
-      width: 25%;
+      width: 30%;
     }
     .info {
-      width: 75%;
+      width: 70%;
+
+      ul {
+        & > li {
+          padding: 0;
+        }
+      }
     }
   }
   ul.people-list {
@@ -96,6 +102,7 @@ ul.people-list {
 
 @include media($tablet) {
   .card {
+    padding: $base-spacing-unit-tiny 0;
     & > img {
       max-height: 180px;
       width: auto;
