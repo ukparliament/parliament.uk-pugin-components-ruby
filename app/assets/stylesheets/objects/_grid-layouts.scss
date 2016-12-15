@@ -11,25 +11,21 @@
 
 // Container Members Prototype (IN WORKS)
 .c-fg2 {
-
-    @include media($mobile) {
-      max-width: 96%;
-      margin: 0 auto;
-    }
-
-    @include media($tablet) {
-      max-width: 96%;
-      margin: 0 auto;
-    }
-
-    @include media($desktop) {
-      max-width: 1170px;
-      margin: 0 auto;
-    }
-
-    @include media($widescreen) {
-      @include outer-container;
-    }
+  @include media($mobile) {
+    max-width: 96%;
+    margin: 0 auto;
+  }
+  @include media($tablet) {
+    max-width: 96%;
+    margin: 0 auto;
+  }
+  @include media($desktop) {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  @include media($widescreen) {
+    @include outer-container;
+  }
 }
 
 // Standard Row

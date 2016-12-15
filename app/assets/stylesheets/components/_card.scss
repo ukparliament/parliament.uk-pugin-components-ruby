@@ -69,10 +69,13 @@ ul.people-list {
     padding: $base-spacing-unit-tiny 0;
     & > img {
       height: auto;
-      width: 25%;
+      width: 30%;
     }
     .info {
-      width: 75%;
+      width: 70%;
+      li {
+        padding: 3px 0;
+      }
     }
   }
   ul.people-list {
@@ -96,6 +99,7 @@ ul.people-list {
 
 @include media($tablet) {
   .card {
+    padding: $base-spacing-unit-small 0;
     & > img {
       max-height: 180px;
       width: auto;
@@ -117,7 +121,6 @@ ul.people-list {
 @include media($desktop) {
   // Generic Card
   .card {
-    padding: $base-spacing-unit-small 0;
     .info {
       height: auto;
       width: auto;
