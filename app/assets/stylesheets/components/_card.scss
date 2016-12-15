@@ -55,7 +55,7 @@ ul.people-list {
             padding: 0 $base-spacing-unit-tiny;
           }
           a {
-            float: left;
+            //float: left;
           }
         }
       }
@@ -73,8 +73,11 @@ ul.people-list {
     }
     .info {
       width: 70%;
-      li {
-        padding: 3px 0;
+
+      ul {
+        & > li {
+          padding: 0;
+        }
       }
     }
   }
@@ -99,7 +102,7 @@ ul.people-list {
 
 @include media($tablet) {
   .card {
-    padding: $base-spacing-unit-small 0;
+    padding: $base-spacing-unit-tiny 0;
     & > img {
       max-height: 180px;
       width: auto;
@@ -121,6 +124,7 @@ ul.people-list {
 @include media($desktop) {
   // Generic Card
   .card {
+    padding: $base-spacing-unit-small 0;
     .info {
       height: auto;
       width: auto;
