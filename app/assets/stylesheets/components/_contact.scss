@@ -1,3 +1,22 @@
+.contact-details {
+  & > dl {
+    & > dd,
+    & > dt {
+      display: inline;
+    }
+    & > dt {
+      font-weight: bold;
+      text-transform: capitalize;
+      &:after {
+        content: ' :';
+        padding-right: $base-spacing-unit-tiny;
+      }
+    }
+  }
+}
+
+// Legacy Styling - To Be Removed
+
 .cnt-default {
   background-color: $grey05;
   margin: $base-spacing-unit-small 0 0 0;

@@ -1,11 +1,9 @@
-.c-fg
-  .u-panel
-    h2 Contact
-    - if properties[:is_mp] == true
-      .cnt-default
-        a[href="http://google.com"] Who should I contact?
-        p Your MP can only help with certain matters. Find out if they're the best person to contact
-    .cnt-details
+.contact-details
+  h2 Contact
+  - if properties[:is_mp] == true
+    .panel
+      a[href="http://google.com"] Who should I contact?
+      p Your MP can only help with certain matters. Find out if they're the best person to contact
       - properties[:address].each do |address|
         - address.each do |key, value|
           - if render_if_exists(key)
@@ -13,4 +11,3 @@
               h3 = value
             - else
               = PUGIN.get_component('modules/info-block', {info_title: key, info_description: value})
-
