@@ -3,6 +3,7 @@
   & > ol {
     list-style-type: none;
     margin-top: $base-spacing-unit-tiny;
+    margin-left: 0;
     padding: 0;
     color: $grey75;
     & > li {
