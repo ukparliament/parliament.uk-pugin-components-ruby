@@ -1,81 +1,82 @@
+// Base Typography Resets
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
-  line-height: 1.5;
 }
 
-// Mobile Typography Settings
+// Fontsize Mixin Creates 'font-size' & 'line-height' in REM with PX fallback
+
+// Mobile Typography Settings (pixels)
 @include media($mobile) {
   h1 {
-    font-size: 22px;
+    @include fontsize(22);
   }
   h2 {
-    font-size: 20px;
+    @include fontsize(20);
   }
   h3 {
-    font-size: 18px;
+    @include fontsize(18);
   }
-  p, li {
-    font-size: 12px;
+  h4 {
+    @include fontsize(16);
+  }
+  h5 {
+    @include fontsize(14);
+  }
+  h6 {
+    @include fontsize(14);
+  }
+  p {
+    @include fontsize(12);
   }
 }
 
-// Tablet Typography Settings
+// Tablet Typography Settings (pixels)
 @include media($tablet) {
   h1 {
-    font-size: 34px;
+    @include fontsize(34);
   }
   h2 {
-    font-size: 26px;
+    @include fontsize(30);
   }
   h3 {
-    font-size: 22px;
+    @include fontsize(26);
   }
-  p, li {
-    font-size: $base-font-size;
+  h4 {
+    @include fontsize(22);
+  }
+  h5 {
+    @include fontsize(18);
+  }
+  h6 {
+    @include fontsize(16);
+  }
+  p {
+    @include fontsize(14);
   }
 }
 
-// Small Desktop Typography Settings
+// Desktop Typography Settings (pixels)
 @include media($desktop) {
   h1 {
-    font-size: 40px;
-    padding: $base-spacing-unit-small 0;
+    @include fontsize(40);
   }
-
   h2 {
-    font-size: 32px;
-    padding: $base-spacing-unit-small 0;
+    @include fontsize(34);
   }
-
   h3 {
-    font-size: 28px;
-    padding: $base-spacing-unit-small 0;
+    @include fontsize(28);
   }
-
   h4 {
-    font-size: 24px;
-    padding: $base-spacing-unit-small 0;
+    @include fontsize(24);
   }
-
   h5 {
-    font-size: 22px;
-    padding: $base-spacing-unit-tiny 0;
+    @include fontsize(20);
   }
-
   h6 {
-    font-size: 18px;
-    padding: $base-spacing-unit-tiny 0;
+    @include fontsize(18);
   }
-
-  p, li {
-    font-size: $base-font-size;
-    padding: $base-spacing-unit-tiny 0;
+  p {
+    @include fontsize(16);
   }
 }
-
-// Default Typography Settings
-@include media($widescreen) {
-
-}
-
