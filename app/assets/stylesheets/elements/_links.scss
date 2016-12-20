@@ -3,7 +3,9 @@
 a {
   color: $blue-light;
   text-decoration: underline;
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     color: $blue-dark;
     text-decoration: none;
   }
