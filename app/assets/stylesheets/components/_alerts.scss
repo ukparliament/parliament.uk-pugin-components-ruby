@@ -2,18 +2,19 @@
   border: solid 1px transparent;
   padding: $base-spacing-unit-tiny;
   & > p > i {
-    margin: 0 $base-spacing-unit-small 0 $base-spacing-unit-tiny;
+    margin-left: $base-spacing-unit-tiny;
+    margin-right: $base-spacing-unit-small;
   }
   & .close {
     float: right;
     border: none;
     padding: 0;
-    margin: 0 $base-spacing-unit-tiny 0 0;
+    margin-right: $base-spacing-unit-tiny;
     background: none;
     cursor: pointer;
   }
   &.standard {
-    background: $grey05;
+    background-color: $grey05;
     border-color: $grey20;
     color: $grey100;
     & .close {
@@ -21,7 +22,7 @@
     }
   }
   &.information {
-    background: $info-back;
+    background-color: $info-back;
     border-color: $info-border;
     color: $info-text;
     & .close {
@@ -29,7 +30,7 @@
     }
   }
   &.success {
-    background: $succ-back;
+    background-color: $succ-back;
     border-color: $succ-border;
     color: $succ-text;
     & .close {
@@ -37,7 +38,7 @@
     }
   }
   &.warning {
-    background: $warn-back;
+    background-color: $warn-back;
     border-color: $warn-border;
     color: $warn-text;
     & .close {
@@ -45,7 +46,7 @@
     }
   }
   &.error {
-    background: $eror-back;
+    background-color: $eror-back;
     border-color: $eror-border;
     color: $eror-text;
     & .close {

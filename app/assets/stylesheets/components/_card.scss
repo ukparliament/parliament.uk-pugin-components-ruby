@@ -1,3 +1,7 @@
+.member-card {
+  @include row();
+}
+
 .card {
   & > img {
     vertical-align: bottom;

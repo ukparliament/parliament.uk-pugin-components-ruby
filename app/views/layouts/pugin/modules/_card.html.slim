@@ -1,4 +1,4 @@
-.r
+.member-card
   .card class = (properties[:house] == "HouseOfCommons" ? "member" : "lord")
     - if properties.has_key?(:image)
       - properties[:image].each do |image|
@@ -12,4 +12,3 @@
                 li
                   - hash.each do |key, value|
                     => value
-
