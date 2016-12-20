@@ -1,7 +1,8 @@
 .ftr {
-  @include clearfix;
+  @include row();
   border-top: solid 4px $grey20;
-  padding: $base-spacing-unit-small 0;
+  padding-top: $base-spacing-unit-small;
+  padding-bottom: $base-spacing-unit-small;
   &-cpy {
     @include span-columns(7.9);
     @include shift(0.1);
@@ -12,8 +13,9 @@
     &-icn {
       float: right;
       display: block;
-      background: url('../_img/pugin/portcullis--black.svg.png') no-repeat;
-      background: url('../_img/pugin/portcullis--black.svg') no-repeat;
+      background-image: url('../_img/pugin/portcullis--black.svg.png');
+      background-image: url('../_img/pugin/portcullis--black.svg');
+      background-repeat: no-repeat;
       width: 50px;
       height: 58px;
     }

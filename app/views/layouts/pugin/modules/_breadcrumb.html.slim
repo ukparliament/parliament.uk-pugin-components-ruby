@@ -1,5 +1,5 @@
-.r
-  ol.crumb
+.breadcrumb
+  ol
     - url = ""
     - properties[:breadcrumbs].each_with_index do |breadcrumb, index|
       - (url ||= "") << "/" << breadcrumb[:slug]

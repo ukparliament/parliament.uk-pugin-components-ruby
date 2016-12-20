@@ -1,8 +1,11 @@
 .contact-details {
+  margin-bottom: $base-spacing-unit-small;
   & > dl {
+    padding: 0;
+    & > dt,
     & > dd,
-    & > dt {
-      display: inline;
+    & > dd > p {
+      display: inline-block;
     }
     & > dt {
       font-weight: bold;
@@ -12,23 +15,5 @@
         padding-right: $base-spacing-unit-tiny;
       }
     }
-  }
-}
-
-// Legacy Styling - To Be Removed
-
-.cnt-default {
-  background-color: $grey05;
-  margin: $base-spacing-unit-small 0 0 0;
-  padding: $base-spacing-unit-small;
-  & > a {
-    font-weight: bold;
-  }
-}
-
-.cnt-details {
-  padding: $base-spacing-unit-tiny 0;
-  & > dl {
-    display: inline-block;
   }
 }
