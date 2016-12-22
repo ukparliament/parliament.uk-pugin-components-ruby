@@ -8,17 +8,17 @@
   }
   .info {
     display: inline-block;
-    padding: 0 10px;
+    padding-left: $base-spacing-unit-small;
+    padding-right: $base-spacing-unit-small;
     vertical-align: top;
-    h2 {
-      padding: 0;
-    }
     ul {
       margin: 0;
-      list-style: none;
-      line-height: 1.7;
+      padding: 0;
+      list-style-image: none;
       & > li {
         display: block;
+        padding-top: 6px;
+        padding-bottom: 6px;
       }
     }
   }
@@ -27,17 +27,11 @@
 ul.people-list {
   margin: 0;
   padding: 0;
-  list-style: none;
-  li {
-    padding: 0;
-  }
-  .card {
+  list-style-image: none;
+  li.card {
     border-bottom: 1px solid #D6D6D6;
-    & > :last-child {
+    &:last-child {
       border-bottom: none;
-    }
-    li {
-      padding: inherit;
     }
     &.member > img {
       border-left: $base-spacing-unit-tiny solid $parl-green;
@@ -45,10 +39,8 @@ ul.people-list {
     &.lord > img {
       border-left: $base-spacing-unit-tiny solid $parl-red;
     }
-    & > :last-child {
-      border-bottom: none;
-    }
     .info {
+      display: inline-block;
       ul {
         & > li:not(:first-child) {
           display: inline;
@@ -56,40 +48,40 @@ ul.people-list {
         & > li:nth-child(2) {
           &:after {
             content: "|";
-            padding: 0 $base-spacing-unit-tiny;
-          }
-          a {
-            //float: left;
+            padding-left: $base-spacing-unit-tiny;
+            padding-right: $base-spacing-unit-tiny;
           }
         }
       }
     }
-
   }
 }
 
 @include media($mobile) {
   .card {
-    padding: $base-spacing-unit-tiny 0;
-    & > img {
-      height: auto;
-      width: 30%;
+    padding-top: $base-spacing-unit-tiny;
+    padding-bottom: $base-spacing-unit-tiny;
+    & img {
+      width: 100px;
+      height: 100px;
     }
     .info {
-      width: 70%;
-
+      width: 60%;
+      padding-right: 0;
       ul {
         & > li {
-          padding: 0;
+          padding-bottom: $base-spacing-unit-small;
         }
       }
     }
   }
   ul.people-list {
     .card {
+      padding-top: $base-spacing-unit-tiny;
+      padding-bottom: $base-spacing-unit-tiny;
       & > img {
-        height: auto;
-        width: 25%;
+        width: 75px;
+        height: 75px;
       }
       &.member > img {
         padding-left: $base-spacing-unit-tiny;
@@ -98,7 +90,7 @@ ul.people-list {
         padding-left: $base-spacing-unit-tiny;
       }
       .info {
-        width: 75%;
+        display: inline-block;
       }
     }
   }
@@ -106,32 +98,41 @@ ul.people-list {
 
 @include media($tablet) {
   .card {
-    padding: $base-spacing-unit-tiny 0;
-    & > img {
-      max-height: 180px;
-      width: auto;
+    padding-top: $base-spacing-unit-tiny;
+    padding-bottom: $base-spacing-unit-tiny;
+    & img {
+      width: 140px;
+      height: 140px;
     }
   }
   ul.people-list {
     .card {
-      padding: $base-spacing-unit-tiny 0;
+      padding-top: $base-spacing-unit-tiny;
+      padding-bottom: $base-spacing-unit-tiny;
+      & > img {
+        width: 120px;
+        height: 120px;
+      }
       &.member > img {
         padding-left: $base-spacing-unit-tiny;
       }
       &.lord > img {
         padding-left: $base-spacing-unit-tiny;
+      }
+      .info {
+        display: inline-block;
       }
     }
   }
 }
 
 @include media($desktop) {
-  // Generic Card
   .card {
-    padding: $base-spacing-unit-small 0;
+    padding-top: $base-spacing-unit-small;
+    padding-bottom: $base-spacing-unit-small;
     .info {
-      height: auto;
-      width: auto;
+      width: 160px;
+      height: 160px;
     }
   }
   ul.people-list {
@@ -144,8 +145,4 @@ ul.people-list {
       }
     }
   }
-}
-
-@include media($widescreen) {
-
 }

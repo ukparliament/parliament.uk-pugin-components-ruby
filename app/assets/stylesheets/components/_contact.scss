@@ -16,4 +16,14 @@
       }
     }
   }
+  & > h2 {
+    padding-bottom: $base-spacing-unit-tiny;
+  }
+  & > h3 {
+    padding-top: $base-spacing-unit-tiny;
+    padding-bottom: $base-spacing-unit-tiny;
+  }
+  & > dl {
+    padding-bottom: $base-spacing-unit-tiny;
+  }
 }
