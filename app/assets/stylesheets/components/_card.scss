@@ -14,11 +14,11 @@
     ul {
       margin: 0;
       padding: 0;
-      list-style-image: none;
+      list-style-type: none;
       & > li {
         display: block;
-        padding-top: 6px;
-        padding-bottom: 6px;
+        padding-top: $base-spacing-unit-tiny;
+        padding-bottom: $base-spacing-unit-tiny;
       }
     }
   }
@@ -27,7 +27,7 @@
 ul.people-list {
   margin: 0;
   padding: 0;
-  list-style-image: none;
+  list-style-type: none;
   li.card {
     border-bottom: 1px solid #D6D6D6;
     &:last-child {
@@ -63,10 +63,11 @@ ul.people-list {
     padding-bottom: $base-spacing-unit-tiny;
     & img {
       width: 100px;
-      height: 100px;
+      height: auto;
     }
     .info {
       width: 60%;
+      padding-left: $base-spacing-unit-tiny;
       padding-right: 0;
       ul {
         & > li {
@@ -80,8 +81,8 @@ ul.people-list {
       padding-top: $base-spacing-unit-tiny;
       padding-bottom: $base-spacing-unit-tiny;
       & > img {
-        width: 75px;
-        height: 75px;
+        width: 100px;
+        height: auto;
       }
       &.member > img {
         padding-left: $base-spacing-unit-tiny;
@@ -101,8 +102,8 @@ ul.people-list {
     padding-top: $base-spacing-unit-tiny;
     padding-bottom: $base-spacing-unit-tiny;
     & img {
-      width: 140px;
-      height: 140px;
+      width: 160px;
+      height: auto;
     }
   }
   ul.people-list {
@@ -110,8 +111,8 @@ ul.people-list {
       padding-top: $base-spacing-unit-tiny;
       padding-bottom: $base-spacing-unit-tiny;
       & > img {
-        width: 120px;
-        height: 120px;
+        width: 130px;
+        height: auto;
       }
       &.member > img {
         padding-left: $base-spacing-unit-tiny;
@@ -130,10 +131,6 @@ ul.people-list {
   .card {
     padding-top: $base-spacing-unit-small;
     padding-bottom: $base-spacing-unit-small;
-    .info {
-      width: 160px;
-      height: 160px;
-    }
   }
   ul.people-list {
     .card {
