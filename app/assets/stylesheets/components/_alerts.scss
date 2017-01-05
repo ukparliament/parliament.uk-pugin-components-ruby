@@ -1,18 +1,19 @@
 .alert {
   border: solid 1px transparent;
-  padding: $base-spacing-unit-tiny;
-  & > p > i {
-    margin-left: $base-spacing-unit-tiny;
-    margin-right: $base-spacing-unit-small;
+  padding: $base-spacing-unit-tiny $base-spacing-unit-small;
+  & > i {
+    margin-right: $base-spacing-unit-tiny;
   }
   & .close {
+    position: relative;
     float: right;
-    border: none;
-    padding: 0;
-    margin-right: $base-spacing-unit-tiny;
+    top: -($base-spacing-unit-tiny - 2);
+    padding: 0 0 0 $base-spacing-unit-small;
     background: none;
+    border: none;
     cursor: pointer;
   }
+  // Alert Status Option Styling
   &.standard {
     background-color: $grey05;
     border-color: $grey20;
@@ -30,27 +31,54 @@
     }
   }
   &.success {
-    background-color: $succ-back;
-    border-color: $succ-border;
-    color: $succ-text;
+    background-color: $success-back;
+    border-color: $success-border;
+    color: $success-text;
     & .close {
-      color: $succ-text;
+      color: $success-text;
     }
   }
   &.warning {
-    background-color: $warn-back;
-    border-color: $warn-border;
-    color: $warn-text;
+    background-color: $warning-back;
+    border-color: $warning-border;
+    color: $warning-text;
     & .close {
-      color: $warn-text;
+      color: $warning-text;
     }
   }
   &.error {
-    background-color: $eror-back;
-    border-color: $eror-border;
-    color: $eror-text;
+    background-color: $error-back;
+    border-color: $error-border;
+    color: $error-text;
     & .close {
-      color: $eror-text;
+      color: $error-text;
+    }
+  }
+}
+// Mobile Alert Component Styling
+@include media($mobile) {
+  .alerts {
+    @include fontsize(12);
+    & .close {
+      @include fontsize(16);
+    }
+  }
+}
+// Tablet Alert Component Styling
+@include media($tablet) {
+  .alerts {
+    @include fontsize(14);
+    & .close {
+      @include fontsize(16);
+    }
+  }
+}
+// Desktop Alert Component Styling
+@include media($desktop) {
+  .alerts {
+    @include fontsize(16);
+    & .close {
+      @include fontsize(18);
     }
   }
 }
