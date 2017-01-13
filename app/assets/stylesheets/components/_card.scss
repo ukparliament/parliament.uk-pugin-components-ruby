@@ -3,11 +3,17 @@
 }
 
 .card {
+  padding-top: $base-spacing-unit-small;
+  padding-bottom: $base-spacing-unit-small;
   & > img {
+    width: 160px;
+    height: 160px;
     vertical-align: bottom;
   }
   .info {
     display: inline-block;
+    // IE => 7 specfic star hack - better in conditional stylesheet? See STYLE-60
+    // *display: inline;
     padding-left: $base-spacing-unit-small;
     padding-right: $base-spacing-unit-small;
     vertical-align: top;
@@ -33,6 +39,10 @@ ul.people-list {
     &:last-child {
       border-bottom: none;
     }
+    & > img {
+      width: 160px;
+      height: 160px;
+    }
     &.member > img {
       border-left: $base-spacing-unit-tiny solid $parl-green;
     }
@@ -41,6 +51,8 @@ ul.people-list {
     }
     .info {
       display: inline-block;
+      // IE => 7 specfic star hack - better in conditional stylesheet? See STYLE-60
+      // *display: inline;
       ul {
         & > li:not(:first-child) {
           display: inline;
@@ -77,7 +89,7 @@ ul.people-list {
     }
   }
   ul.people-list {
-    .card {
+    li.card {
       padding-top: $base-spacing-unit-tiny;
       padding-bottom: $base-spacing-unit-tiny;
       & > img {
@@ -107,7 +119,7 @@ ul.people-list {
     }
   }
   ul.people-list {
-    .card {
+    li.card {
       padding-top: $base-spacing-unit-tiny;
       padding-bottom: $base-spacing-unit-tiny;
       & > img {
@@ -133,7 +145,7 @@ ul.people-list {
     padding-bottom: $base-spacing-unit-small;
   }
   ul.people-list {
-    .card {
+    li.card {
       &.member > img {
         padding-left: $base-spacing-unit-small;
       }

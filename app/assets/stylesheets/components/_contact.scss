@@ -5,14 +5,14 @@
     & > dt,
     & > dd,
     & > dd > p {
-      display: inline-block;
+      display: inline;
     }
     & > dt {
       font-weight: bold;
       text-transform: capitalize;
+      padding-right: $base-spacing-unit-tiny;
       &:after {
         content: ' :';
-        padding-right: $base-spacing-unit-tiny;
       }
     }
   }
