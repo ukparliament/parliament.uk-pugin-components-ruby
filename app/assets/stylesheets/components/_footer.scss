@@ -9,15 +9,15 @@
   }
   &-lgo {
     @include span-columns(3.95);
-    @include shift(-0.05)
+    @include shift(-0.05);
     &-icn {
       float: right;
       display: block;
       background-image: url('../_img/pugin/portcullis--black.svg.png');
       background-image: url('../_img/pugin/portcullis--black.svg');
       background-repeat: no-repeat;
-      width: 50px;
-      height: 58px;
+      width: 42px;
+      height: 50px;
     }
   }
 }
