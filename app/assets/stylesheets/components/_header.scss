@@ -5,8 +5,8 @@
   &-lgo {
     display: block;
     margin-left: $base-spacing-unit-small;
-    background-image: url('../_img/pugin/parliament-uk--white.svg.png');
-    background-image: url('../_img/pugin/parliament-uk--white.svg');
+    background: url('../_img/pugin/parliament-uk--white.svg.png');
+    background-image: url('../_img/pugin/parliament-uk--white.svg'), none;
     background-repeat: no-repeat;
     width: 300px;
     height: 56px;
