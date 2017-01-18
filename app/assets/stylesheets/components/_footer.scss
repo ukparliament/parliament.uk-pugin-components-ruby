@@ -13,8 +13,8 @@
     &-icn {
       float: right;
       display: block;
-      background-image: url('../_img/pugin/portcullis--black.svg.png');
-      background-image: url('../_img/pugin/portcullis--black.svg');
+      background: url('../_img/pugin/portcullis--black.svg.png');
+      background-image: url('../_img/pugin/portcullis--black.svg'), none;
       background-repeat: no-repeat;
       width: 42px;
       height: 50px;
