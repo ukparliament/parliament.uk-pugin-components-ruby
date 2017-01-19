@@ -7,14 +7,14 @@
   li {
     @include span-columns (1);
 
-    background: $black;
+    background: $white;
     border: solid 1px $black;
     display: list-item;
     padding: 0;
     text-align: center;
 
     a {
-      color: $white;
+      color: $black;
       display: block;
       padding: $base-spacing-unit-small;
       text-decoration: none;
@@ -38,10 +38,10 @@
 
   li.active,
   li:hover {
-    background: $white;
+    background: $black;
 
     a {
-      color: $black;
+      color: $white;
     }
   }
 }

@@ -6,7 +6,7 @@
   li {
     @include span-columns (.905);
 
-    background-color: $black;
+    background-color: $white;
     border: solid 1px $black;
     display: list-item;
     float: left;
@@ -15,7 +15,7 @@
     text-align: center;
 
     a {
-      color: $white;
+      color: $black;
       display: block;
       padding: $base-spacing-unit-small;
       text-decoration: none;
@@ -28,10 +28,10 @@
 
   li.active,
   li:hover {
-    background-color: $white;
+    background-color: $black;
 
     a {
-      color: $black;
+      color: $white;
     }
   }
 }
