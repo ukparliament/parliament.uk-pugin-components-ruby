@@ -1,23 +1,10 @@
-# Ignore bundler config.
-/.bundle
+.bundle/
+log/*.log
+pkg/
+spec/dummy/db/*.sqlite3
+spec/dummy/db/*.sqlite3-journal
+spec/dummy/log/*.log
+spec/dummy/tmp/
 
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
-
-# Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
-
-# Ignore Byebug command history file.
-.byebug_history
-
-# Mac files
-.DS_Store
-Thumbs.db
-
-# Node
-/node_modules
-/npm-debug.log
+coverage
+.idea

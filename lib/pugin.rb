@@ -1,8 +1,5 @@
-Gem.loaded_specs['pugin'].dependencies.each do |d|
- require d.name
-end
-
-require "pugin/engine"
+require 'pugin/engine'
 
 module Pugin
+  # Your code goes here...
 end

@@ -1,9 +1,0 @@
-nav aria-label="Paged navigation"
-  ul.atoz-letters
-    - ('a'..'z').each do |letter|
-      - if "#{letter}" == "p"
-        li.active data-letter="#{letter}"
-          a data-atoz-see="true" href="#"
-      - else
-        li data-letter="#{letter}"
-          a data-atoz-see="true" href="#"
