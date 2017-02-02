@@ -5,13 +5,13 @@ describe Pugin::Engine do
     it 'exposes a compiled pugin/pugin.js file' do
       visit 'assets/pugin/pugin.js'
 
-      expect(page.text).to include('var pugin = {};')
+      expect(page.text).to include('document.body.classList.toggle(')
     end
 
     it 'exposes a compiled pugin/pugin.css file' do
       visit 'assets/pugin/pugin.css'
 
-      expect(page.text).to include('body#pugin { background-color: #ccc; }')
+      expect(page.text).to include('.status{')
     end
   end
 end

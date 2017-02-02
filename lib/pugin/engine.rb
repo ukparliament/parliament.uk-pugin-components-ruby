@@ -3,7 +3,8 @@ module Pugin
     isolate_namespace Pugin
 
     initializer 'pugin.assets.precompile' do |app|
-      app.config.assets.precompile += %w(pugin.js pugin.css)
+      app.config.assets.precompile += %w(pugin/pugin.js pugin/pugin.css pugin/*.png pugin/*.jpg pugin/*.jpeg
+                                         pugin/*.gif pugin/*.svg pugin/*.ico)
     end
 
     config.generators do |g|

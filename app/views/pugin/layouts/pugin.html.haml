@@ -1,0 +1,20 @@
+%doctype html
+%html{lang:'en'}
+  %head
+    %title Parliamentary Digital Service
+    -#%link{rel: 'stylesheet', href: 'http://CDN.com/app.css' }
+    = stylesheet_link_tag 'pugin/pugin', media: 'all', 'data-turbolinks-track' => true
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    = favicon_link_tag 'pugin/favicon.ico'
+  %body
+    .c-wrap
+      %a#top
+      = render 'pugin/components/header'
+      = render 'pugin/components/status'
+      .c-fg
+        .row
+          = yield
+      .footer-push
+    = render 'pugin/components/footer'
+    = javascript_include_tag 'pugin/pugin', 'data-turbolinks-track' => true
+    -#%script{src: 'http://CDN.com/app.js'}
