@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ['Matt Rayner']
   s.email       = ['mattrayner1@gmail.com']
   s.homepage    = 'https://github.com/ukparliament/pugin'
-  s.summary     = 'Pugin is a component-based pattern design library for UK PDS microservices.'
-  s.description = 'Pugin is a component-based pattern design library that holds all of the reusable partials, styles and scripts for elements of Parliamentary Digital Service microservices.'
+  s.summary     = 'Pugin is a component-based pattern design library for UK Parliament microservices.'
+  s.description = 'Pugin is a component-based pattern design library that holds all of the reusable partials, styles and scripts for elements of UK Parliament microservices.'
   s.license     = 'Open Parliament License'
 
   s.files = Dir["{app,config,db,lib}/**/*", 'LICENSE', 'Rakefile', 'README.md']
