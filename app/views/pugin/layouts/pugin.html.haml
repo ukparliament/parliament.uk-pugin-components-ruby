@@ -10,7 +10,7 @@
     .c-wrap
       %a#top
       = render 'pugin/components/header'
-      = render 'pugin/components/status'
+      = render partial: 'pugin/components/status', locals: { status: nil }
       .c-fg
         .row
           = yield
