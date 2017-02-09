@@ -12,11 +12,22 @@ describe 'pugin/components/_footer.html.haml', type: :view do
 <div class='c-fs footer'>
 <div class='c-fg'>
 <div class='row'>
-<div class='footer__logo'></div>
+<div class='footer__logo'>
+<img alt='parliament.uk' src='../images/parliament-uk--darkgrey.png' srcset='../images/parliament-uk--darkgrey.svg'>
+</div>
 <ul class='footer__list'>
-<li>Parliament.uk <a href="#">digital blog</a></li>
-<li>Visit the <a href="#">current parliament.uk</a> website</li>
-<li><a href="#">Cookie Policy</a></li>
+<li>
+Parliament.uk
+<a href='#'>digital blog</a>
+</li>
+<li>
+Visit the
+<a href='#'>current parliament.uk</a>
+website
+</li>
+<li>
+<a href='#'>Cookie Policy</a>
+</li>
 </ul>
 </div>
 </div>
