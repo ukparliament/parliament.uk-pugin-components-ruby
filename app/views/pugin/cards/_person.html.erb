@@ -1,7 +1,0 @@
-<div class="card card-small">
-  <h3><%= person.respond_to?(:name) ? person.name : '' %></h3>
-  <p><strong><%= person.respond_to?(:position) ? person.position : '' %></strong></p>
-  <% if person.respond_to?(:id) %>
-    <a class="cta" href="/people/<%= person.id %>">Find out more</a>
-  <% end %>
-</div>

@@ -3,7 +3,14 @@
     .c-fg
       .row
         .footer__logo
+          %img{:alt => "parliament.uk", :src => "../images/parliament-uk--darkgrey.png", :srcset => "../images/parliament-uk--darkgrey.svg"}/
         %ul.footer__list
-          %li Parliament.uk #{link_to 'digital blog', '#'}
-          %li Visit the #{link_to 'current parliament.uk', '#'} website
-          %li= link_to 'Cookie Policy', '#'
+          %li
+            Parliament.uk
+            %a{:href => "#"} digital blog
+          %li
+            Visit the
+            %a{:href => "#"} current parliament.uk
+            website
+          %li
+            %a{:href => "#"} Cookie Policy
