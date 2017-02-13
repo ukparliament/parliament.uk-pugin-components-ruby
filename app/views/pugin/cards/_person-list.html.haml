@@ -1,13 +1,4 @@
 .card__list
   %ul
-    - people.each do |person|
-      - if person.respond_to?(:name) && person.respond_to?(:id)
-        %li
-          %a{:href => "/people/#{person.id}"}= person.name
-      - if person.respond_to?(:constituency) && person.respond_to?(:constituency_id)
-        %li
-          MP for
-          %a{:href => "/constituencies/#{person.constituency_id}"}= person.constituency
-      - if person.respond_to?(:party) && person.respond_to?(:party_id)
-        %li
-          %a{:href => "/parties/#{person.party_id}"}= person.party
+    -# @people.each do |person|
+      
