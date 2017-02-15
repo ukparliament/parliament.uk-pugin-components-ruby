@@ -1,4 +1,14 @@
-.card__list
-  %ul
-  
-      
+%ol.result-list
+  - @people.each do |person|
+    %li.result-list__item
+      %ul
+        - if person.respond_to?(:full_name) && person.respond_to?(:graph_id)
+          %li
+            %a{:href => "/people/#{person.graph_id}"}= person.full_name
+        - if !person.constituencies.empty?
+          %li
+            MP for
+            %a{:href => "/constituencies/#{person.constituencies.first.graph_id}"}= person.constituencies.first.name
+        - if !person.parties.empty?
+          %li
+            %a{:href => "/parties/#{person.parties.first.graph_id}"}= person.parties.first.name
