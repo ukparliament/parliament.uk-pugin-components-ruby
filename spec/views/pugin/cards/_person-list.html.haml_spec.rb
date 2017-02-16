@@ -30,7 +30,7 @@ describe 'pugin/cards/_person-list.html.haml', type: :view do
     end
 
     it 'displays all information as expected' do
-      render partial: 'pugin/cards/person-list', locals: { person: @people }
+      render partial: 'pugin/cards/person-list', locals: { people: @people }
 
       expect(rendered).to eq(
 <<DATA
@@ -65,7 +65,7 @@ DATA
     end
 
     it 'displays with no data' do
-      render partial: 'pugin/cards/person-list', locals: { person: @people }
+      render partial: 'pugin/cards/person-list', locals: { people: @people }
 
       expect(rendered).to eq(
 <<DATA
@@ -100,7 +100,7 @@ DATA
     end
 
     it 'displays with no name data' do
-      render partial: 'pugin/cards/person-list', locals: { person: @people }
+      render partial: 'pugin/cards/person-list', locals: { people: @people }
 
       expect(rendered).to eq(
 <<DATA
@@ -141,7 +141,7 @@ DATA
     end
 
     it 'displays with no constituency data' do
-      render partial: 'pugin/cards/person-list', locals: { person: @people }
+      render partial: 'pugin/cards/person-list', locals: { people: @people }
 
       expect(rendered).to eq(
 <<DATA
@@ -180,7 +180,7 @@ DATA
     end
 
     it 'displays with no party data' do
-      render partial: 'pugin/cards/person-list', locals: { person: @people }
+      render partial: 'pugin/cards/person-list', locals: { people: @people }
 
       expect(rendered).to eq(
 <<DATA
