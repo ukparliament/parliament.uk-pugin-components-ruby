@@ -1,5 +1,5 @@
 %ol.result-list
-  - @people.each do |person|
+  - people.each do |person|
     %li.result-list__item
       %ul
         - if person.respond_to?(:full_name) && person.respond_to?(:graph_id)
