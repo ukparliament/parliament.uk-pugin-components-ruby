@@ -6,7 +6,11 @@
     = stylesheet_link_tag 'pugin/pugin', media: 'all', 'data-turbolinks-track' => true
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
     = favicon_link_tag 'pugin/favicon.ico'
+    - if Rails.application.secrets.gtm_key
+      = render partial: 'pugin/javascript/google_tag_manager'
   %body
+    - if Rails.application.secrets.gtm_key
+      = render partial: 'pugin/javascript/google_tag_manager_noscript'
     .c-wrap
       %a#top
       = render 'pugin/components/header'
