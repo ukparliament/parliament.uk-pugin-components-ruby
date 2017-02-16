@@ -8,3 +8,4 @@ spec/dummy/tmp/
 
 coverage
 .idea
+node_modules/

@@ -13,7 +13,7 @@ describe 'pugin/components/_header.html.haml', type: :view do
 <div class='row'>
 <div class='header__logo'>
 <a href='/'>
-<img alt='parliament.uk' src='#{ENV["ASSET_LOCATION_URL"]}/images/parliament-uk--white-50.png' srcset='#{ENV["ASSET_LOCATION_URL"]}/images/parliament-uk--white-50.svg'>
+<img alt='parliament.uk' src='#{Rails.application.secrets.asset_location_url}/images/parliament-uk--white-50.png' srcset='#{Rails.application.secrets.asset_location_url}/images/parliament-uk--white-50.svg'>
 </a>
 </div>
 </div>
