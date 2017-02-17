@@ -6,9 +6,11 @@
           %li
             %a{:href => "/people/#{person.graph_id}"}= person.full_name
         - if !person.constituencies.empty?
+          - seat_incumbency = person.seat_incumbencies.select(&:current?).first
           %li
             MP for
-            %a{:href => "/constituencies/#{person.constituencies.first.graph_id}"}= person.constituencies.first.name
+            %a{:href => "/constituencies/#{seat_incumbency.constituency.graph_id}"}= seat_incumbency.constituency.name
         - if !person.parties.empty?
+          - party_membership = person.party_memberships.select(&:current?).first
           %li
-            %a{:href => "/parties/#{person.parties.first.graph_id}"}= person.parties.first.name
+            %a{:href => "/parties/#{party_membership.party.graph_id}"}= party_membership.party.name
