@@ -1,7 +1,7 @@
-%ol.result-list
+%ol.list
   - people.each do |person|
-    %li.result-list__item
-      %ul
+    %li.list--item
+      %ul.list
         - if person.respond_to?(:full_name) && person.respond_to?(:graph_id)
           %li
             %a{:href => "/people/#{person.graph_id}"}= person.full_name
