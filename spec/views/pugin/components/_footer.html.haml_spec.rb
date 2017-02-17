@@ -11,7 +11,7 @@ describe 'pugin/components/_footer.html.haml', type: :view do
 <footer>
 <div class='c-fs footer'>
 <div class='c-fg'>
-<div class='row'>
+<div class='row--indent-horizontal'>
 <div class='footer__logo'>
 <img alt='parliament.uk' src='/images/parliament-uk--darkgrey.png' srcset='/images/parliament-uk--darkgrey.svg'>
 </div>

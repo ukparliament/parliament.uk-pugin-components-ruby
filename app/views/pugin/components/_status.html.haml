@@ -1,4 +1,5 @@
-%div{class: "c-fs status#{ status.nil? ? '' : "__#{status}"  }"}
-  .c-fg
-    .row
-      %p This is a #{link_to '<strong>BETA</strong>'.html_safe, '/' }. Give #{link_to 'feedback', '#'} to improve it.
+.highlight__status
+  %div{class: "c-fs status#{ status.nil? ? '' : "__#{status}"  }"}
+    .c-fg
+      .row--indent-horizontal
+        %p This is a #{link_to '<strong>BETA</strong>'.html_safe, '/' }. Give #{link_to 'feedback', '#'} to improve it.

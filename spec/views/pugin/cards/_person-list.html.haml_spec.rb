@@ -53,9 +53,9 @@ describe 'pugin/cards/_person-list.html.haml', type: :view do
 
       expect(rendered).to eq(
 <<DATA
-<ol class='result-list'>
-<li class='result-list__item'>
-<ul>
+<ol class='list'>
+<li class='list--item'>
+<ul class='list'>
 <li>
 <a href='/people/123'>Jane Smith</a>
 </li>
@@ -88,9 +88,9 @@ DATA
 
       expect(rendered).to eq(
 <<DATA
-<ol class='result-list'>
-<li class='result-list__item'>
-<ul>
+<ol class='list'>
+<li class='list--item'>
+<ul class='list'>
 </ul>
 </li>
 </ol>
@@ -138,9 +138,9 @@ DATA
 
       expect(rendered).to eq(
 <<DATA
-<ol class='result-list'>
-<li class='result-list__item'>
-<ul>
+<ol class='list'>
+<li class='list--item'>
+<ul class='list'>
 <li>
 MP for
 <a href='/constituencies/123'>Hackney</a>
@@ -187,9 +187,9 @@ DATA
 
       expect(rendered).to eq(
 <<DATA
-<ol class='result-list'>
-<li class='result-list__item'>
-<ul>
+<ol class='list'>
+<li class='list--item'>
+<ul class='list'>
 <li>
 <a href='/people/123'>Jane Smith</a>
 </li>
@@ -234,9 +234,9 @@ DATA
 
       expect(rendered).to eq(
 <<DATA
-<ol class='result-list'>
-<li class='result-list__item'>
-<ul>
+<ol class='list'>
+<li class='list--item'>
+<ul class='list'>
 <li>
 <a href='/people/123'>Jane Smith</a>
 </li>

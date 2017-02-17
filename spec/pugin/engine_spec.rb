@@ -11,7 +11,7 @@ describe Pugin::Engine do
     it 'exposes a compiled pugin/pugin.css file' do
       visit 'assets/pugin/pugin.css'
 
-      expect(page.text).to include('.status{')
+      expect(page.text).to include('html')
     end
   end
 end

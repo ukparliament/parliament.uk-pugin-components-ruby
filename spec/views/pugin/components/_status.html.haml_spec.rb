@@ -9,10 +9,12 @@ describe 'pugin/components/_status.html.haml', type: :view do
 
       expect(response).to eq(
 <<DATA
+<div class='highlight__status'>
 <div class='c-fs status'>
 <div class='c-fg'>
-<div class='row'>
+<div class='row--indent-horizontal'>
 <p>This is a <a href="/"><strong>BETA</strong></a>. Give <a href="#">feedback</a> to improve it.</p>
+</div>
 </div>
 </div>
 </div>
@@ -27,10 +29,12 @@ DATA
 
       expect(rendered).to eq(
 <<DATA
+<div class='highlight__status'>
 <div class='c-fs status__test'>
 <div class='c-fg'>
-<div class='row'>
+<div class='row--indent-horizontal'>
 <p>This is a <a href="/"><strong>BETA</strong></a>. Give <a href="#">feedback</a> to improve it.</p>
+</div>
 </div>
 </div>
 </div>
