@@ -10,10 +10,10 @@ describe 'pugin/components/_header.html.haml', type: :view do
 <header>
 <div class='c-fs header'>
 <div class='c-fg'>
-<div class='row'>
+<div class='row--indent-horizontal'>
 <div class='header__logo'>
 <a href='/'>
-<img alt='parliament.uk' src='#{Rails.application.secrets.asset_location_url}/images/parliament-uk--white-50.png' srcset='#{Rails.application.secrets.asset_location_url}/images/parliament-uk--white-50.svg'>
+<img alt='parliament.uk' src='#{Rails.application.secrets.asset_location_url}/images/parliament-uk--white.png' srcset='#{Rails.application.secrets.asset_location_url}/images/parliament-uk--white.svg'>
 </a>
 </div>
 </div>
