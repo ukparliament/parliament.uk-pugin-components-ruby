@@ -4,8 +4,12 @@ require 'haml'
 describe 'pugin/cards/_person-list.html.haml', type: :view do
 
   let(:person) { Class.new }
+  let(:seat_incumbency1) { Class.new }
+  let(:seat_incumbency2) { Class.new }
   let(:constituency1) { Class.new }
   let(:constituency2) { Class.new }
+  let(:party_memberships1) { Class.new }
+  let(:party_memberships2) { Class.new }
   let(:party1) { Class.new }
   let(:party2) { Class.new }
 
@@ -20,12 +24,27 @@ describe 'pugin/cards/_person-list.html.haml', type: :view do
       allow(constituency1).to receive(:graph_id).and_return('123')
       allow(constituency2).to receive(:name).and_return('Stoke')
       allow(constituency2).to receive(:graph_id).and_return('456')
-      allow(person).to receive(:constituencies).and_return([constituency1,constituency2])
+
+      allow(seat_incumbency1).to receive(:current?).and_return(true)
+      allow(seat_incumbency1).to receive(:constituency).and_return(constituency1)
+
+      allow(seat_incumbency2).to receive(:current?).and_return(false)
+      allow(seat_incumbency2).to receive(:constituency).and_return(constituency2)
 
       allow(party1).to receive(:name).and_return('Labour')
       allow(party1).to receive(:graph_id).and_return('123')
       allow(party2).to receive(:name).and_return('Conservative')
       allow(party2).to receive(:graph_id).and_return('456')
+
+      allow(party_memberships1).to receive(:current?).and_return(true)
+      allow(party_memberships1).to receive(:party).and_return(party1)
+
+      allow(party_memberships2).to receive(:current?).and_return(false)
+      allow(party_memberships2).to receive(:party).and_return(party2)
+
+      allow(person).to receive(:seat_incumbencies).and_return([seat_incumbency1, seat_incumbency2])
+      allow(person).to receive(:constituencies).and_return([constituency1,constituency2])
+      allow(person).to receive(:party_memberships).and_return([party_memberships1,party_memberships2])
       allow(person).to receive(:parties).and_return([party1,party2])
     end
 
@@ -90,12 +109,27 @@ DATA
       allow(constituency1).to receive(:graph_id).and_return('123')
       allow(constituency2).to receive(:name).and_return('Stoke')
       allow(constituency2).to receive(:graph_id).and_return('456')
-      allow(person).to receive(:constituencies).and_return([constituency1,constituency2])
+
+      allow(seat_incumbency1).to receive(:current?).and_return(true)
+      allow(seat_incumbency1).to receive(:constituency).and_return(constituency1)
+
+      allow(seat_incumbency2).to receive(:current?).and_return(false)
+      allow(seat_incumbency2).to receive(:constituency).and_return(constituency2)
 
       allow(party1).to receive(:name).and_return('Labour')
       allow(party1).to receive(:graph_id).and_return('123')
       allow(party2).to receive(:name).and_return('Conservative')
       allow(party2).to receive(:graph_id).and_return('456')
+
+      allow(party_memberships1).to receive(:current?).and_return(true)
+      allow(party_memberships1).to receive(:party).and_return(party1)
+
+      allow(party_memberships2).to receive(:current?).and_return(false)
+      allow(party_memberships2).to receive(:party).and_return(party2)
+
+      allow(person).to receive(:seat_incumbencies).and_return([seat_incumbency1, seat_incumbency2])
+      allow(person).to receive(:constituencies).and_return([constituency1,constituency2])
+      allow(person).to receive(:party_memberships).and_return([party_memberships1,party_memberships2])
       allow(person).to receive(:parties).and_return([party1,party2])
     end
 
@@ -131,12 +165,20 @@ DATA
       allow(person).to receive(:full_name).and_return('Jane Smith')
       allow(person).to receive(:graph_id).and_return('123')
 
-      allow(person).to receive(:constituencies).and_return([])
-
       allow(party1).to receive(:name).and_return('Labour')
       allow(party1).to receive(:graph_id).and_return('123')
       allow(party2).to receive(:name).and_return('Conservative')
       allow(party2).to receive(:graph_id).and_return('456')
+
+      allow(party_memberships1).to receive(:current?).and_return(true)
+      allow(party_memberships1).to receive(:party).and_return(party1)
+
+      allow(party_memberships2).to receive(:current?).and_return(false)
+      allow(party_memberships2).to receive(:party).and_return(party2)
+
+      allow(person).to receive(:seat_incumbencies).and_return([seat_incumbency1, seat_incumbency2])
+      allow(person).to receive(:constituencies).and_return([])
+      allow(person).to receive(:party_memberships).and_return([party_memberships1,party_memberships2])
       allow(person).to receive(:parties).and_return([party1,party2])
     end
 
@@ -174,8 +216,16 @@ DATA
       allow(constituency1).to receive(:graph_id).and_return('123')
       allow(constituency2).to receive(:name).and_return('Stoke')
       allow(constituency2).to receive(:graph_id).and_return('456')
-      allow(person).to receive(:constituencies).and_return([constituency1,constituency2])
 
+      allow(seat_incumbency1).to receive(:current?).and_return(true)
+      allow(seat_incumbency1).to receive(:constituency).and_return(constituency1)
+
+      allow(seat_incumbency2).to receive(:current?).and_return(false)
+      allow(seat_incumbency2).to receive(:constituency).and_return(constituency2)
+
+      allow(person).to receive(:seat_incumbencies).and_return([seat_incumbency1, seat_incumbency2])
+      allow(person).to receive(:constituencies).and_return([constituency1,constituency2])
+      allow(person).to receive(:party_memberships).and_return([party_memberships1,party_memberships2])
       allow(person).to receive(:parties).and_return([])
     end
 
