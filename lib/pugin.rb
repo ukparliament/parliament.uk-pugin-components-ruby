@@ -1,4 +1,4 @@
-require "pugin/engine"
+require 'pugin/engine'
 
 module Pugin
   # Your code goes here...
