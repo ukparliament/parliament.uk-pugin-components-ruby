@@ -10,6 +10,7 @@
   %body
     - if Rails.application.secrets.gtm_key
       = render partial: 'pugin/javascript/google_tag_manager_noscript'
+      = render partial: 'pugin/elements/skip-content'
     %main#content
       %a#top
       = render 'pugin/components/header'
