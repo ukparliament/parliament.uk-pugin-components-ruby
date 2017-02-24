@@ -3,7 +3,8 @@
   %head
     %title Parliamentary Digital Service
     %link{rel: 'stylesheet', href: "#{Rails.application.secrets.asset_location_url}/stylesheets/main.css" }
-    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    %meta{'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1'}
     = favicon_link_tag 'pugin/favicon.ico'
     - if Rails.application.secrets.gtm_key
       = render partial: 'pugin/javascript/google_tag_manager'
