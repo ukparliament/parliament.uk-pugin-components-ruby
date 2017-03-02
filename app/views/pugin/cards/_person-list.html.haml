@@ -12,5 +12,6 @@
             %a{:href => "/constituencies/#{seat_incumbency.constituency.graph_id}"}= seat_incumbency.constituency.name
         - if !person.parties.empty?
           - party_membership = person.party_memberships.select(&:current?).first
-          %li
-            %a{:href => "/parties/#{party_membership.party.graph_id}"}= party_membership.party.name
+          - unless party_membership.nil?
+            %li
+              %a{:href => "/parties/#{party_membership.party.graph_id}"}= party_membership.party.name
