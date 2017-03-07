@@ -55,10 +55,10 @@ describe 'pugin/cards/_person-list.html.haml', type: :view do
 <<DATA
 <ol class='list'>
 <li class='list__item'>
-<ul>
-<li>
+<h2>
 <a href='/people/123'>Jane Smith</a>
-</li>
+</h2>
+<ul>
 <li>
 MP for
 <a href='/constituencies/123'>Hackney</a>
@@ -90,8 +90,6 @@ DATA
 <<DATA
 <ol class='list'>
 <li class='list__item'>
-<ul>
-</ul>
 </li>
 </ol>
 DATA
@@ -189,10 +187,10 @@ DATA
 <<DATA
 <ol class='list'>
 <li class='list__item'>
-<ul>
-<li>
+<h2>
 <a href='/people/123'>Jane Smith</a>
-</li>
+</h2>
+<ul>
 <li>
 <a href='/parties/123'>Labour</a>
 </li>
@@ -236,10 +234,10 @@ DATA
 <<DATA
 <ol class='list'>
 <li class='list__item'>
-<ul>
-<li>
+<h2>
 <a href='/people/123'>Jane Smith</a>
-</li>
+</h2>
+<ul>
 <li>
 MP for
 <a href='/constituencies/123'>Hackney</a>
