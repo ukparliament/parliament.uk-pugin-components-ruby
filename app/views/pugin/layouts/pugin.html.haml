@@ -12,7 +12,6 @@
     - if Rails.application.secrets.gtm_key
       = render partial: 'pugin/javascript/google_tag_manager_noscript'
     = render partial: 'pugin/elements/skip-content'
-    %a#top
     = render 'pugin/components/header'
     = render partial: 'pugin/components/status', locals: { status: nil }
     %main#content
