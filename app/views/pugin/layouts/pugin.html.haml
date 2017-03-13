@@ -2,9 +2,9 @@
 %html{lang:'en'}
   %head
     %title #{t('website_brand')}
-    %link{rel: 'stylesheet', href: "#{Rails.application.secrets.asset_location_url}/stylesheets/main.css" }
+    %link{rel: 'stylesheet', href: "#{Rails.application.secrets.asset_location_url}/1.1.2-alpha/stylesheets/main.css" }
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
-    %meta{'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1'}
+    %meta{'http-equiv': 'X-UA-Compatible', content: 'IE=edge'}
     = favicon_link_tag 'pugin/favicon.ico'
     - if Rails.application.secrets.gtm_key
       = render partial: 'pugin/javascript/google_tag_manager'
@@ -12,7 +12,6 @@
     - if Rails.application.secrets.gtm_key
       = render partial: 'pugin/javascript/google_tag_manager_noscript'
     = render partial: 'pugin/elements/skip-content'
-    %a#top
     = render 'pugin/components/header'
     = render partial: 'pugin/components/status', locals: { status: nil }
     %main#content
@@ -20,4 +19,4 @@
         .row--indent-full
           = yield
     = render 'pugin/components/footer'
-    %script{src: "#{Rails.application.secrets.asset_location_url}/javascripts/main.js"}
+    %script{src: "#{Rails.application.secrets.asset_location_url}/1.1.2-alpha/javascripts/main.js"}
