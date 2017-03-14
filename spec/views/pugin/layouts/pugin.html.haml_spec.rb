@@ -13,8 +13,7 @@ describe 'pugin/layouts/pugin.html.haml', type: :view do
 
     it 'renders HAML without errors' do
       render
-
-      expect(rendered).to include('<title>Parliamentary Digital Service</title>')
+      expect(rendered).to have_title(I18n.t('website_brand'))
     end
   end
 end
