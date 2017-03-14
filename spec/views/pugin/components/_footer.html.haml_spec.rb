@@ -6,14 +6,13 @@ describe 'pugin/components/_footer.html.haml', type: :view do
   it 'renders as expected' do
     render
 
-    expect(response).to eq(
-<<DATA
+    expect(response).to eq(<<DATA
 <footer>
-<div class='c-fs footer'>
-<div class='c-fg'>
+<div class='container--full-screen footer'>
+<div class='container--full-grid'>
 <div class='row--indent-horizontal'>
 <div class='footer__logo'>
-<img alt='parliament.uk' src='/images/parliament-uk--darkgrey.png' srcset='/images/parliament-uk--darkgrey.svg'>
+<img alt='parliament.uk' src='//images/parliament-uk--darkgrey.png' srcset='//images/parliament-uk--darkgrey.svg'>
 </div>
 <ul class='footer__list'>
 <li>
