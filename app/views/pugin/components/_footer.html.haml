@@ -3,14 +3,11 @@
     .container--full-grid
       .row--indent-horizontal
         .footer__logo
-          %img{:alt => "parliament.uk", :src => "#{Rails.application.secrets.asset_location_url}/#{Rails.application.secrets.asset_version}/images/parliament-uk--darkgrey.png", :srcset => "#{Rails.application.secrets.asset_location_url}/#{Rails.application.secrets.asset_version}/images/parliament-uk--darkgrey.svg"}/
+          %p Parliament.uk
         %ul.footer__list
           %li
-            Parliament.uk
-            %a{:href => "https://pds.blog.parliament.uk/", :target => "_blank"} digital blog
+            %a{:href => "https://pds.blog.parliament.uk/", :target => "_blank"} Parliamentary Digital Service blog
           %li
-            Visit the
-            %a{:href => "https://www.parliament.uk/", :target => "_blank"} current parliament.uk
-            website
+            %a{:href => "https://www.parliament.uk/", :target => "_blank"} Current Parliament.uk website
           %li
             %a{:href => "/meta/cookie-policy"} Cookie Policy
