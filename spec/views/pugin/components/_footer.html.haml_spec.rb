@@ -12,17 +12,14 @@ describe 'pugin/components/_footer.html.haml', type: :view do
 <div class='container--full-grid'>
 <div class='row--indent-horizontal'>
 <div class='footer__logo'>
-<img alt='parliament.uk' src='//images/parliament-uk--darkgrey.png' srcset='//images/parliament-uk--darkgrey.svg'>
+<p>Parliament.uk</p>
 </div>
 <ul class='footer__list'>
 <li>
-Parliament.uk
-<a href='https://pds.blog.parliament.uk/' target='_blank'>digital blog</a>
+<a href='https://pds.blog.parliament.uk/' target='_blank'>Parliamentary Digital Service blog</a>
 </li>
 <li>
-Visit the
-<a href='https://www.parliament.uk/' target='_blank'>current parliament.uk</a>
-website
+<a href='https://www.parliament.uk/' target='_blank'>Current Parliament.uk website</a>
 </li>
 <li>
 <a href='/meta/cookie-policy'>Cookie Policy</a>
