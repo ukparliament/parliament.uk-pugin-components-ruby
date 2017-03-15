@@ -1,5 +1,5 @@
-# Pugin
-[pugin][pugin] is a component-based pattern design library created by the [Parliamentary Digital Service][pds] that holds all of the reusable partials, styles and scripts for elements of the UK Parliament's microservices. It is named after the designer [Augustus Welby Northmore Pugin][augustus-pugin], who provided designs for the interior of the Palace of Westminster.
+# Pugin Components Rails
+[pugin-components-rails][pugin-components-rails] is a component-based pattern design library created by the [Parliamentary Digital Service][pds] that holds all of the reusable partials for elements of the UK Parliament's microservices.
 
 [![Build Status][shield-travis]][info-travis] [![Test Coverage][shield-coveralls]][info-coveralls] [![License][shield-license]][info-license]
 
@@ -23,7 +23,7 @@
 
 
 ## Requirements
-[pugin][pugin] requires the following:
+[pugin-components-rails][pugin-components-rails] requires the following:
 * [Ruby][ruby] - [click here][ruby-version] for the exact version
 * [Bundler][bundler]
 * [Rails][rails]
@@ -56,8 +56,8 @@ Now all of the view components should be available within your host application.
 ## Getting Started with Development
 To clone the repository and set up the dependencies, run the following:
 ```bash
-git clone https://github.com/ukparliament/pugin.git
-cd pugin
+git clone https://github.com/ukparliament/pugin-components-rails.git
+cd pugin-components-rails
 bundle install
 ```
 
@@ -80,23 +80,22 @@ If you wish to submit a bug fix or feature, you can create a pull request and it
 
 
 ## License
-[pugin][pugin] is licensed under the [Open Parliament Licence][info-license].
+[pugin-components-rails][pugin-components-rails] is licensed under the [Open Parliament Licence][info-license].
 
-[ruby]:           https://www.ruby-lang.org/en/
-[bundler]:        http://bundler.io
-[rspec]:          http://rspec.info
-[pugin]:          https://github.com/ukparliament/pugin
-[pds]:            https://www.parliament.uk/mps-lords-and-offices/offices/bicameral/parliamentary-digital-service/
-[ruby-version]:   https://github.com/ukparliament/pugin/blob/master/.ruby-version
-[rails]:          http://rubyonrails.org
-[haml]:           http://haml.info
-[augustus-pugin]: https://en.wikipedia.org/wiki/Augustus_Pugin
+[ruby]:                   https://www.ruby-lang.org/en/
+[bundler]:                http://bundler.io
+[rspec]:                  http://rspec.info
+[pugin-components-rails]: https://github.com/ukparliament/pugin-components-rails
+[pds]:                    https://www.parliament.uk/mps-lords-and-offices/offices/bicameral/parliamentary-digital-service/
+[ruby-version]:           https://github.com/ukparliament/pugin/blob/master/.ruby-version
+[rails]:                  http://rubyonrails.org
+[haml]:                   http://haml.info
 
-[info-travis]:   https://travis-ci.org/ukparliament/pugin
-[shield-travis]: https://img.shields.io/travis/ukparliament/pugin.svg
+[info-travis]:            https://travis-ci.org/ukparliament/pugin
+[shield-travis]:          https://img.shields.io/travis/ukparliament/pugin.svg
 
-[info-coveralls]:   https://coveralls.io/github/ukparliament/pugin
-[shield-coveralls]: https://img.shields.io/coveralls/ukparliament/pugin.svg
+[info-coveralls]:         https://coveralls.io/github/ukparliament/pugin
+[shield-coveralls]:       https://img.shields.io/coveralls/ukparliament/pugin.svg
 
-[info-license]:   http://www.parliament.uk/site-information/copyright/open-parliament-licence/
-[shield-license]: https://img.shields.io/badge/license-Open%20Parliament%20Licence-blue.svg
+[info-license]:           http://www.parliament.uk/site-information/copyright/open-parliament-licence/
+[shield-license]:         https://img.shields.io/badge/license-Open%20Parliament%20Licence-blue.svg
