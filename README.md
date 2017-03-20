@@ -33,7 +33,7 @@
 ## Installation
 Within your rails application, add the below to your `Gemfile`.
 ```bash
-gem 'pugin', '~> 0.3'
+gem 'pugin'
 ```
 
 
