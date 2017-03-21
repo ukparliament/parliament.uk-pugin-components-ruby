@@ -33,7 +33,7 @@
 ## Installation
 Within your rails application, add the below to your `Gemfile`.
 ```bash
-gem 'pugin', '~> 0.2'
+gem 'pugin', '~> 0.3'
 ```
 
 
@@ -85,7 +85,7 @@ If you wish to submit a bug fix or feature, you can create a pull request and it
 [ruby]:                   https://www.ruby-lang.org/en/
 [bundler]:                http://bundler.io
 [rspec]:                  http://rspec.info
-[pugin-components-rails]: https://github.com/ukparliament/pugin-components-rails
+[pugin-components-rails]: https://github.com/ukparliament/parliament.uk-pugin-components-rails
 [pds]:                    https://www.parliament.uk/mps-lords-and-offices/offices/bicameral/parliamentary-digital-service/
 [ruby-version]:           https://github.com/ukparliament/pugin/blob/master/.ruby-version
 [rails]:                  http://rubyonrails.org

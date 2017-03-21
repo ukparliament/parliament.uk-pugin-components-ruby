@@ -12,9 +12,7 @@ describe 'pugin/components/_header.html.haml', type: :view do
 <div class='container--full-grid'>
 <div class='row--indent-horizontal'>
 <div class='header__logo'>
-<span>
 <a href='/'>UK Parliament</a>
-</span>
 </div>
 </div>
 </div>
