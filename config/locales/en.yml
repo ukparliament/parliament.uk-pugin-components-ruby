@@ -7,3 +7,7 @@ en:
   current_website: "Current Parliament.uk website"
   cookie_policy: "Cookie Policy"
   parliament_header: "UK Parliament"
+  no_content:
+    empty_list:
+      members:
+        description: "Sorry there are no results for '%{letter}'"

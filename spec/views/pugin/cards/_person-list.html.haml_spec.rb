@@ -68,6 +68,27 @@ DATA
     end
   end
 
+  context 'with no people' do
+    before :each do
+      @people = []
+    end
+
+    it 'renders as expected' do
+      render partial: 'pugin/cards/person-list', locals: { people: @people, letter: 'a' }
+
+      expect(response).to eq(<<DATA
+<ol class='list'>
+<li class='list__item'>
+<p>Sorry there are no results for 'A'</p>
+</li>
+</ol>
+DATA
+                            )
+    end
+
+  end
+
+
   context 'with no data' do
     let(:person) { Class.new }
 
