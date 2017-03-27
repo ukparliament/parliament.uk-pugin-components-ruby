@@ -11,11 +11,10 @@
             %a{:href => "/people/#{person.graph_id}"}= person.display_name
           - if !person.statuses[:house_membership_status].empty? && !person.statuses[:house_membership_status].include?('Current MP')
             %p= person.statuses[:house_membership_status].join(' and ')
-
           - if !person.constituencies.empty?
             - seat_incumbency = person.seat_incumbencies.select(&:current?).first
             - unless seat_incumbency.nil?
-              %p= "#{t('current_mp_for')} #{seat_incumbency.constituency.name}"
+              %p= "#{t('.current_mp_for')} #{seat_incumbency.constituency.name}"
           - if !person.parties.empty?
             - party_membership = person.party_memberships.select(&:current?).first
             - unless party_membership.nil?

@@ -13,7 +13,7 @@ describe 'pugin/layouts/pugin.html.haml', type: :view do
 
     it 'renders HAML without errors' do
       render
-      expect(rendered).to have_title(I18n.t('website_brand'))
+      expect(rendered).to have_title(I18n.t('.pugin.layouts.pugin.website_brand'))
     end
   end
 end
