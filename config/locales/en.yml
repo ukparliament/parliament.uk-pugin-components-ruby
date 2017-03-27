@@ -1,12 +1,24 @@
 en:
-  website_brand: "UK Parliament"
-  current_mp_for: "Current MP for"
-  parliament_uk: "Parliament.uk"
+  pugin:
+    cards:
+      person-list: 
+        current_mp_for: "Current MP for"
+    components:
+      header:
+        parliament_header: "UK Parliament"
+      status: 
+        current_website: 'current website'
+        status_text_1: 'This is a test website, so may be inaccurate or misleading'
+        status_text_2: 'to help improve it. Return to'
+        give_feedback: 'give feedback'
+      footer: 
+        parliament_uk: "Parliament.uk"
+        current_website: "Current Parliament.uk website"
+        cookie_policy: "Cookie Policy"
+    layouts: 
+      pugin: 
+        website_brand: "UK Parliament"
   open_new_window: "web site opens in a new window"
-  pds_blog: "Parliamentary Digital Service blog"
-  current_website: "Current Parliament.uk website"
-  cookie_policy: "Cookie Policy"
-  parliament_header: "UK Parliament"
   no_content:
     empty_list:
       members:
