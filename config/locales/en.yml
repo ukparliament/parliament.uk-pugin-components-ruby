@@ -18,7 +18,7 @@ en:
     layouts: 
       pugin: 
         website_brand: "UK Parliament"
-  open_new_window: "web site opens in a new window"
+  open_new_window: "website opens in a new window"
   no_content:
     empty_list:
       members:
