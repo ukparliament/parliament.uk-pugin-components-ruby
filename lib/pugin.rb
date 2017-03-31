@@ -1,4 +1,5 @@
 require 'pugin/engine'
+require 'pugin/railtie'
 require 'pugin/version'
 
 module Pugin
