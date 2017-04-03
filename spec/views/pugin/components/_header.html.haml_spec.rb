@@ -8,14 +8,8 @@ describe 'pugin/components/_header.html.haml', type: :view do
 
     expect(response).to eq(<<DATA
 <header>
-<div class='container--full-screen header'>
 <div class='container--full-grid'>
-<div class='row--indent-horizontal'>
-<div class='header__logo'>
-<a href='/'>UK Parliament</a>
-</div>
-</div>
-</div>
+<a class='logo' href='/'>UK Parliament</a>
 </div>
 </header>
 DATA

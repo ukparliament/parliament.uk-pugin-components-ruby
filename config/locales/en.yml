@@ -12,7 +12,7 @@ en:
         status_text_2: 'to help improve it. Return to'
         give_feedback: 'give feedback'
       footer: 
-        parliament_uk: "Parliament.uk"
+        uk_parliament: "UK Parliament"
         current_website: "Current Parliament.uk website"
         cookie_policy: "Cookie Policy"
     layouts: 

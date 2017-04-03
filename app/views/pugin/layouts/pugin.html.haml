@@ -16,7 +16,6 @@
     = render partial: 'pugin/components/status', locals: { status: nil }
     %main#content
       .container--full-grid
-        .row--indent-full
-          = yield
+        = yield
     = render 'pugin/components/footer'
     %script{src: "#{ENV['ASSET_LOCATION_URL']}/#{Pugin::ASSET_VERSION}/javascripts/main.js"}
