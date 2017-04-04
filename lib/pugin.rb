@@ -3,5 +3,6 @@ require 'pugin/railtie'
 require 'pugin/version'
 
 module Pugin
-  # Your code goes here...
+  ASSET_VERSION = '1.2.7'.freeze
+  ASSET_LOCATION_URL = ENV.fetch('ASSET_LOCATION_URL', 'https://s3-eu-west-1.amazonaws.com/web1devci.pugin-website')
 end
