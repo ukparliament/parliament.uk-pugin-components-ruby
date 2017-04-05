@@ -49,7 +49,12 @@ Now all of the view components should be available within your host application.
 
 ### Example
 ```erb
-<%= render 'pugin/components/status' %>
+<%= render partial: 'pugin/components/status' %>
+```
+### Adding the Parliamentary layout
+Add the following line into the application controller within your host application
+```erb
+layout 'pugin/layouts/pugin'
 ```
 
 
