@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pugin (0.5.2)
+    pugin (0.5.3)
       haml (~> 4.0)
       rails (~> 5.0)
 
