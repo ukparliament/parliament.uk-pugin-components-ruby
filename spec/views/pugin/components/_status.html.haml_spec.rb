@@ -11,7 +11,7 @@ describe 'pugin/components/_status.html.haml', type: :view do
 <<DATA
 <div class='highlight__status status'>
 <div class='container--full-grid'>
-<p>This is a test website, so may be inaccurate or misleading - <a target="_blank" title="website opens in a new window" href="https://ukparliament-self.achieveservice.com/en/AchieveForms/?form_uri=sandbox-publish://AF-Process-032e1b1d-958f-4402-9ab2-97a38ed9b899/AF-Stage9b7ecae8-0c85-4ee7-afda-b256cffe5f08/definition.json&amp;redirectlink=%2F&amp;cancelRedirectLink=%2F&amp;category=AF-Category-48936b5c-9329-48c7-a0a5-563463aacadf">give feedback</a> to help improve it. Return to <a href="https://www.parliament.uk">current website</a>.</p>
+<p>This is a test website, so may be inaccurate or misleading - <a target="_blank" title="website opens in a new window" href="https://ukparliament-self.achieveservice.com/AchieveForms/?form_uri=sandbox://AF-Form-337e2b87-4c8b-40f7-bb72-a80f15284b21&amp;category=AF-Category-108691b0-e15c-46d7-9d16-7ad0d35cdb2a&amp;isPublished=false">give feedback</a> to help improve it. Return to <a href="https://www.parliament.uk">current website</a>.</p>
 </div>
 </div>
 DATA
@@ -27,7 +27,7 @@ DATA
 <<DATA
 <div class='highlight__status status__test'>
 <div class='container--full-grid'>
-<p>This is a test website, so may be inaccurate or misleading - <a target="_blank" title="website opens in a new window" href="https://ukparliament-self.achieveservice.com/en/AchieveForms/?form_uri=sandbox-publish://AF-Process-032e1b1d-958f-4402-9ab2-97a38ed9b899/AF-Stage9b7ecae8-0c85-4ee7-afda-b256cffe5f08/definition.json&amp;redirectlink=%2F&amp;cancelRedirectLink=%2F&amp;category=AF-Category-48936b5c-9329-48c7-a0a5-563463aacadf">give feedback</a> to help improve it. Return to <a href="https://www.parliament.uk">current website</a>.</p>
+<p>This is a test website, so may be inaccurate or misleading - <a target="_blank" title="website opens in a new window" href="https://ukparliament-self.achieveservice.com/AchieveForms/?form_uri=sandbox://AF-Form-337e2b87-4c8b-40f7-bb72-a80f15284b21&amp;category=AF-Category-108691b0-e15c-46d7-9d16-7ad0d35cdb2a&amp;isPublished=false">give feedback</a> to help improve it. Return to <a href="https://www.parliament.uk">current website</a>.</p>
 </div>
 </div>
 DATA
