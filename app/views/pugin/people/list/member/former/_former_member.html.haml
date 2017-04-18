@@ -2,4 +2,3 @@
   %a{:href => "/people/#{data.graph_id}"}= data.display_name
 - if !data.statuses[:house_membership_status].empty? && !data.statuses[:house_membership_status].include?('Current MP')
   %p= data.statuses[:house_membership_status].join(' and ')
-
