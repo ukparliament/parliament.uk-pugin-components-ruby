@@ -1,4 +1,3 @@
 - person_type = data.house_incumbencies.empty? ? "member" : "lord"
 %li.list__item
   = render partial: "pugin/people/list/#{person_type}/#{person_type}", locals: { data: local_assigns.fetch(:data, []) }
- 
