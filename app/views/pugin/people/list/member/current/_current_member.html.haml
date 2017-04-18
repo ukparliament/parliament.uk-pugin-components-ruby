@@ -8,4 +8,3 @@
   - party_membership = data.party_memberships.select(&:current?).first
   - unless party_membership.nil?
     %p= party_membership.party.name
-    

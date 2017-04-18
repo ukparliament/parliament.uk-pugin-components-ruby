@@ -1,4 +1,3 @@
 - constituency_status = data.current? ? "current" : "former" 
 %li.list__item
   = render partial: "pugin/constituencies/list/#{constituency_status}/#{constituency_status}_constituency", locals: { constituency: local_assigns.fetch(:data, []) }
-  
