@@ -1,0 +1,3 @@
+%ul
+  %li= link_to constituency.name, constituency_path(constituency.graph_id)
+  %li= constituency.current? ? "#{t('current').capitalize} #{t('constituency')}" : "#{t('former').capitalize} #{t('constituency')}"
