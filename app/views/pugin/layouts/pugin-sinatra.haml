@@ -1,0 +1,22 @@
+!!! 5
+%html{lang:'en'}
+  %head
+    - title = yield_content :title
+    %title= ( title.nil? || title.empty? ) ? I18n.t('pugin.layouts.pugin.website_brand') : title + ' - ' + I18n.t('pugin.layouts.pugin.website_brand')
+    %link{rel: 'stylesheet', href: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/stylesheets/main.css" }
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    %meta{'http-equiv': 'X-UA-Compatible', content: 'IE=edge'}
+    =# favicon_link_tag 'pugin/favicon.ico'
+    - if ENV['GTM_KEY']
+      = partial '/pugin/javascript/_google_tag_manager'
+  %body.no-js
+    - if ENV['GTM_KEY']
+      = partial '/pugin/javascript/_google_tag_manager_noscript'
+    = partial '/pugin/elements/_skip-content'
+    = partial '/pugin/components/_header'
+    = partial '/pugin/components/_status'
+    %main#content
+      .container--full-grid
+        = yield
+    = partial '/pugin/components/_footer'
+    %script{src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/javascripts/main.js"}
