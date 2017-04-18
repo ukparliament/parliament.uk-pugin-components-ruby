@@ -1,8 +1,5 @@
 %h2
   %a{:href => "/people/#{data.graph_id}"}= data.display_name
 - if !data.statuses[:house_membership_status].empty? && !data.statuses[:house_membership_status].include?('Current MP')
-<<<<<<< HEAD
   %p= data.statuses[:house_membership_status].join(' and ')
-=======
-  %p= data.statuses[:house_membership_status].join(' and ')
->>>>>>> added new translations, first implementation of some lists, updated letter navigation
+

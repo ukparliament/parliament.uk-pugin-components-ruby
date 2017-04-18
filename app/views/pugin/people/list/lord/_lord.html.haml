@@ -1,8 +1,4 @@
 - current_incumbency = data.house_incumbencies.sort{ |inc_a, inc_b| inc_b.start_date <=> inc_a.start_date }.first
 - current_incumbency = current_incumbency.current? ? "current" : "former"
 
-<<<<<<< HEAD
 = render partial: "pugin/people/list/lord/#{current_incumbency}/#{current_incumbency}_lord", locals: { data: local_assigns.fetch(:data, []) }
-=======
-= render partial: "pugin/people/list/lord/#{current_incumbency}/#{current_incumbency}_lord", locals: { data: local_assigns.fetch(:data, []) }
->>>>>>> added new translations, first implementation of some lists, updated letter navigation
