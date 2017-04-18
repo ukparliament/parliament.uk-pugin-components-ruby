@@ -7,4 +7,8 @@
 - if !data.parties.empty?
   - party_membership = data.party_memberships.select(&:current?).first
   - unless party_membership.nil?
+<<<<<<< HEAD
     %p= party_membership.party.name
+=======
+    %p= party_membership.party.name
+>>>>>>> added new translations, first implementation of some lists, updated letter navigation

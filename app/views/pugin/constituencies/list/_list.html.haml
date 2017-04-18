@@ -1,3 +1,7 @@
 - constituency_status = data.current? ? "current" : "former" 
 %li.list__item
+<<<<<<< HEAD
   = render partial: "pugin/constituencies/list/#{constituency_status}/#{constituency_status}_constituency", locals: { constituency: local_assigns.fetch(:data, []) }
+=======
+  = render partial: "pugin/constituencies/list/#{constituency_status}/#{constituency_status}_constituency", locals: { constituency: local_assigns.fetch(:data, []) }
+>>>>>>> added new translations, first implementation of some lists, updated letter navigation
