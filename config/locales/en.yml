@@ -15,6 +15,16 @@ en:
         uk_parliament: "UK Parliament"
         current_website: "Current Parliament.uk website"
         cookie_policy: "Cookie Policy"
+      letter-navigation: 
+        aria_label: "Paged navigation"
+        select_letter: "select a letter"
+        showing_results: "Showing results for"
+    people:
+        list:
+          member:
+            current: 
+              current_member:
+                current_mp_for: "Current MP for"
     layouts: 
       pugin: 
         website_brand: "UK Parliament"

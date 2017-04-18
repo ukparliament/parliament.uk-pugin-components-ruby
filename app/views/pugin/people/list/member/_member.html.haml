@@ -1,0 +1,4 @@
+- current_incumbency = data.seat_incumbencies.sort{ |inc_a, inc_b| inc_b.start_date <=> inc_a.start_date }.first
+- current_incumbency = current_incumbency.current? ? "current" : "former"
+
+= render partial: "pugin/people/list/member/#{current_incumbency}/#{current_incumbency}_member", locals: { data: local_assigns.fetch(:data, []) }
