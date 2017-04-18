@@ -1,3 +1,4 @@
 - current_party = data.parties.current? ? "current" : "former" 
 %li.list__item
   = render partial: "pugin/parties/list/#{person_type}/#{person_type}", locals: { data: local_assigns.fetch(:data, []) }
+  
