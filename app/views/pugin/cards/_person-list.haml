@@ -1,7 +1,7 @@
 -if people.empty?
   %ol.list
     %li.list__item
-      %p= t('no_content.empty_list.members.description', letter: letter.upcase)
+      %p= I18n.t('no_content.empty_list.members.description', letter: letter.upcase)
 -else
   %ol.list
     - people.each do |person|
@@ -14,7 +14,7 @@
           - if !person.constituencies.empty?
             - seat_incumbency = person.seat_incumbencies.select(&:current?).first
             - unless seat_incumbency.nil?
-              %p= "#{t('.current_mp_for')} #{seat_incumbency.constituency.name}"
+              %p= "#{I18n.t('pugin.cards.person-list.current_mp_for')} #{seat_incumbency.constituency.name}"
           - if !person.parties.empty?
             - party_membership = person.party_memberships.select(&:current?).first
             - unless party_membership.nil?
