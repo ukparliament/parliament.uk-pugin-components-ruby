@@ -15,8 +15,7 @@
     = partial '/pugin/elements/_skip-content'
     = partial '/pugin/components/_header'
     = partial '/pugin/components/_status'
-    %main#content
-      .container--full-grid
-        = yield
+    %main
+      = yield
     = partial '/pugin/components/_footer'
     %script{src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/javascripts/main.js"}

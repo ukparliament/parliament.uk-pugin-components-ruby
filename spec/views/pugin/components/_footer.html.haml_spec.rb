@@ -8,7 +8,7 @@ describe 'pugin/components/_footer.html.haml', type: :view do
 
     expect(response).to eq(<<DATA
 <footer>
-<div class='container--full-grid'>
+<div class='container'>
 <h2 class='logo'>UK Parliament</h2>
 <ul class='list'>
 <li>
