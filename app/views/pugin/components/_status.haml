@@ -1,9 +1,10 @@
-.highlight__status.status
-  .container--full-grid
+.highlight__status.highlight--default
+  .container
     %p
       = I18n.t('pugin.components.status.status_text_1')
-      = precede ' - ' do
+      = precede '' do
         %a{ href: 'https://ukparliament-self.achieveservice.com/AchieveForms/?form_uri=sandbox://AF-Form-337e2b87-4c8b-40f7-bb72-a80f15284b21&amp;category=AF-Category-108691b0-e15c-46d7-9d16-7ad0d35cdb2a&amp;isPublished=false', target: '_blank', title: I18n.t('open_new_window')}= I18n.t('pugin.components.status.give_feedback')
       = I18n.t('pugin.components.status.status_text_2')
-      = succeed '.' do
-        %a{ href: 'https://www.parliament.uk' }= I18n.t('pugin.components.status.current_website')
+      = succeed '' do
+        %a{ href: 'https://www.gov.uk/register-to-vote' }= I18n.t('pugin.components.status.register_to_vote')
+      = I18n.t('pugin.components.status.status_text_3')

@@ -6,11 +6,12 @@ en:
     components:
       header:
         parliament_header: "UK Parliament"
-      status: 
-        current_website: 'current website'
-        status_text_1: 'This is a test website, so may be inaccurate or misleading'
-        status_text_2: 'to help improve it. Return to'
-        give_feedback: 'give feedback'
+      status:
+        status_text_1: 'This is a test website, so may be inaccurate.'
+        status_text_2: 'to help improve it.'
+        status_text_3: 'in the General Election by 22 May.'
+        give_feedback: 'Give feedback'
+        register_to_vote: 'Register to vote'
       footer: 
         uk_parliament: "UK Parliament"
         current_website: "Current Parliament.uk website"
