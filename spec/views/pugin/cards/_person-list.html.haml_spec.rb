@@ -79,7 +79,7 @@ DATA
       expect(response).to eq(<<DATA
 <ol class='list'>
 <li class='list__item'>
-<p>Sorry there are no results for 'A'</p>
+<p>Sorry there are no results for &#39;A&#39;</p>
 </li>
 </ol>
 DATA

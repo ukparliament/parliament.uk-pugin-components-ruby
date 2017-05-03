@@ -14,6 +14,13 @@ module Pugin
   		elsif sprockets?
   			register_sprockets
 			end
+
+			# Try and load HAML, raising an error if we are not able to
+			begin
+				require 'haml'
+			rescue LoadError => e
+				raise(LoadError, "pugin requires the 'haml' gem. Please check it is in your Gemfile - #{e.message}")
+			end
 		end
 
 		# Paths

@@ -17,9 +17,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", 'LICENSE', 'Rakefile', 'README.md']
   s.test_files = Dir['spec/**/*']
 
-  s.add_dependency 'haml', '~> 4.0'
-
-  s.add_development_dependency 'rails', '~> 5.0.1'
+  s.add_development_dependency 'rails', '~> 5.1'
   s.add_development_dependency 'sqlite3', '~> 1.3'
   s.add_development_dependency 'rspec-rails', '~> 3.5'
   s.add_development_dependency 'capybara', '~> 2.12'
@@ -28,4 +26,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'coveralls', '~> 0.8'
   s.add_development_dependency 'rubocop', '~> 0.47'
   s.add_development_dependency 'pry', '~> 0.10'
+  s.add_development_dependency 'haml', '~> 5.0'
 end
