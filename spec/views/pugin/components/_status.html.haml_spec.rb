@@ -9,7 +9,7 @@ describe 'pugin/components/_status.html.haml', type: :view do
 
       expect(response).to eq(
 <<DATA
-<div class='highlight__status highlight--default'>
+<div class='highlight--status highlight--default'>
 <div class='container'>
 <p>
 This is a test website, so may be inaccurate.
