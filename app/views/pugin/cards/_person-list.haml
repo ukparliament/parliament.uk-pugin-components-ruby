@@ -1,12 +1,12 @@
 -if people.empty?
-  %ol.list
-    %li.list__item
+  %ol.list--box
+    %li
       %p= I18n.t('no_content.empty_list.members.description', letter: letter.upcase)
 -else
-  %ol.list
+  %ol.list--box
     - people.each do |person|
       - if person.respond_to?(:graph_id)
-        %li.list__item
+        %li
           %h2
             %a{:href => "/people/#{person.graph_id}"}= person.display_name
           - if !person.statuses[:house_membership_status].empty? && !person.statuses[:house_membership_status].include?('Current MP')
