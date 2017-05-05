@@ -1,8 +1,8 @@
-%p.lead
+%p
   A to Z -
   = params[:letter].present? ? "#{I18n.t('pugin.components.letter-navigation.showing_results')} #{params[:letter].capitalize}" : "#{I18n.t('pugin.components.letter-navigation.select_letter')}"
-%nav{ aria:{ label: I18n.t('pugin.components.letter-navigation.aria_label') } }
-  %ul.navigation
+%nav.navigation--letter{ aria:{ label: I18n.t('pugin.components.letter-navigation.aria_label') } }
+  %ul
     - ('a'..'z').each do |letter|
       %li{ data: { letter: letter }, class: ('active' if (params[:letter] == letter)) }
         - unless letter == params[:letter]
