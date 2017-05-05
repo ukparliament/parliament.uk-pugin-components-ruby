@@ -1,7 +1,7 @@
 %p
   A to Z -
-  = params[:letter].present? ? "#{I18n.t('pugin.components.letter-navigation.showing_results')} #{params[:letter].capitalize}" : "#{I18n.t('pugin.components.letter-navigation.select_letter')}"
-%nav.navigation--letter{ aria:{ label: I18n.t('pugin.components.letter-navigation.aria_label') } }
+  = params[:letter].present? ? "#{I18n.t('pugin.components.navigation-letter.showing_results')} #{params[:letter].capitalize}" : "#{I18n.t('pugin.components.navigation-letter.select_letter')}"
+%nav.navigation--letter{ aria:{ label: I18n.t('pugin.components.navigation-letter.aria_label') } }
   %ul
     - ('a'..'z').each do |letter|
       %li{ data: { letter: letter }, class: ('active' if (params[:letter] == letter)) }
