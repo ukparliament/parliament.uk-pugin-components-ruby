@@ -9,6 +9,6 @@
           - unless letter == params[:letter]
             = navigation_link(route_symbol: route_symbol, letter: letter, primary_id: local_assigns.fetch(:primary_id, nil), secondary_id: local_assigns.fetch(:secondary_id, nil))
           - else
-            = letter
+            %span= letter
         - else 
-          = letter
+          %span= letter

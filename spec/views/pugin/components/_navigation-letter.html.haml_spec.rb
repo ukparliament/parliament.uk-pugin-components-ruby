@@ -47,7 +47,7 @@ describe 'pugin/components/_navigation-letter.html.haml', type: :view do
         render partial: 'pugin/components/navigation-letter', locals: { route_symbol: :people_letter_path }
       end
       it "renders the list items with the active class and no link" do
-        expect(rendered).to include("<li class='active' data-letter='a'>\na\n</li>")
+        expect(rendered).to include("<li class='active' data-letter='a'>\n<span>a</span>\n</li>")
       end
     end
 
@@ -84,7 +84,7 @@ describe 'pugin/components/_navigation-letter.html.haml', type: :view do
       ('a'..'z').each do |letter|
         it "just renders the letter #{letter}" do
           expect(rendered).not_to include("<a data-atoz-see=\"true\" href=\"/parties/1234/members/a-z/#{letter}\">#{letter}</a>")
-          expect(rendered).to include("<li data-letter='#{letter}'>\n#{letter}\n</li>")
+          expect(rendered).to include("<li data-letter='#{letter}'>\n<span>#{letter}</span>\n</li>")
         end
       end
     end
