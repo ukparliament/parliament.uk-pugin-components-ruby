@@ -9,10 +9,12 @@ en:
       status:
         status_text_1: 'This is a test website, so may be inaccurate.'
         status_text_2: 'to help improve it.'
-        election_text_1: 'in the General Election by 22 May.'
-        election_text_2: 'Remember to vote in the general election on 8th June.'
+        election_text_1: 'in the general election by 22 May.'
+        election_text_2: 'Find out'
+        election_text_3: 'in the general election on 8 June.'
         give_feedback: 'Give feedback'
         register_to_vote: 'Register to vote'
+        how_to_vote: 'how to vote'
       footer:
         uk_parliament: "UK Parliament"
         current_website: "Current Parliament.uk website"

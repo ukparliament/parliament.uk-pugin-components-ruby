@@ -8,7 +8,7 @@
         - if defined?(FlagHelper.register_to_vote?) && FlagHelper.register_to_vote?
           %a{ href: 'https://www.gov.uk/register-to-vote' }= I18n.t('pugin.components.status.register_to_vote')
           = I18n.t('pugin.components.status.election_text_1')
-        - else 
+        - else
           = I18n.t('pugin.components.status.election_text_2')
-
-
+          %a{ href: 'http://www.parliament.uk/get-involved/elections/voting/', target: '_blank', title: I18n.t('open_new_window')}= I18n.t('pugin.components.status.how_to_vote')
+          = I18n.t('pugin.components.status.election_text_3')
