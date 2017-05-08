@@ -1,7 +1,7 @@
 require 'pugin/version'
 
 module Pugin
-  ASSET_VERSION = '1.2.8'.freeze
+  ASSET_VERSION = '1.4.1'.freeze
   ASSET_LOCATION_URL = ENV.fetch('ASSET_LOCATION_URL', 'https://s3-eu-west-1.amazonaws.com/web1devci.pugin-website')
 
   class << self
@@ -13,6 +13,13 @@ module Pugin
   			add_i18n_paths
   		elsif sprockets?
   			register_sprockets
+			end
+
+			# Try and load HAML, raising an error if we are not able to
+			begin
+				require 'haml'
+			rescue LoadError => e
+				raise(LoadError, "pugin requires the 'haml' gem. Please check it is in your Gemfile - #{e.message}")
 			end
 		end
 

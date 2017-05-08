@@ -14,6 +14,7 @@
     = render partial: 'pugin/elements/skip-content'
     = render 'pugin/components/header'
     = render partial: 'pugin/components/status', locals: { status: nil }
+    = render partial: 'pugin/components/navigation-main' if @enable_navigation_main
     %main
       = yield
     = render 'pugin/components/footer'

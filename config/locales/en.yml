@@ -1,32 +1,40 @@
 en:
   pugin:
     cards:
-      person-list: 
+      person-list:
         current_mp_for: "Current MP for"
     components:
       header:
         parliament_header: "UK Parliament"
-      status: 
-        current_website: 'current website'
-        status_text_1: 'This is a test website, so may be inaccurate or misleading'
-        status_text_2: 'to help improve it. Return to'
-        give_feedback: 'give feedback'
-      footer: 
+      status:
+        status_text_1: 'This is a test website, so may be inaccurate.'
+        status_text_2: 'to help improve it.'
+        election_text_1: 'in the General Election by 22 May.'
+        election_text_2: 'Remember to vote in the general election on 8th June.'
+        give_feedback: 'Give feedback'
+        register_to_vote: 'Register to vote'
+      footer:
         uk_parliament: "UK Parliament"
         current_website: "Current Parliament.uk website"
         cookie_policy: "Cookie Policy"
-      letter-navigation: 
+      navigation-letter:
         aria_label: "Paged navigation"
         select_letter: "select a letter"
         showing_results: "Showing results for"
+      navigation-main:
+        aria_label: "navigation"
+        item_1: "MPs"
+        item_2: "Lords"
+        item_3: "Parties"
+        item_4: "Constituencies"
     people:
         list:
           member:
-            current: 
+            current:
               current_member:
                 current_mp_for: "Current MP for"
-    layouts: 
-      pugin: 
+    layouts:
+      pugin:
         website_brand: "UK Parliament"
   open_new_window: "website opens in a new window"
   no_content:

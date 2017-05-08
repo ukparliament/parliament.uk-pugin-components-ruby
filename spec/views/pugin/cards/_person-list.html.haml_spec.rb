@@ -54,8 +54,8 @@ describe 'pugin/cards/_person-list.html.haml', type: :view do
 
       expect(rendered).to eq(
 <<DATA
-<ol class='list'>
-<li class='list__item'>
+<ol class='list--box'>
+<li>
 <h2>
 <a href='/people/123'>Jane Smith</a>
 </h2>
@@ -77,9 +77,9 @@ DATA
       render partial: 'pugin/cards/person-list', locals: { people: @people, letter: 'a' }
 
       expect(response).to eq(<<DATA
-<ol class='list'>
-<li class='list__item'>
-<p>Sorry there are no results for 'A'</p>
+<ol class='list--box'>
+<li>
+<p>Sorry there are no results for &#39;A&#39;</p>
 </li>
 </ol>
 DATA
@@ -103,7 +103,7 @@ DATA
 
       expect(rendered).to eq(
 <<DATA
-<ol class='list'>
+<ol class='list--box'>
 </ol>
 DATA
                               )
@@ -153,8 +153,8 @@ DATA
 
       expect(rendered).to eq(
 <<DATA
-<ol class='list'>
-<li class='list__item'>
+<ol class='list--box'>
+<li>
 <h2>
 <a href='/people/123'></a>
 </h2>
@@ -199,8 +199,8 @@ DATA
 
       expect(rendered).to eq(
 <<DATA
-<ol class='list'>
-<li class='list__item'>
+<ol class='list--box'>
+<li>
 <h2>
 <a href='/people/123'>Jane Smith</a>
 </h2>
@@ -243,8 +243,8 @@ DATA
 
       expect(rendered).to eq(
 <<DATA
-<ol class='list'>
-<li class='list__item'>
+<ol class='list--box'>
+<li>
 <h2>
 <a href='/people/123'>Jane Smith</a>
 </h2>
