@@ -17,7 +17,6 @@ en:
         uk_parliament: "UK Parliament"
         current_website: "Current Parliament.uk website"
         cookie_policy: "Cookie Policy"
-<<<<<<< HEAD
       navigation-letter:
         aria_label: "Paged navigation"
         select_letter: "select a letter"
@@ -36,20 +35,6 @@ en:
                 current_mp_for: "Current MP for"
     layouts:
       pugin:
-=======
-      letter-navigation: 
-        aria_label: "Paged navigation"
-        select_letter: "select a letter"
-        showing_results: "Showing results for"
-    people:
-        list:
-          member:
-            current: 
-              current_member:
-                current_mp_for: "Current MP for"
-    layouts: 
-      pugin: 
->>>>>>> added new translations, first implementation of some lists, updated letter navigation
         website_brand: "UK Parliament"
   open_new_window: "website opens in a new window"
   no_content:
