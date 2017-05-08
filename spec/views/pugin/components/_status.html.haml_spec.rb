@@ -50,7 +50,6 @@ DATA
 
     it 'renders a message that shows a link to register to vote' do
       render partial: 'pugin/components/status', locals: { status: nil }
-      p FlagHelper.dissolution?
       expect(response).to eq(
 <<DATA
 <div class='highlight--status highlight--default'>
