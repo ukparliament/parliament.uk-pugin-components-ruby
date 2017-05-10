@@ -35,6 +35,10 @@ en:
             current:
               current_member:
                 current_mp_for: "Current MP for"
+    constituencies: 
+      list:
+        current: 
+          vacant: 'vacant'
     layouts:
       pugin:
         website_brand: "UK Parliament"
@@ -42,4 +46,5 @@ en:
   no_content:
     empty_list:
       members:
-        description: "Sorry there are no results for '%{letter}'"
+        description: 'There are no results'
+        for: 'for'

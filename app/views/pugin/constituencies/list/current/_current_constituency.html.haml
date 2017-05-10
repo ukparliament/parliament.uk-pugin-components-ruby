@@ -1,6 +1,5 @@
-%ul
-  %li= link_to(constituency.name, constituency_path(constituency.graph_id))
-  - if constituency.members.empty?
-    %li= t('constituencies.shared_translations.vacant_by_election').capitalize
-  - else
-    %li= constituency.members.first.display_name
+%h2= link_to(constituency.name, constituency_path(constituency.graph_id))
+- if constituency.members.empty?
+  %p= I18n.t('pugin.constituencies.list.current.vacant').capitalize
+- else
+  %p= constituency.members.first.display_name

@@ -74,12 +74,15 @@ DATA
     end
 
     it 'renders as expected' do
-      render partial: 'pugin/cards/person-list', locals: { people: @people, letter: 'a' }
+      render partial: 'pugin/cards/person-list', locals: { people: @people }
 
       expect(response).to eq(<<DATA
 <ol class='list--box'>
 <li>
-<p>Sorry there are no results for &#39;A&#39;</p>
+<p>
+There are no results
+
+</p>
 </li>
 </ol>
 DATA

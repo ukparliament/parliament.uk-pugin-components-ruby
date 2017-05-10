@@ -1,7 +1,9 @@
 -if people.empty?
   %ol.list--box
     %li
-      %p= I18n.t('no_content.empty_list.members.description', letter: letter.upcase)
+      %p
+        = "#{I18n.t('no_content.empty_list.members.description')}" 
+        = params[:letter].nil? ? "" : "#{I18n.t('no_content.empty_list.members.for')} '#{params[:letter].upcase}'"
 -else
   %ol.list--box
     - people.each do |person|

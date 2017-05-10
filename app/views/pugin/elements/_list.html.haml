@@ -1,7 +1,7 @@
 - list_tag = local_assigns.fetch(:ordered?, false) ? :ol : :ul
-= content_tag(list_tag, class: "list") do
+= content_tag(list_tag, class: "list--box") do
   - if data.empty?
-    %li.list__item
+    %li
       %p= t('no_content.empty_list.members.description', letter: params[:letter])
   - else 
-    = render partial: "pugin/#{item_type}/list/list", collection: local_assigns.fetch(:data, []), as: :data
+    = render partial: "pugin/#{item_type}/list/list", collection: local_assigns.fetch(:data, []), as: item_type.to_sym
