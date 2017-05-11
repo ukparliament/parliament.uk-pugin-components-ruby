@@ -25,7 +25,7 @@ describe 'pugin/components/_status.html.haml', type: :view do
 <div class='container'>
 <p>
 This is a test website, so may be inaccurate.
-<a href='https://ukparliament-self.achieveservice.com/AchieveForms/?form_uri=sandbox://AF-Form-337e2b87-4c8b-40f7-bb72-a80f15284b21&amp;amp;category=AF-Category-108691b0-e15c-46d7-9d16-7ad0d35cdb2a&amp;amp;isPublished=false' target='_blank' title='website opens in a new window'>Give feedback</a>
+<a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/' target='_blank' title='website opens in a new window'>Give feedback</a>
 to help improve it.
 </p>
 </div>
@@ -56,7 +56,7 @@ DATA
 <div class='container'>
 <p>
 This is a test website, so may be inaccurate.
-<a href='https://ukparliament-self.achieveservice.com/AchieveForms/?form_uri=sandbox://AF-Form-337e2b87-4c8b-40f7-bb72-a80f15284b21&amp;amp;category=AF-Category-108691b0-e15c-46d7-9d16-7ad0d35cdb2a&amp;amp;isPublished=false' target='_blank' title='website opens in a new window'>Give feedback</a>
+<a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/' target='_blank' title='website opens in a new window'>Give feedback</a>
 to help improve it.
 <a href='https://www.gov.uk/register-to-vote'>Register to vote</a>
 in the general election by 22 May.
@@ -90,7 +90,7 @@ DATA
 <div class='container'>
 <p>
 This is a test website, so may be inaccurate.
-<a href='https://ukparliament-self.achieveservice.com/AchieveForms/?form_uri=sandbox://AF-Form-337e2b87-4c8b-40f7-bb72-a80f15284b21&amp;amp;category=AF-Category-108691b0-e15c-46d7-9d16-7ad0d35cdb2a&amp;amp;isPublished=false' target='_blank' title='website opens in a new window'>Give feedback</a>
+<a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/' target='_blank' title='website opens in a new window'>Give feedback</a>
 to help improve it.
 Find out
 <a href='http://www.parliament.uk/get-involved/elections/voting/' target='_blank' title='website opens in a new window'>how to vote</a>
