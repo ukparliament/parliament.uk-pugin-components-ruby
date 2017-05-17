@@ -10,7 +10,7 @@ module Pugin
   		if rails?
   			register_rails_files
   		elsif sinatra?
-  			add_i18n_paths
+  			register_sinatra_files
   		elsif sprockets?
   			register_sprockets
 			end
@@ -65,12 +65,29 @@ module Pugin
 
 		def register_rails_files
 			require 'pugin/engine'
-      require 'pugin/railtie'
+      		require 'pugin/railtie'
+
+      		setup_bandiera
+		end
+
+		def register_sinatra_files
+			add_i18n_paths
+			setup_bandiera
+			require 'pugin/view_helpers'
 		end
 
 		def add_i18n_paths
 			require 'i18n'
 			I18n.load_path += Dir[File.join(gem_path, 'config', 'locales', '*.yml')]
+		end
+
+		def setup_bandiera
+			if defined?(::Bandiera::Client)
+				require 'pugin/bandiera'
+				include PuginBandieraClient
+			else
+				raise(LoadError, "pugin requires the host application to be using the bandiera-client gem. Please check your Gemfile and try again.")
+			end
 		end
 
 		def register_sprockets

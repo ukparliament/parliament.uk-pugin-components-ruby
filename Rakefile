@@ -17,7 +17,13 @@ RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
+
 APP_RAKEFILE = File.expand_path('../spec/dummy/Rakefile', __FILE__)
+
+ENV['BANDIERA_URL'] ||= 'localhost:5000'
+require 'bandiera/client'
+require 'pugin/bandiera'
+
 load 'rails/tasks/engine.rake'
 
 load 'rails/tasks/statistics.rake'

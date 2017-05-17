@@ -4,11 +4,12 @@
       = I18n.t('pugin.components.status.status_text_1')
       %a{ href: 'http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/', target: '_blank', title: I18n.t('open_new_window')}= I18n.t('pugin.components.status.give_feedback')
       = I18n.t('pugin.components.status.status_text_2')
-      - if defined?(FlagHelper.dissolution?) && FlagHelper.dissolution?
-        - if defined?(FlagHelper.register_to_vote?) && FlagHelper.register_to_vote?
+      - if Pugin::Feature::Bandiera.dissolution?
+        - if Pugin::Feature::Bandiera.register_to_vote?
           %a{ href: 'https://www.gov.uk/register-to-vote' }= I18n.t('pugin.components.status.register_to_vote')
           = I18n.t('pugin.components.status.election_text_1')
         - else
           = I18n.t('pugin.components.status.election_text_2')
           %a{ href: 'http://www.parliament.uk/get-involved/elections/voting/', target: '_blank', title: I18n.t('open_new_window')}= I18n.t('pugin.components.status.how_to_vote')
           = I18n.t('pugin.components.status.election_text_3')
+ 
