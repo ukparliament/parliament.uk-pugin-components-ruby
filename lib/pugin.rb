@@ -66,13 +66,12 @@ module Pugin
 		def register_rails_files
 			require 'pugin/engine'
       		require 'pugin/railtie'
-
-      		setup_bandiera
+      		setup_features
 		end
 
 		def register_sinatra_files
 			add_i18n_paths
-			setup_bandiera
+			setup_features
 			require 'pugin/view_helpers'
 		end
 
@@ -82,12 +81,16 @@ module Pugin
 		end
 
 		def setup_bandiera
-			if defined?(::Bandiera::Client)
-				require 'pugin/bandiera'
-				include PuginBandieraClient
-			else
-				raise(LoadError, "pugin requires the host application to be using the bandiera-client gem. Please check your Gemfile and try again.")
-			end
+			raise(LoadError, 'pugin requires the host application to be using the bandiera-client gem. Please check your Gemfile and try again.') unless defined?(::Bandiera::Client)
+			raise(LoadError, 'pugin requires the environment variable BANDIERA_URL to be set. Please set the environment variable and try again.') unless ENV['BANDIERA_URL']
+
+			require 'pugin/bandiera'
+			include PuginBandieraClient
+		end
+
+		def setup_features
+			setup_bandiera
+			require 'pugin/feature'
 		end
 
 		def register_sprockets
