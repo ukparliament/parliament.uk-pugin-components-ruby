@@ -2,6 +2,10 @@ require 'spec_helper'
 
 describe 'Pugin simple feature' do
 
+    before :example do 
+        Pugin::Feature::SimpleFeature.disable
+    end
+
     after :example do
         Pugin::Feature::SimpleFeature.disable
     end

@@ -2,6 +2,10 @@ require 'spec_helper'
 
 describe 'Pugin status banner' do
 
+    before :example do 
+        Pugin::Feature::StatusBanner.disable
+    end
+
     after :example do
         Pugin::Feature::StatusBanner.disable
     end

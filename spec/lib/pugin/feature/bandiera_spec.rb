@@ -50,4 +50,16 @@ describe 'The bandiera client' do
             end
         end
     end
+
+    context 'when trying to reset the @features instance variable' do
+
+        before :each do
+            Pugin::Feature::Bandiera.instance_variable_set(:@features, {'show-register' => true})
+        end
+
+        it 'resets the @features instance variable back to nil' do
+            Pugin::Feature::Bandiera.reset
+            expect(@features).to equal(nil)
+        end
+    end
 end

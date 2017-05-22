@@ -2,6 +2,10 @@ require 'spec_helper'
 
 describe 'Pugin top navigation' do
 
+    before :example do 
+        Pugin::Feature::TopNavigation.disable
+    end
+
     after :example do
         Pugin::Feature::TopNavigation.disable
     end
