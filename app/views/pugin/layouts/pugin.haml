@@ -13,8 +13,8 @@
       = render partial: 'pugin/javascript/google_tag_manager_noscript'
     = render partial: 'pugin/elements/skip-content'
     = render 'pugin/components/header'
-    = render partial: 'pugin/components/status', locals: { status: nil }
-    = render partial: 'pugin/components/navigation-main' if @enable_navigation_main
+    = render partial: 'pugin/components/status', locals: { status: nil } if Pugin::Feature::StatusBanner.enabled?
+    = render partial: 'pugin/components/navigation-main' if Pugin::Feature::TopNavigation.enabled?
     %main
       = yield
     = render 'pugin/components/footer'

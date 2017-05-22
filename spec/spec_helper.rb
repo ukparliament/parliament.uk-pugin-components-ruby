@@ -1,5 +1,6 @@
 require 'simplecov'
 require 'coveralls'
+
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
                                                                  Coveralls::SimpleCov::Formatter,
                                                                  SimpleCov::Formatter::HTMLFormatter
@@ -7,6 +8,8 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 SimpleCov.start
 
 ENV['RAILS_ENV'] ||= 'test'
+
+require 'bandiera/client'
 
 require File.expand_path('../dummy/config/environment.rb', __FILE__)
 require 'rspec/rails'

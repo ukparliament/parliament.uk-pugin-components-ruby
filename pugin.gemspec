@@ -27,4 +27,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop', '~> 0.47'
   s.add_development_dependency 'pry', '~> 0.10'
   s.add_development_dependency 'haml', '~> 5.0'
+  s.add_development_dependency 'bandiera-client', '3.0.4'
+  
 end
