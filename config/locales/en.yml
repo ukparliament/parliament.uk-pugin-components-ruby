@@ -37,8 +37,12 @@ en:
                 current_mp_for: "Current MP for"
     constituencies: 
       list:
-        current: 
+        current_constituency:
           vacant: 'vacant'
+        former_constituency:
+          former: 'former'
+          constituency: 'constituency'
+
     layouts:
       pugin:
         website_brand: "UK Parliament"

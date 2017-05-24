@@ -1,8 +1,10 @@
 %li
   - if constituencies.current?
-    %h2= link_to(constituencies.name, constituency_path(constituencies.graph_id))
-    //- Constituency has a member? TRUE = Member's Name : FALSE = "Vacant" text
-    %p= constituencies.members.empty? ? I18n.t('pugin.constituencies.list.current.vacant').capitalize : constituencies.members.first.display_name
+    %h2
+      %a{:href => "/constituencies/#{constituencies.graph_id}"}= constituencies.name
+    -# Constituency has a member? TRUE = Member's Name : FALSE = "Vacant" text
+    %p= constituencies.members.empty? ? I18n.t('pugin.constituencies.list.current_constituency.vacant').capitalize : constituencies.members.first.display_name
   - else 
-    %h2= link_to constituencies.name, constituency_path(constituencies.graph_id)
-    %p= "#{t('former').capitalize} #{t('constituency')}"
+    %h2
+      %a{:href => "/constituencies/#{constituencies.graph_id}"}= constituencies.name
+    %p= "#{t('pugin.constituencies.list.former_constituency.former').capitalize} #{t('pugin.constituencies.list.former_constituency.constituency')}"
