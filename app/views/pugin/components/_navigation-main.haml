@@ -1,11 +1,11 @@
 %nav.navigation--main{aria:{ label: I18n.t('pugin.components.navigation-main.aria_label') } }
   .container
     %ul
+      %li 
+        = link_to(I18n.t('pugin.components.navigation-main.item_1'), house_members_current_a_z_letter_path(HousesHelper.commons_id, 'a'))
       %li
-        %a{ href: '/houses/KL2k1BGP/members/current/a-z/a'}= I18n.t('pugin.components.navigation-main.item_1')
+        = link_to(I18n.t('pugin.components.navigation-main.item_2'), house_members_current_a_z_letter_path(HousesHelper.lords_id, 'a'))
       %li
-        %a{ href: '/houses/m1EgVTLj/members/current/a-z/a'}= I18n.t('pugin.components.navigation-main.item_2')
+        = link_to(I18n.t('pugin.components.navigation-main.item_4'), constituencies_current_a_z_letter_path('a'))
       %li
-        %a{ href: '/houses/KL2k1BGP/parties/current'}= I18n.t('pugin.components.navigation-main.item_3')
-      %li
-        %a{ href: '/constituencies/current/a-z/a'}= I18n.t('pugin.components.navigation-main.item_4')
+        = link_to(I18n.t('pugin.components.navigation-main.item_3'), house_parties_current_path(HousesHelper.commons_id))
