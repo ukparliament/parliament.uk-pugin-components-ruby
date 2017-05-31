@@ -1,14 +1,15 @@
-%p
-  A to Z -
-  = params[:letter].present? ? "#{I18n.t('pugin.components.navigation-letter.showing_results')} #{params[:letter].capitalize}" : "#{I18n.t('pugin.components.navigation-letter.select_letter')}"
-%nav.navigation--letter{ aria:{ label: I18n.t('pugin.components.navigation-letter.aria_label') } }
-  %ul
-    - ('a'..'z').each do |letter|
-      %li{ data: { letter: letter }, class: ('active' if (params[:letter] == letter)) }
-        - if @letters.include?(letter.upcase)
-          - unless letter == params[:letter]
-            = navigation_link(route_symbol: route_symbol, letter: letter, primary_id: local_assigns.fetch(:primary_id, nil), secondary_id: local_assigns.fetch(:secondary_id, nil))
+- unless @letters.empty?
+  %p
+    A to Z -
+    = params[:letter].present? ? "#{I18n.t('pugin.components.navigation-letter.showing_results')} #{params[:letter].capitalize}" : "#{I18n.t('pugin.components.navigation-letter.select_letter')}"
+  %nav.navigation--letter{ aria:{ label: I18n.t('pugin.components.navigation-letter.aria_label') } }
+    %ul
+      - ('a'..'z').each do |letter|
+        %li{ data: { letter: letter }, class: ('active' if (params[:letter] == letter)) }
+          - if @letters.include?(letter.upcase)
+            - unless letter == params[:letter]
+              = navigation_link(route_symbol: route_symbol, letter: letter, primary_id: local_assigns.fetch(:primary_id, nil), secondary_id: local_assigns.fetch(:secondary_id, nil))
+            - else
+              %span= letter
           - else
             %span= letter
-        - else 
-          %span= letter

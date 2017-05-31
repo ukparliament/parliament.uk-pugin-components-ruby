@@ -9,7 +9,7 @@ describe 'pugin/components/_navigation-letter.html.haml', type: :view do
       # Variables used in testing
       @primary_id = '1234'
       @secondary_id = '5678'
-      @letters = ('A'..'Z')
+      @letters = ('A'..'Z').to_a
 
       # Allow URLS to be generated
       #   - Simple Letter
@@ -84,7 +84,7 @@ describe 'pugin/components/_navigation-letter.html.haml', type: :view do
       ('a'..'z').each do |letter|
         it "just renders the letter #{letter}" do
           expect(rendered).not_to include("<a data-atoz-see=\"true\" href=\"/parties/1234/members/a-z/#{letter}\">#{letter}</a>")
-          expect(rendered).to include("<li data-letter='#{letter}'>\n<span>#{letter}</span>\n</li>")
+          expect(rendered).to include("")
         end
       end
     end
