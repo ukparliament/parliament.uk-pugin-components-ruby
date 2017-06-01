@@ -1,52 +1,34 @@
 require 'spec_helper'
 require 'pugin/feature/bandiera'
 
-describe 'The bandiera client' do
+describe 'The bandiera client feature set' do
 
-    context 'when checking if Parliament is in dissolution' do 
-        context 'when the feature exists in Bandiera' do
+    method_hash = {
+        'show-dissolution': :dissolution?,
+        'show-register': :register_to_vote?,
+        'show-election': :election?,
+        'show-post-election': :post_election?
+    }
 
-            before :each do
-                Pugin::Feature::Bandiera.instance_variable_set(:@features, {'show-dissolution' => true})
+    method_hash.each do |flag_name, method_name|
+        context flag_name do
+            context 'when the feature exists in Bandiera' do
+                before :each do
+                    Pugin::Feature::Bandiera.instance_variable_set(:@features, {"#{flag_name}" => true})
+                end
+
+                it "returns the value of #{flag_name} in the Bandiera database if it exists" do
+                    expect(Pugin::Feature::Bandiera.send(method_name)).to equal(true)
+                end
             end
+            context 'when the feature does not exist in Bandiera' do
+                before :each do
+                    Pugin::Feature::Bandiera.instance_variable_set(:@features, {})
+                end
 
-            it "returns the value of show-dissolution in the Bandiera database if it exists"  do 
-                expect(Pugin::Feature::Bandiera.dissolution?).to equal(true)
-            end
-        end
-
-        context 'when the feature does not exist in Bandiera' do 
-
-            before :each do
-                Pugin::Feature::Bandiera.instance_variable_set(:@features, {})
-            end
-
-            it "returns false because the feature value is nil"  do 
-                expect(Pugin::Feature::Bandiera.dissolution?).to equal(false)
-            end
-        end
-    end
-
-    context 'when checking if you can still register to vote' do 
-        context 'when the feature exists in Bandiera' do 
-
-            before :each do
-                Pugin::Feature::Bandiera.instance_variable_set(:@features, {'show-register' => true})
-            end
-
-            it "returns the value of show-dissolution in the Bandiera database if it exists"  do 
-                expect(Pugin::Feature::Bandiera.register_to_vote?).to equal(true)
-            end
-        end
-
-        context 'when the feature does not exist in Bandiera' do 
-
-            before :each do
-                Pugin::Feature::Bandiera.instance_variable_set(:@features, {})
-            end
-
-            it "returns false because the feature value is nil"  do 
-                expect(Pugin::Feature::Bandiera.register_to_vote?).to equal(false)
+                it "returns false because the feature value is nil"  do
+                    expect(Pugin::Feature::Bandiera.send(method_name)).to equal(false)
+                end
             end
         end
     end

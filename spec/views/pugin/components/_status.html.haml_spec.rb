@@ -8,6 +8,7 @@ describe 'pugin/components/_status.html.haml', type: :view do
   	before :each do 
       allow(Pugin::Feature::Bandiera).to receive(:dissolution?).and_return(false)
       allow(Pugin::Feature::Bandiera).to receive(:register_to_vote?).and_return(false)
+      allow(Pugin::Feature::Bandiera).to receive(:election?).and_return(false)
     end
 
     it 'renders a message not related to the dissolution' do
@@ -84,5 +85,35 @@ DATA
       )
     end
   end
+
+  context 'while on election day' do
+
+    before :each do
+      allow(Pugin::Feature::Bandiera).to receive(:dissolution?).and_return(false)
+      allow(Pugin::Feature::Bandiera).to receive(:register_to_vote?).and_return(false)
+      allow(Pugin::Feature::Bandiera).to receive(:election?).and_return(true)
+    end
+
+    it 'renders a message that reminds the user of the general election date' do
+      render partial: 'pugin/components/status', locals: { status: nil }
+
+      expect(response).to eq(
+<<DATA
+<div class='highlight--status highlight--default'>
+<div class='container'>
+<p>
+This is a test website, so may be inaccurate.
+<a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/' target='_blank' title='website opens in a new window'>Give feedback</a>
+to help improve it.
+Thursday 8 June is election day, find out
+<a href='http://www.parliament.uk/get-involved/elections/voting/' target='_blank' title='website opens in a new window'>how to vote</a>.
+</p>
+</div>
+</div>
+DATA
+      )
+    end
+  end
+
 
 end
