@@ -51,23 +51,11 @@ describe 'pugin/components/_navigation-letter.html.haml', type: :view do
       end
     end
 
-    # Test for primary id and letter
-    context 'and a primary id' do
-      before :each do
-        render partial: 'pugin/components/navigation-letter', locals: { route_symbol: :party_members_letter_path, primary_id: @primary_id }
+    context 'and with route arguments' do 
+      before :each do 
+        render partial: 'pugin/components/navigation-letter', locals: { route_symbol: :house_party_members_letter_path, route_args:[@primary_id,@secondary_id] }
       end
 
-      ('a'..'z').each do |letter|
-        it "renders a navigation link for /parties/1234/a-z/#{letter}" do
-          expect(rendered).to include("<a data-atoz-see=\"true\" href=\"/parties/1234/members/a-z/#{letter}\">#{letter}</a>")
-        end
-      end
-    end
-
-    context 'and both a primary and secondary id' do
-      before :each do
-        render partial: 'pugin/components/navigation-letter', locals: { route_symbol: :house_party_members_letter_path, primary_id: @primary_id, secondary_id: @secondary_id }
-      end
       ('a'..'z').each do |letter|
         it "renders a navigation link for /houses/1234/parties/5678/members/a-z/#{letter}" do
           expect(rendered).to include("<a data-atoz-see=\"true\" href=\"/houses/1234/parties/5678/members/a-z/#{letter}\">#{letter}</a>")
@@ -78,7 +66,7 @@ describe 'pugin/components/_navigation-letter.html.haml', type: :view do
     context "doesn't render links for empty letters" do
       before :each do
         @letters = []
-        render partial: 'pugin/components/navigation-letter', locals: { route_symbol: :party_members_letter_path, primary_id: @primary_id }
+        render partial: 'pugin/components/navigation-letter', locals: { route_symbol: :party_members_letter_path, route_args: [@primary_id] }
       end
 
       ('a'..'z').each do |letter|

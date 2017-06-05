@@ -12,6 +12,16 @@ module Pugin
 
 					@features.fetch('show-register', false)
 				end
+				def election?
+					get_features
+
+					@features.fetch('show-election', false)
+				end
+				def post_election?
+					get_features
+
+					@features.fetch('show-post-election', false)
+				end
 
 				# Reset cached features
 				def reset
