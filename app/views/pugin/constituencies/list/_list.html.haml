@@ -8,7 +8,6 @@
         %p= "#{incumbency.member.display_name} #{t('pugin.constituencies.list.from')} #{l(incumbency.start_date, format: :default)} - #{l(incumbency.end_date, format: :default)}"
         - incumbency.member.party_memberships.each do |member_party|
           %p= member_party.party.name
-
   - elsif constituencies.current?
     %h2
       %a{:href => "/constituencies/#{constituencies.graph_id}"}= constituencies.name

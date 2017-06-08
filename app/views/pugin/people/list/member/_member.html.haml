@@ -17,11 +17,11 @@
 
   %h2
     %a{:href => "/people/#{member.graph_id}"}= member.display_name
-  - if !member.constituencies.empty?
+  - unless member.constituencies.empty?
     - seat_incumbency = member.seat_incumbencies.select(&:current?).first
     - unless seat_incumbency.nil?
-      %p= "#{t('.current_mp_for')} #{seat_incumbency.constituency.name}"
-  - if !member.parties.empty?
+      %p= "#{I18n.t('pugin.people.list.member.current_mp_for')} #{seat_incumbency.constituency.name}"
+  - unless member.parties.empty?
     - party_membership = member.party_memberships.select(&:current?).first
     - unless party_membership.nil?
       %p= party_membership.party.name
@@ -30,5 +30,5 @@
 
   %h2
     %a{:href => "/people/#{member.graph_id}"}= member.display_name
-  - if !member.statuses[:house_membership_status].empty? && !member.statuses[:house_membership_status].include?('Current MP')
+  - unless member.statuses[:house_membership_status].empty? && !member.statuses[:house_membership_status].include?('Current MP')
     %p= member.statuses[:house_membership_status].join(' and ')

@@ -33,9 +33,7 @@ en:
     people:
         list:
           member:
-            current:
-              current_member:
-                current_mp_for: "Current MP for"
+            current_mp_for: "Current MP for"
     constituencies: 
       list:
         from: 'from'
