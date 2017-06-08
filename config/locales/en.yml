@@ -38,6 +38,7 @@ en:
                 current_mp_for: "Current MP for"
     constituencies: 
       list:
+        from: 'from'
         current_constituency:
           vacant: 'vacant'
         former_constituency:

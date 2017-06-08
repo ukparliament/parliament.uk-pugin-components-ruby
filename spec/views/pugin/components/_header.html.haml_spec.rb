@@ -9,7 +9,9 @@ describe 'pugin/components/_header.html.haml', type: :view do
     expect(response).to eq(<<DATA
 <header>
 <div class='container'>
-<a class='logo' href='/'>UK Parliament</a>
+<a href='/'>
+<img alt='UK Parliament' class='logo' src='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/1.4.6/images/uk_parliament_logo.png' srcset='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/1.4.6/images/uk_parliament_logo.svg'>
+</a>
 </div>
 </header>
 DATA

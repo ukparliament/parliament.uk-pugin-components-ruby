@@ -1,4 +1,34 @@
-- current_incumbency = data.seat_incumbencies.sort{ |inc_a, inc_b| inc_b.start_date <=> inc_a.start_date }.first
-- current_incumbency = current_incumbency.current? ? "current" : "former"
+- current_incumbency = member.seat_incumbencies.sort{ |inc_a, inc_b| inc_b.start_date <=> inc_a.start_date }.first
 
-= render partial: "pugin/people/list/member/#{current_incumbency}/#{current_incumbency}_member", locals: { data: local_assigns.fetch(:data, []) }
+- if !instance_variable_get("@parliament").nil? # parliament member
+
+  %h2
+    %a{:href => "/people/#{member.graph_id}"}= member.display_name
+  - unless member.constituencies.empty?
+    - unless member.seat_incumbencies.nil?
+      - member.seat_incumbencies.each do |seat_incumbency|
+        %p= "#{seat_incumbency.constituency.name} from #{l(seat_incumbency.start_date, format: :default)} - #{l(seat_incumbency.end_date, format: :default)}"
+        
+  - unless member.parties.empty?
+    - member.party_memberships.each do |party_membership|
+      %p= party_membership.party.name
+
+- elsif current_incumbency.current? # current member
+
+  %h2
+    %a{:href => "/people/#{member.graph_id}"}= member.display_name
+  - if !member.constituencies.empty?
+    - seat_incumbency = member.seat_incumbencies.select(&:current?).first
+    - unless seat_incumbency.nil?
+      %p= "#{t('.current_mp_for')} #{seat_incumbency.constituency.name}"
+  - if !member.parties.empty?
+    - party_membership = member.party_memberships.select(&:current?).first
+    - unless party_membership.nil?
+      %p= party_membership.party.name
+
+- else # former member
+
+  %h2
+    %a{:href => "/people/#{member.graph_id}"}= member.display_name
+  - if !member.statuses[:house_membership_status].empty? && !member.statuses[:house_membership_status].include?('Current MP')
+    %p= member.statuses[:house_membership_status].join(' and ')
