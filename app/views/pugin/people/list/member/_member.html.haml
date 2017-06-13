@@ -1,7 +1,6 @@
-- current_incumbency = member.seat_incumbencies.sort{ |inc_a, inc_b| inc_b.start_date <=> inc_a.start_date }.first
+- current_incumbency = member.seat_incumbencies.select(&:current?).first
 
 - if !instance_variable_get("@parliament").nil? # parliament member
-
   %h2
     %a{:href => "/people/#{member.graph_id}"}= member.display_name
   - unless member.constituencies.empty?
@@ -13,8 +12,7 @@
     - member.party_memberships.each do |party_membership|
       %p= party_membership.party.name
 
-- elsif current_incumbency.current? # current member
-
+- elsif !current_incumbency.nil? # current member
   %h2
     %a{:href => "/people/#{member.graph_id}"}= member.display_name
   - unless member.constituencies.empty?

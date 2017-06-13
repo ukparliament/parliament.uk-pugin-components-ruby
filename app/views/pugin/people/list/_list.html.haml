@@ -1,3 +1,7 @@
 - person_type = people.house_incumbencies.empty? ? "member" : "lord"
-%li.list__item
-  = render partial: "pugin/people/list/#{person_type}/#{person_type}", locals: { "#{person_type}": local_assigns.fetch(:people, []), as: person_type }
+%li{:class => ("image__item" if Pugin::Feature::Bandiera.show_list_images?)}
+  = get_image()
+  - if Pugin::Feature::Bandiera.show_list_images?
+    .list--details= render partial: "pugin/people/list/#{person_type}/#{person_type}", locals: { "#{person_type}": local_assigns.fetch(:people, []), as: person_type }
+  - else 
+    = render partial: "pugin/people/list/#{person_type}/#{person_type}", locals: { "#{person_type}": local_assigns.fetch(:people, []), as: person_type }

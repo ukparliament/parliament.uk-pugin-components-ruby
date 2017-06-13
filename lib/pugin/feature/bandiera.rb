@@ -22,6 +22,12 @@ module Pugin
 
 					@features.fetch('show-post-election', false)
 				end
+				def show_list_images?
+					get_features
+
+					@features.fetch('show-list-images', false)
+				end
+
 
 				# Reset cached features
 				def reset
