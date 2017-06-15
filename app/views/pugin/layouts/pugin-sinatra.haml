@@ -13,8 +13,8 @@
     - if ENV['GTM_KEY']
       = partial '/pugin/javascript/_google_tag_manager_noscript'
     = partial '/pugin/elements/_skip-content'
-    = partial '/pugin/components/_header'
     = partial '/pugin/components/_status'
+    = partial '/pugin/components/_header'
     %main
       = yield
     = partial '/pugin/components/_footer'
