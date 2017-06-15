@@ -12,7 +12,7 @@ module Pugin
                 if @image
                     return image_tag("#{@image.image_id}")
                 else
-                    return image_tag("https://s3-eu-west-1.amazonaws.com/web1devci.pugin-website/images/uk_parliament_placeholder_list_image.png")
+                    return image_tag("https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/images/uk_parliament_placeholder_list_image.png")
                 end
             end
         end
