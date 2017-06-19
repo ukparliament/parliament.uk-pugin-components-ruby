@@ -37,7 +37,7 @@ describe 'pugin/people/list/member/_member.html.haml', type: :view do
     it "renders the current MP data" do 
       render partial: "pugin/people/list/list", collection: @people, as: "people".to_sym
       expect(response).to include("<a href='/people/123'>currentmp1</a>") 
-      expect(response).to include("<p>Current MP for constituency1</p>") 
+      expect(response).to include("<p>MP for constituency1</p>") 
       expect(response).to include("<p>Labour</p>") 
     end
   end
