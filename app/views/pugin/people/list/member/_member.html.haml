@@ -18,7 +18,7 @@
   - unless member.constituencies.empty?
     - seat_incumbency = member.seat_incumbencies.select(&:current?).first
     - unless seat_incumbency.nil?
-      %p= "#{I18n.t('pugin.people.list.member.current_mp_for')} #{seat_incumbency.constituency.name}"
+      %p= "#{I18n.t('pugin.people.list.member.mp_for')} #{seat_incumbency.constituency.name}"
   - unless member.parties.empty?
     - party_membership = member.party_memberships.select(&:current?).first
     - unless party_membership.nil?
