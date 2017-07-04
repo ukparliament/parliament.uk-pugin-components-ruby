@@ -6,6 +6,12 @@ module Pugin
   STATIC_ASSET_LOCATION_URL = ENV.fetch('STATIC_ASSET_LOCATION_URL', 'https://s3-eu-west-1.amazonaws.com/web1devci.static-assets')
 
   class << self
+		attr_writer :alternates
+
+		def alternates
+			@alternates || []
+		end
+
   	# Inspired by bootsrap-sass
   	def load!
   		if rails?

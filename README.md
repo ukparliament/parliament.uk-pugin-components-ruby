@@ -14,6 +14,9 @@
 - [Installation](#installation)
 - [Usage](#usage)
   - [Example](#example)
+  - [Adding the Parliamentary layout](#adding-the-parliamentary-layout)
+    - [Including rel-alternate links](#including-rel-alternate-links)
+      - [Example](#example-1)
 - [Getting Started with Development](#getting-started-with-development)
   - [Running the tests](#running-the-tests)
 - [Contributing](#contributing)
@@ -55,6 +58,28 @@ Now all of the view components should be available within your host application.
 Add the following line into the application controller within your host application
 ```erb
 layout 'pugin/layouts/pugin'
+```
+
+#### Including rel-alternate links
+When rendering using the Parliamentary layout, if you'd like to document rel-alternates like so:
+
+```html
+<link rel="alternate" type="application/rdf+json" href="https://api.example.com/some/url" />
+<link rel="alternate" type="application/rdf+xml" href="https://api.example.com/some/other/url" />
+```
+
+You can do so automatically by setting `Pugin.alternates`.
+
+##### Example
+Within your controller:
+
+```ruby
+alternates = [
+  { type: 'application/rdf+json', href: 'https://api.example.com/some/url' },
+  { type: 'application/rdf+xml', href: 'https://api.example.com/some/other/url' }
+]
+
+Pugin.alternates = alternates
 ```
 
 
