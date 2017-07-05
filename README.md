@@ -1,5 +1,5 @@
 # Pugin Components Rails
-[pugin-components-rails][pugin-components-rails] is a component-based pattern design library created by the [Parliamentary Digital Service][pds] that holds all of the reusable partials for elements of the UK Parliament's microservices.
+[pugin-components-ruby][pugin-components-ruby] is a component-based pattern design library created by the [Parliamentary Digital Service][pds] that holds all of the reusable partials for elements of the UK Parliament's microservices.
 
 [![Build Status][shield-travis]][info-travis] [![Test Coverage][shield-coveralls]][info-coveralls] [![License][shield-license]][info-license]
 
@@ -26,7 +26,7 @@
 
 
 ## Requirements
-[pugin-components-rails][pugin-components-rails] requires the following:
+[pugin-components-ruby][pugin-components-ruby] requires the following:
 * [Ruby][ruby] - [click here][ruby-version] for the exact version
 * [Bundler][bundler]
 * [Rails][rails]
@@ -86,8 +86,8 @@ Pugin.alternates = alternates
 ## Getting Started with Development
 To clone the repository and set up the dependencies, run the following:
 ```bash
-git clone https://github.com/ukparliament/pugin-components-rails.git
-cd pugin-components-rails
+git clone https://github.com/ukparliament/pugin-components-ruby.git
+cd pugin-components-ruby
 bundle install
 ```
 
@@ -110,12 +110,12 @@ If you wish to submit a bug fix or feature, you can create a pull request and it
 
 
 ## License
-[pugin-components-rails][pugin-components-rails] is licensed under the [Open Parliament Licence][info-license].
+[pugin-components-ruby][pugin-components-ruby] is licensed under the [Open Parliament Licence][info-license].
 
 [ruby]:                   https://www.ruby-lang.org/en/
 [bundler]:                http://bundler.io
 [rspec]:                  http://rspec.info
-[pugin-components-rails]: https://github.com/ukparliament/parliament.uk-pugin-components-rails
+[pugin-components-ruby]: 	https://github.com/ukparliament/parliament.uk-pugin-components-ruby
 [pds]:                    https://www.parliament.uk/mps-lords-and-offices/offices/bicameral/parliamentary-digital-service/
 [ruby-version]:           https://github.com/ukparliament/pugin/blob/master/.ruby-version
 [rails]:                  http://rubyonrails.org
