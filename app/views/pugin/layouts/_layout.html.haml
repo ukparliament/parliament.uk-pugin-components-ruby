@@ -8,6 +8,10 @@
     %link{rel: 'shortcut icon', type: 'image/x-icon', href: "#{Pugin::STATIC_ASSET_LOCATION_URL}/favicon.ico"}
     - if ENV['GTM_KEY']
       = render partial: 'pugin/javascript/google_tag_manager'
+    - unless Pugin.alternates.empty?
+      / /==========================\
+      / [ See below for data views ]
+      / \==========================/
     - Pugin.alternates.each do |alternate|
       %link{rel: 'alternate', type: alternate[:type], href: alternate[:href]}
   %body.no-js
