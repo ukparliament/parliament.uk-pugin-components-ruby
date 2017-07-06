@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'haml'
 
-describe 'pugin/layouts/pugin.html.haml', type: :view do
+describe 'pugin/layouts/_layout.html.haml', type: :view do
   before :each do
     HousesHelper = Class.new
     allow(HousesHelper).to receive(:commons_id).and_return('123')
