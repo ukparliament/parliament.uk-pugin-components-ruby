@@ -1,32 +1,39 @@
 - current_incumbency = member.seat_incumbencies.select(&:current?).first
 
-- if !instance_variable_get("@parliament").nil? # parliament member
-  %h2
-    %a{:href => "/people/#{member.graph_id}"}= member.display_name
-  - unless member.constituencies.empty?
-    - unless member.seat_incumbencies.nil?
-      - member.seat_incumbencies.each do |seat_incumbency|
-        %p= "#{seat_incumbency.constituency.name} from #{l(seat_incumbency.start_date, format: :default)} - #{l(seat_incumbency.end_date, format: :default)}"
-        
-  - unless member.parties.empty?
-    - member.party_memberships.each do |party_membership|
-      %p= party_membership.party.name
+- if Pugin::Feature::Bandiera.show_list_images?
+  - if member.image_id != "placeholder"
+    %img{:src => "#{ENV['IMAGE_SERVICE_URL']}/#{member.image_id}.jpg?crop=1&height=93px&width=93px", :alt => "#{member.display_name}"}
+  - else
+    %img{:src => "https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/images/uk_parliament_placeholder_list_image.png", :alt => "placeholder"}
+.list--details
+  - if !instance_variable_get("@parliament").nil? # parliament member
+    %h2
+      %a{:href => "/people/#{member.graph_id}"}= member.display_name
+    - unless member.constituencies.empty?
+      - unless member.seat_incumbencies.nil?
+        - member.seat_incumbencies.each do |seat_incumbency|
+          %p= "#{seat_incumbency.constituency.name} from #{l(seat_incumbency.start_date, format: :default)} - #{l(seat_incumbency.end_date, format: :default)}"
+          
+    - unless member.parties.empty?
+      - member.party_memberships.each do |party_membership|
+        %p= party_membership.party.name
 
-- elsif !current_incumbency.nil? # current member
-  %h2
-    %a{:href => "/people/#{member.graph_id}"}= member.display_name
-  - unless member.constituencies.empty?
-    - seat_incumbency = member.seat_incumbencies.select(&:current?).first
-    - unless seat_incumbency.nil?
-      %p= "#{I18n.t('pugin.people.list.member.mp_for')} #{seat_incumbency.constituency.name}"
-  - unless member.parties.empty?
-    - party_membership = member.party_memberships.select(&:current?).first
-    - unless party_membership.nil?
-      %p= party_membership.party.name
+  - elsif !current_incumbency.nil? # current member
+    %h2
+      %a{:href => "/people/#{member.graph_id}"}= member.display_name
+    - unless member.constituencies.empty?
+      - seat_incumbency = member.seat_incumbencies.select(&:current?).first
+      - unless seat_incumbency.nil?
+        %p= "#{I18n.t('pugin.people.list.member.mp_for')} #{seat_incumbency.constituency.name}"
+    - unless member.parties.empty?
+      - party_membership = member.party_memberships.select(&:current?).first
+      - unless party_membership.nil?
+        %p= party_membership.party.name
 
-- else # former member
+  - else # former member
 
-  %h2
-    %a{:href => "/people/#{member.graph_id}"}= member.display_name
-  - unless member.statuses[:house_membership_status].empty? && !member.statuses[:house_membership_status].include?('Current MP')
-    %p= member.statuses[:house_membership_status].join(' and ')
+    %h2
+      %a{:href => "/people/#{member.graph_id}"}= member.display_name
+    - unless member.statuses[:house_membership_status].empty? && !member.statuses[:house_membership_status].include?('Current MP')
+      %p= member.statuses[:house_membership_status].join(' and ')
+      

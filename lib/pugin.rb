@@ -1,10 +1,9 @@
 require 'pugin/version'
 
 module Pugin
-  ASSET_VERSION = '1.5.0'.freeze
+  ASSET_VERSION = '1.5.1'.freeze
   ASSET_LOCATION_URL = ENV.fetch('ASSET_LOCATION_URL', 'https://s3-eu-west-1.amazonaws.com/web1devci.pugin-website')
   STATIC_ASSET_LOCATION_URL = ENV.fetch('STATIC_ASSET_LOCATION_URL', 'https://s3-eu-west-1.amazonaws.com/web1devci.static-assets')
-
   class << self
 		attr_writer :alternates
 
