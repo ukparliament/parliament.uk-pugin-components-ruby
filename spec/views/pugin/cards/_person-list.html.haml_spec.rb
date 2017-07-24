@@ -56,11 +56,13 @@ describe 'pugin/cards/_person-list.html.haml', type: :view do
 <<DATA
 <ol class='list--box'>
 <li>
+<div class='list--details'>
 <h2>
 <a href='/people/123'>Jane Smith</a>
 </h2>
 <p>Current MP for Hackney</p>
 <p>Labour</p>
+</div>
 </li>
 </ol>
 DATA
@@ -79,10 +81,12 @@ DATA
       expect(response).to eq(<<DATA
 <ol class='list--box'>
 <li>
+<div class='list--details'>
 <p>
 There are no results
 
 </p>
+</div>
 </li>
 </ol>
 DATA
@@ -158,11 +162,13 @@ DATA
 <<DATA
 <ol class='list--box'>
 <li>
+<div class='list--details'>
 <h2>
 <a href='/people/123'></a>
 </h2>
 <p>Current MP for Hackney</p>
 <p>Labour</p>
+</div>
 </li>
 </ol>
 DATA
@@ -204,10 +210,12 @@ DATA
 <<DATA
 <ol class='list--box'>
 <li>
+<div class='list--details'>
 <h2>
 <a href='/people/123'>Jane Smith</a>
 </h2>
 <p>Labour</p>
+</div>
 </li>
 </ol>
 DATA
@@ -248,10 +256,12 @@ DATA
 <<DATA
 <ol class='list--box'>
 <li>
+<div class='list--details'>
 <h2>
 <a href='/people/123'>Jane Smith</a>
 </h2>
 <p>Current MP for Hackney</p>
+</div>
 </li>
 </ol>
 DATA
