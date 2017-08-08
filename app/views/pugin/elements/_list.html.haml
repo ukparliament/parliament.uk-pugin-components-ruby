@@ -1,5 +1,5 @@
 - list_tag = local_assigns.fetch(:ordered?, false) ? :ol : :ul
-= content_tag(list_tag, class: "list--box") do
+= content_tag(list_tag, class: "list--block") do
   - if data.empty?
     %li
       %p= t('no_content.empty_list.members.description', letter: params[:letter])

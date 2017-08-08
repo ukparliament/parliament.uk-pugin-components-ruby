@@ -54,7 +54,7 @@ describe 'pugin/cards/_person-list.html.haml', type: :view do
 
       expect(rendered).to eq(
 <<DATA
-<ol class='list--box'>
+<ol class='list--block'>
 <li>
 <div class='list--details'>
 <h2>
@@ -79,7 +79,7 @@ DATA
       render partial: 'pugin/cards/person-list', locals: { people: @people }
 
       expect(response).to eq(<<DATA
-<ol class='list--box'>
+<ol class='list--block'>
 <li>
 <div class='list--details'>
 <p>
@@ -110,7 +110,7 @@ DATA
 
       expect(rendered).to eq(
 <<DATA
-<ol class='list--box'>
+<ol class='list--block'>
 </ol>
 DATA
                               )
@@ -160,7 +160,7 @@ DATA
 
       expect(rendered).to eq(
 <<DATA
-<ol class='list--box'>
+<ol class='list--block'>
 <li>
 <div class='list--details'>
 <h2>
@@ -208,7 +208,7 @@ DATA
 
       expect(rendered).to eq(
 <<DATA
-<ol class='list--box'>
+<ol class='list--block'>
 <li>
 <div class='list--details'>
 <h2>
@@ -254,7 +254,7 @@ DATA
 
       expect(rendered).to eq(
 <<DATA
-<ol class='list--box'>
+<ol class='list--block'>
 <li>
 <div class='list--details'>
 <h2>

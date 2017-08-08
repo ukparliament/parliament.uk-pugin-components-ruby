@@ -1,12 +1,12 @@
 -if people.empty?
-  %ol.list--box
+  %ol.list--block
     %li
       .list--details
         %p
           = "#{I18n.t('no_content.empty_list.members.description')}" 
           = params[:letter].nil? ? "" : "#{I18n.t('no_content.empty_list.members.for')} '#{params[:letter].upcase}'"
 -else
-  %ol.list--box
+  %ol.list--block
     - people.each do |person|
       - if person.respond_to?(:graph_id)
         %li

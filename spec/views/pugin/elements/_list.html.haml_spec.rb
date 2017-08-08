@@ -5,12 +5,12 @@ describe 'pugin/components/_status.html.haml', type: :view do
 
   it 'renders an ordered list when :ordered? is set to true' do 
     render partial: 'pugin/elements/list', locals: { ordered?: true, data: {} }
-    expect(response).to include('<ol class="list--box">')
+    expect(response).to include('<ol class="list--block">')
   end
 
   it 'renders an unordered list when :ordered? is not set' do 
     render partial: 'pugin/elements/list', locals: { data: {} }
-    expect(response).to include('<ul class="list--box">')
+    expect(response).to include('<ul class="list--block">')
   end
 
   context 'without any data' do 

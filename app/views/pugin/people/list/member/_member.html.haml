@@ -2,10 +2,12 @@
 
 - if Pugin::Feature::Bandiera.show_list_images?
   %figure
-    - if member.image_id != "placeholder"
-      %img{ src: "#{ENV['IMAGE_SERVICE_URL']}/#{member.image_id}.jpeg?crop=CU_1:1&width=186&quality=80", alt: "#{member.display_name}" }
-    - else
-      %img{ src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/images/placeholder_members_image.png", alt: "placeholder" }
+    %a{href: "/people/#{member.graph_id}"}
+      %picture
+        - if member.image_id != "placeholder"
+          %img{ src: "#{ENV['IMAGE_SERVICE_URL']}/#{member.image_id}.jpeg?crop=CU_1:1&width=186&quality=80", alt: "#{member.display_name}" }
+        - else
+          %img{ src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/images/placeholder_members_image.png", alt: "placeholder" }
         
 .list--details
   - if !instance_variable_get("@parliament").nil? # parliament member
