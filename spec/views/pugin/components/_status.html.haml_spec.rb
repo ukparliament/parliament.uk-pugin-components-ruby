@@ -16,7 +16,7 @@ describe 'pugin/components/_status.html.haml', type: :view do
 
       expect(response).to eq(
 <<DATA
-<div class='highlight--status'>
+<div class='status--banner'>
 <div class='container'>
 <p>
 This is a test website, so may be inaccurate.
@@ -41,7 +41,7 @@ DATA
       render partial: 'pugin/components/status', locals: { status: nil }
       expect(response).to eq(
 <<DATA
-<div class='highlight--status'>
+<div class='status--banner'>
 <div class='container'>
 <p>
 This is a test website, so may be inaccurate.
@@ -69,7 +69,7 @@ DATA
 
       expect(response).to eq(
 <<DATA
-<div class='highlight--status'>
+<div class='status--banner'>
 <div class='container'>
 <p>
 This is a test website, so may be inaccurate.
@@ -99,7 +99,7 @@ DATA
 
       expect(response).to eq(
 <<DATA
-<div class='highlight--status'>
+<div class='status--banner'>
 <div class='container'>
 <p>
 This is a test website, so may be inaccurate.
