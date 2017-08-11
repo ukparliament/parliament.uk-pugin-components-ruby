@@ -34,7 +34,7 @@ en:
         list:
           member:
             mp_for: "MP for"
-    constituencies: 
+    constituencies:
       list:
         from: 'from'
         current_constituency:
@@ -52,3 +52,5 @@ en:
       members:
         description: 'There are no results'
         for: 'for'
+  shared:
+    to_present: 'to present'

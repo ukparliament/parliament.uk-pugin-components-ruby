@@ -8,7 +8,7 @@
           %img{ src: "#{ENV['IMAGE_SERVICE_URL']}/#{member.image_id}.jpeg?crop=CU_1:1&width=186&quality=80", alt: "#{member.display_name}" }
         - else
           %img{ src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/images/placeholder_members_image.png", alt: "placeholder" }
-        
+
 .list--details
   - if !instance_variable_get("@parliament").nil? # parliament member
     %h2
@@ -16,8 +16,10 @@
     - unless member.constituencies.empty?
       - unless member.seat_incumbencies.nil?
         - member.seat_incumbencies.each do |seat_incumbency|
-          %p= "#{seat_incumbency.constituency.name} from #{l(seat_incumbency.start_date, format: :default)} - #{l(seat_incumbency.end_date, format: :default)}"
-          
+          %p
+            = "#{seat_incumbency.constituency.name} from #{l(seat_incumbency.start_date, format: :default)}"
+            = seat_incumbency.end_date.nil? ? "#{I18n.t('shared.to_present')}" : "- #{l(seat_incumbency.end_date, format: :default)}"
+
     - unless member.parties.empty?
       - member.party_memberships.each do |party_membership|
         %p= party_membership.party.name
