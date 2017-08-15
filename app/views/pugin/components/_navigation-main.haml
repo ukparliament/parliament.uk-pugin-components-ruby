@@ -4,7 +4,7 @@
       %li 
         = link_to(I18n.t('pugin.components.navigation-main.item_1'), mps_path)
       %li
-        = link_to(I18n.t('pugin.components.navigation-main.item_2'), house_members_current_a_z_letter_path(Parliament::Utils::Helpers::HousesHelper.lords_id, 'a'))
+        = link_to(I18n.t('pugin.components.navigation-main.item_2'), house_members_current_a_z_letter_path(HousesHelper.lords_id, 'a'))
       %li
         = link_to(I18n.t('pugin.components.navigation-main.item_4'), constituencies_current_a_z_letter_path('a'))
       %li
