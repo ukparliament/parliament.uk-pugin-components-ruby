@@ -20,7 +20,7 @@ describe 'pugin/components/_status.html.haml', type: :view do
 <div class='container'>
 <p>
 This is a test website, so may be inaccurate.
-<a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/' target='_blank' title='website opens in a new window'>Give feedback</a>
+<a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/'>Give feedback</a>
 to help improve it.
 </p>
 </div>
@@ -45,7 +45,7 @@ DATA
 <div class='container'>
 <p>
 This is a test website, so may be inaccurate.
-<a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/' target='_blank' title='website opens in a new window'>Give feedback</a>
+<a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/'>Give feedback</a>
 to help improve it.
 <a href='https://www.gov.uk/register-to-vote'>Register to vote</a>
 in the general election by 22 May.
@@ -73,10 +73,10 @@ DATA
 <div class='container'>
 <p>
 This is a test website, so may be inaccurate.
-<a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/' target='_blank' title='website opens in a new window'>Give feedback</a>
+<a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/'>Give feedback</a>
 to help improve it.
 Find out
-<a href='http://www.parliament.uk/get-involved/elections/voting/' target='_blank' title='website opens in a new window'>how to vote</a>
+<a href='http://www.parliament.uk/get-involved/elections/voting/'>how to vote</a>
 in the general election on 8 June.
 </p>
 </div>
@@ -103,10 +103,10 @@ DATA
 <div class='container'>
 <p>
 This is a test website, so may be inaccurate.
-<a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/' target='_blank' title='website opens in a new window'>Give feedback</a>
+<a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/'>Give feedback</a>
 to help improve it.
 Thursday 8 June is election day, find out
-<a href='http://www.parliament.uk/get-involved/elections/voting/' target='_blank' title='website opens in a new window'>how to vote</a>.
+<a href='http://www.parliament.uk/get-involved/elections/voting/'>how to vote</a>.
 </p>
 </div>
 </div>
