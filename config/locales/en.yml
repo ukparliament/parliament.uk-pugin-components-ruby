@@ -1,4 +1,7 @@
 en:
+  time: 
+    formats:
+      year_only: "%Y"
   pugin:
     cards:
       person-list:

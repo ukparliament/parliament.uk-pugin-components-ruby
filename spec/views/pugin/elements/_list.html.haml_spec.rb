@@ -27,6 +27,8 @@ describe 'pugin/components/_status.html.haml', type: :view do
       allow(constituency).to receive(:current?).and_return(false)
       allow(constituency).to receive(:name).and_return('Aberavon')
       allow(constituency).to receive(:graph_id).and_return('123')
+      allow(constituency).to receive(:start_date).and_return(DateTime.new(1929))
+      allow(constituency).to receive(:end_date).and_return(DateTime.new(1950))
       @constituencies = [constituency]
     end
 
