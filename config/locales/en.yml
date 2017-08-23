@@ -27,6 +27,7 @@ en:
         aria_label: "Paged navigation"
         select_letter: "select a letter"
         showing_results: "Showing results for"
+        all: "all"
       navigation-main:
         aria_label: "navigation"
         item_1: "MPs"
