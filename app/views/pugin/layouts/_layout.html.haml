@@ -6,6 +6,7 @@
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     %meta{'http-equiv': 'X-UA-Compatible', content: 'IE=edge'}
     %link{rel: 'shortcut icon', type: 'image/x-icon', href: "#{Pugin::STATIC_ASSET_LOCATION_URL}/favicon.ico"}
+    %link{rel: 'search', type: 'application/opensearchdescription+xml', href: opensearch_description_url, title: I18n.t('pugin.layouts.pugin.website_brand')}
     - if ENV['GTM_KEY']
       = render partial: 'pugin/javascript/google_tag_manager'
     - unless Pugin.alternates.empty?
