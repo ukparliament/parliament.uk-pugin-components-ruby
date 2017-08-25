@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pugin (1.2.0)
+    pugin (1.2.1)
 
 GEM
   remote: https://rubygems.org/
@@ -43,8 +43,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.1)
-      public_suffix (~> 2.0, >= 2.0.2)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
     ast (2.3.0)
     bandiera-client (3.0.4)
@@ -86,7 +86,7 @@ GEM
     haml (5.0.2)
       temple (>= 0.8.0)
       tilt
-    hashdiff (0.3.5)
+    hashdiff (0.3.6)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.8.6)
@@ -126,7 +126,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    public_suffix (2.0.5)
+    public_suffix (3.0.0)
     rack (2.0.3)
     rack-test (0.6.3)
       rack (>= 1.0)
