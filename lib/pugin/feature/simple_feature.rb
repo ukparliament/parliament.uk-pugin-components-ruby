@@ -1,24 +1,25 @@
 module Pugin
 	module Feature
 		class SimpleFeature
-			@@enabled = false
 			class << self
 				attr_reader :enabled
 
+				@enabled = false
+
 				def enable
-					@@enabled = true
+					@enabled = true
 				end
 
 				def disable
-					@@enabled = false
+					@enabled = false
 				end
 
 				def enabled?
-					@@enabled
+					@enabled
 				end
 
 				def disabled?
-					!@@enabled
+					!@enabled
 				end
 			end
 		end

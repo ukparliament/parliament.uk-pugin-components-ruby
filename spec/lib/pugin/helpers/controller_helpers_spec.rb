@@ -14,7 +14,7 @@ describe 'pugin/helpers/controller_helpers.rb' do
 	context '#enable_status_banner' do 
 		it 'enables the status banner' do 
 			subject.enable_status_banner
-			expect(Pugin::Feature::TopNavigation.enabled?).to equal(true)
+			expect(Pugin::Feature::StatusBanner.enabled?).to equal(true)
 		end
 	end
 	context '#disable_status_banner' do 
