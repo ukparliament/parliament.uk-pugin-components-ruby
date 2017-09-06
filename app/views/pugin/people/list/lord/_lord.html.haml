@@ -1,7 +1,7 @@
 - current_incumbency = lord.house_incumbencies.sort{ |inc_a, inc_b| inc_b.start_date <=> inc_a.start_date }.first
 - if Pugin::Feature::Bandiera.show_list_images?
   %figure
-    %a{href: "/people/#{lord.graph_id}"}
+    %a{href: "/people/#{lord.graph_id}", tabindex: "-1"}
       %picture
         - if lord.image_id != "placeholder"
           %img{ src: "#{ENV['IMAGE_SERVICE_URL']}/#{lord.image_id}.jpeg?crop=CU_1:1&width=186&quality=80", alt: "#{lord.display_name}" }

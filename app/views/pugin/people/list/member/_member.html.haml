@@ -2,7 +2,7 @@
 
 - if Pugin::Feature::Bandiera.show_list_images?
   %figure
-    %a{href: "/people/#{member.graph_id}"}
+    %a{href: "/people/#{member.graph_id}", tabindex: "-1"}
       %picture
         - if member.image_id != "placeholder"
           %img{ src: "#{ENV['IMAGE_SERVICE_URL']}/#{member.image_id}.jpeg?crop=CU_1:1&width=186&quality=80", alt: "#{member.display_name}" }
