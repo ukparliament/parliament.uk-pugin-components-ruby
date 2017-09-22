@@ -19,14 +19,13 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rails', '~> 5.1'
   s.add_development_dependency 'sqlite3', '~> 1.3'
-  s.add_development_dependency 'rspec-rails', '~> 3.5'
-  s.add_development_dependency 'capybara', '~> 2.12'
+  s.add_development_dependency 'rspec-rails', '~> 3.6'
+  s.add_development_dependency 'capybara', '~> 2.15'
   s.add_development_dependency 'factory_girl_rails', '~> 4.8'
   s.add_development_dependency 'simplecov', '~> 0.12'
   s.add_development_dependency 'coveralls', '~> 0.8'
-  s.add_development_dependency 'rubocop', '~> 0.47'
-  s.add_development_dependency 'pry', '~> 0.10'
+  s.add_development_dependency 'rubocop', '~> 0.50'
+  s.add_development_dependency 'pry', '~> 0.11'
   s.add_development_dependency 'haml', '~> 5.0'
   s.add_development_dependency 'bandiera-client', '3.0.4'
-  
 end
