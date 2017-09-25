@@ -27,6 +27,11 @@ module Pugin
 
 					@features.fetch('show-list-images', false)
 				end
+				def show_committees?
+					get_features
+
+					@features.fetch('show-committees', false)
+				end
 
 
 				# Reset cached features
