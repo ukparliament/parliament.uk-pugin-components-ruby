@@ -1,0 +1,7 @@
+%li
+  .list--details
+    - if committees.respond_to?(:name)
+      %h2= link_to(committees.name, committees_show_path(committees.graph_id))
+    - else
+      %h2= link_to(committees.formal_body.name, committees_show_path(committees.formal_body.graph_id))
+    %p= "" ? committees.date_range : committees.formal_body.date_range
