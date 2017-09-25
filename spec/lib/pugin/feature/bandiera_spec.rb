@@ -8,7 +8,8 @@ describe 'The bandiera client feature set' do
         'show-register': :register_to_vote?,
         'show-election': :election?,
         'show-post-election': :post_election?,
-        'show-list-images': :show_list_images?
+        'show-list-images': :show_list_images?,
+        'show-committees': :show_committees?
     }
 
     method_hash.each do |flag_name, method_name|
