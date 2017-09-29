@@ -3,5 +3,5 @@
     - if committees.respond_to?(:name)
       %h2= committees.name
     - else
-      %h2= committees.name
+      %h2= committees.formal_body.name
     %p= "" ? committees.date_range : committees.formal_body.date_range
