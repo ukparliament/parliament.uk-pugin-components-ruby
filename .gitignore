@@ -11,3 +11,5 @@ coverage
 node_modules/
 
 *.gem
+
+/Gemfile.lock
