@@ -15,7 +15,9 @@
       / \==========================/
     - Pugin.alternates.each do |alternate|
       %link{rel: 'alternate', type: alternate[:type], href: alternate[:href]}
-  %body.no-js
+  %body
+    = render partial: 'pugin/javascript/has_js'
+    = render partial: 'pugin/components/status-cookie'
     - if ENV['GTM_KEY']
       = render partial: 'pugin/javascript/google_tag_manager_noscript'
     = render partial: 'pugin/elements/skip-content'

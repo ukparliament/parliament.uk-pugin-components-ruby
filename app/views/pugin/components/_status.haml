@@ -1,6 +1,8 @@
 .status--banner
   .container
     %p
+      %img{ class: "icon--inline", src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/icons/caution-circle-white.svg" }
+      
       = I18n.t('pugin.components.status.status_text_1')
       %a{ href: 'http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/' }= I18n.t('pugin.components.status.give_feedback')
       = I18n.t('pugin.components.status.status_text_2')
