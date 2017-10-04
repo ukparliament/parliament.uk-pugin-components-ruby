@@ -20,6 +20,7 @@ describe 'pugin/layouts/_layout.html.haml', type: :view do
     allow(view).to receive(:house_parties_current_path).and_return("houses/#{Parliament::Utils::Helpers::HousesHelper.commons_id}/parties/current/")
     allow(view).to receive(:find_your_constituency_path).and_return("/find-your-constituency")
     allow(view).to receive(:opensearch_description_url).and_return("http://localhost:3000/search/opensearch")
+    allow(view).to receive(:root_path).and_return("/")
     allow(view).to receive(:meta_cookie_policy_path).and_return("/meta/cookie-policy")
   end
 

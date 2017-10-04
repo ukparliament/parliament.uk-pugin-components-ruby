@@ -17,10 +17,10 @@
       %link{rel: 'alternate', type: alternate[:type], href: alternate[:href]}
   %body
     = render partial: 'pugin/javascript/has_js'
-    = render partial: 'pugin/components/status-cookie'
     - if ENV['GTM_KEY']
       = render partial: 'pugin/javascript/google_tag_manager_noscript'
     = render partial: 'pugin/elements/skip-content'
+    = render partial: 'pugin/components/status-cookie'
     = render partial: 'pugin/components/status', locals: { status: nil } if Pugin::Feature::StatusBanner.enabled?
     = render 'pugin/components/header'
     = render partial: 'pugin/components/navigation-main' if Pugin::Feature::TopNavigation.enabled?

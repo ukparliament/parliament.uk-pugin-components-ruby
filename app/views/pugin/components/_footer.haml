@@ -2,7 +2,5 @@
   .container
     %h2.logo= I18n.t('pugin.components.footer.uk_parliament')
     %ul.list
-      %li
-        %a{:href => 'https://www.parliament.uk/'}= I18n.t('pugin.components.footer.current_website')
-      %li
-        %a{:href => 'http://beta.parliament.uk/meta/cookie-policy'}= I18n.t('pugin.components.footer.cookie_policy')
+      %li= link_to( I18n.t('pugin.components.footer.current_website'), root_path() )
+      %li= link_to( I18n.t('pugin.components.footer.cookie_policy'), meta_cookie_policy_path() )
