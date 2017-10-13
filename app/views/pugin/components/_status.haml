@@ -1,7 +1,8 @@
 .status--banner
   .container
     %p
-      %img{ class: "icon--inline", src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/icons/caution-circle-white.svg" }
+      %img{ alt: "", class: "icon--inline", src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/icons/caution-circle-white.svg", aria:{ hidden: "true", label: "caution" } }
+      %span.sr-only= 'caution'
       
       = I18n.t('pugin.components.status.status_text_1')
       %a{ href: 'http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/' }= I18n.t('pugin.components.status.give_feedback')
