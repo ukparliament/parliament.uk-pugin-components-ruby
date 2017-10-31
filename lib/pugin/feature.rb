@@ -1,6 +1,7 @@
 require 'pugin/feature/simple_feature'
 require 'pugin/feature/status_banner'
 require 'pugin/feature/top_navigation'
+require 'pugin/feature/pingdom_feature'
 require 'pugin/feature/bandiera'
 
 module Pugin
