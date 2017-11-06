@@ -28,3 +28,4 @@
       = yield
     = render 'pugin/components/footer'
     %script{src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/javascripts/main.js"}
+    = render partial: 'pugin/javascript/pingdom' if Pugin::Feature::Pingdom.enabled?
