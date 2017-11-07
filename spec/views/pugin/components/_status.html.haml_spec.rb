@@ -19,7 +19,7 @@ describe 'pugin/components/_status.html.haml', type: :view do
 <div class='status--banner'>
 <div class='container'>
 <p>
-<img alt='' aria-hidden='true' aria-label='caution' class='icon--inline' src='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/1.6.3/icons/caution-circle-white.svg'>
+<img alt='' aria-hidden='true' aria-label='caution' class='icon--inline' src='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/1.6.4/icons/caution-circle-white.svg'>
 <span class='sr-only'>caution</span>
 This is a test website, so may be inaccurate.
 <a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/'>Give feedback</a>
@@ -46,7 +46,7 @@ DATA
 <div class='status--banner'>
 <div class='container'>
 <p>
-<img alt='' aria-hidden='true' aria-label='caution' class='icon--inline' src='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/1.6.3/icons/caution-circle-white.svg'>
+<img alt='' aria-hidden='true' aria-label='caution' class='icon--inline' src='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/1.6.4/icons/caution-circle-white.svg'>
 <span class='sr-only'>caution</span>
 This is a test website, so may be inaccurate.
 <a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/'>Give feedback</a>
@@ -76,7 +76,7 @@ DATA
 <div class='status--banner'>
 <div class='container'>
 <p>
-<img alt='' aria-hidden='true' aria-label='caution' class='icon--inline' src='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/1.6.3/icons/caution-circle-white.svg'>
+<img alt='' aria-hidden='true' aria-label='caution' class='icon--inline' src='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/1.6.4/icons/caution-circle-white.svg'>
 <span class='sr-only'>caution</span>
 This is a test website, so may be inaccurate.
 <a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/'>Give feedback</a>
@@ -108,7 +108,7 @@ DATA
 <div class='status--banner'>
 <div class='container'>
 <p>
-<img alt='' aria-hidden='true' aria-label='caution' class='icon--inline' src='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/1.6.3/icons/caution-circle-white.svg'>
+<img alt='' aria-hidden='true' aria-label='caution' class='icon--inline' src='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/1.6.4/icons/caution-circle-white.svg'>
 <span class='sr-only'>caution</span>
 This is a test website, so may be inaccurate.
 <a href='http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/'>Give feedback</a>
