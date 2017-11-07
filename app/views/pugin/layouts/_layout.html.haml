@@ -10,9 +10,9 @@
     - if ENV['GTM_KEY']
       = render partial: 'pugin/javascript/google_tag_manager'
     - unless Pugin.alternates.empty?
-      / /==========================\
-      / [ See below for data views ]
-      / \==========================/
+      / ========================
+      / See below for data views
+      / ========================
     - Pugin.alternates.each do |alternate|
       %link{rel: 'alternate', type: alternate[:type], href: alternate[:href]}
   %body
