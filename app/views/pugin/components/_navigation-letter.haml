@@ -5,7 +5,7 @@
         - if @letters.empty? || !local_assigns[:all_path]
           %span= I18n.t('pugin.components.navigation-letter.all').capitalize
         - else
-          = link_to "#{I18n.t('pugin.components.navigation-letter.all').capitalize}", send(all_path, local_assigns.fetch(:route_args, nil))
+          = link_to "#{I18n.t('pugin.components.navigation-letter.all').capitalize}", send(all_path, *local_assigns.fetch(:route_args, nil))
       - ('a'..'z').each do |letter|
         %li{ data: { letter: letter }, class: ('active' if (params[:letter] == letter)) }
           - if @letters.include?(letter.upcase)
