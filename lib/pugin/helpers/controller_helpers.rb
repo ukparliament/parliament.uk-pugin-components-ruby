@@ -20,6 +20,14 @@ module Pugin
         Pugin::Feature.disable('TopNavigation')
       end
 
+      def enable_asset_overrides
+        Pugin::Feature.enable('AssetOverrides')
+      end
+
+      def disable_asset_overrides
+        Pugin::Feature.disable('AssetOverrides')
+      end
+
       def enable_pingdom
         Pugin::Feature.enable('Pingdom')
       end
