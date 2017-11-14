@@ -3,7 +3,8 @@
   %head
     %title= content_for(:title).nil? ? I18n.t('pugin.layouts.pugin.website_brand') : content_for(:title) + ' - ' + I18n.t('pugin.layouts.pugin.website_brand')
     %link{rel: 'stylesheet', href: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/stylesheets/main.css" }
-    %link{rel: 'stylesheet', href: "https://s3-eu-west-1.amazonaws.com/web1live.static-assets/hybrid-bills/stylesheets/main.css" }
+    - if Pugin::Feature::AssetOverrides.enabled?
+      %link{rel: 'stylesheet', href: "https://s3-eu-west-1.amazonaws.com/web1live.static-assets/hybrid-bills/stylesheets/main.css" }
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     %meta{'http-equiv': 'X-UA-Compatible', content: 'IE=edge'}
     %link{rel: 'shortcut icon', type: 'image/x-icon', href: "#{Pugin::STATIC_ASSET_LOCATION_URL}/favicon.ico"}
@@ -29,5 +30,6 @@
       = yield
     = render 'pugin/components/footer'
     %script{src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/javascripts/main.js"}
-    %script{src: "https://s3-eu-west-1.amazonaws.com/web1live.static-assets/hybrid-bills/javascripts/main.js"}
+    - if Pugin::Feature::AssetOverrides.enabled?
+      %script{src: "https://s3-eu-west-1.amazonaws.com/web1live.static-assets/hybrid-bills/javascripts/main.js"}
     = render partial: 'pugin/javascript/pingdom' if Pugin::Feature::Pingdom.enabled?
