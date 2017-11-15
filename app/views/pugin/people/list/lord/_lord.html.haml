@@ -6,7 +6,7 @@
         - if lord.image_id != "placeholder"
           %img{ src: "#{ENV['IMAGE_SERVICE_URL']}/#{lord.image_id}.jpeg?crop=CU_1:1&width=186&quality=80", alt: "#{lord.display_name}" }
         - else
-          %img{ src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/images/placeholder_members_image.png", alt: "placeholder" }
+          %img{ src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/images/placeholder_members_image.png", alt: "" }
 
 .list--details
   - if !instance_variable_get("@parliament").nil? # parliament lord
