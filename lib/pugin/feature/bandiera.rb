@@ -37,8 +37,11 @@ module Pugin
 
 					@features.fetch('show-government-roles', false)
 				end
+                                def show_opposition_roles?
+                                        get_features
 
-
+                                        @features.fetch('show-opposition-roles', false)
+                                end
 
 				# Reset cached features
 				def reset

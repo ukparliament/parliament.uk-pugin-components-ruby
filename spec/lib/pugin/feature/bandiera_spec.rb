@@ -10,7 +10,8 @@ describe 'The bandiera client feature set' do
         'show-post-election': :post_election?,
         'show-list-images': :show_list_images?,
         'show-committees': :show_committees?,
-        'show-government-roles': :show_government_roles?        
+        'show-government-roles': :show_government_roles?,
+        'show-opposition-roles': :show_opposition_roles?
     }
 
     method_hash.each do |flag_name, method_name|
