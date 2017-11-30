@@ -39,6 +39,7 @@ describe 'pugin/layouts/_layout.html.haml', type: :view do
       [
         { type: 'text/foo', href: 'https://api.example.com/' },
         { type: 'application/bar', href: 'https://api.example.com/' },
+        { type: 'application/bar', href: 'https://api.example.com/test&format=application/bar' },
       ]
     end
 
@@ -50,6 +51,10 @@ describe 'pugin/layouts/_layout.html.haml', type: :view do
     it 'renders rel-alternate links' do
       expect(rendered).to include('<link href=\'https://api.example.com/\' rel=\'alternate\' type=\'text/foo\'>')
       expect(rendered).to include('<link href=\'https://api.example.com/\' rel=\'alternate\' type=\'application/bar\'>')
+    end
+
+    it 'treats HTML as safe' do
+      expect(rendered).to include("<link href='https://api.example.com/test&format=application/bar' rel='alternate' type='application/bar'>")
     end
   end
 
