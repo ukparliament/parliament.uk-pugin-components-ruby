@@ -16,7 +16,7 @@
       / See below for data views
       / ========================
     - Pugin.alternates.each do |alternate|
-      %link{rel: 'alternate', type: alternate[:type], href: alternate[:href]}
+      %link{rel: 'alternate', type: alternate[:type], href: alternate[:href].html_safe}
   %body
     = render partial: 'pugin/javascript/has_js'
     - if ENV['GTM_KEY']
