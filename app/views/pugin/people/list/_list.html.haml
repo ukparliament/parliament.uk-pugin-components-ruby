@@ -1,4 +1,4 @@
-- person_type = people.house_incumbencies.empty? ? "member" : "lord"
+- person_type = people.current_mp? ? "member" : "lord"
 
 %li
   = render partial: "pugin/people/list/#{person_type}/#{person_type}", locals: { "#{person_type}": local_assigns.fetch(:people, []), as: person_type }

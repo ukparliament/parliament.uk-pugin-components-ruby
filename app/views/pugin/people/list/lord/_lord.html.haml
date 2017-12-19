@@ -1,4 +1,4 @@
-- current_incumbency = lord.house_incumbencies.sort{ |inc_a, inc_b| inc_b.start_date <=> inc_a.start_date }.first
+- current_incumbency = lord.seat_incumbencies.sort{ |inc_a, inc_b| inc_b.start_date <=> inc_a.start_date }.first
 - if Pugin::Feature::Bandiera.show_list_images?
   %figure
     %a{href: "/people/#{lord.graph_id}", tabindex: "-1"}
@@ -11,7 +11,7 @@
 .list--details
   - if !instance_variable_get("@parliament").nil? # parliament lord
 
-  - elsif current_incumbency.current? # current lord
+  - elsif current_incumbency&.current? # current lord
     %h2
       %a{href: "/people/#{lord.graph_id}"}= lord.display_name
     - unless lord.statuses[:house_membership_status].empty? && !lord.statuses[:house_membership_status].include?('Current MP')
