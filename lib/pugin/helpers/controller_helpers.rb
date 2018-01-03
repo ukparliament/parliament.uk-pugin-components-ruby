@@ -12,6 +12,14 @@ module Pugin
         Pugin::Feature.disable('StatusBanner')
       end
 
+      def enable_global_search
+        Pugin::Feature.enable('GlobalSearch')
+      end
+
+      def disable_global_search
+        Pugin::Feature.disable('GlobalSearch')
+      end
+
       def enable_top_navigation
         Pugin::Feature.enable('TopNavigation')
       end
