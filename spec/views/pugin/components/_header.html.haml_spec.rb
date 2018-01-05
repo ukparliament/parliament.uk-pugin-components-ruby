@@ -3,19 +3,22 @@ require 'haml'
 
 describe 'pugin/components/_header.html.haml', type: :view do
 
-  it 'renders as expected' do
-    render
+	context 'with global_search flag turned on' do
+		before :each do
+			allow(Pugin::Feature::GlobalSearch).to receive(:enabled?).and_return(true)
+		end
 
-    expect(response).to eq(<<DATA
-<header>
-<div class='container'>
-<a href='/'>
-<img alt='UK Parliament' class='logo' src='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/images/uk_parliament_logo_white.png' srcset='https://s3-eu-west-1.amazonaws.com/web1live.pugin-website/images/uk_parliament_logo_white.svg'>
-</a>
-</div>
-</header>
-DATA
-                          )
-  end
+		it 'renders as expected' do
+        render
+        expect(response).to eq(File.read(File.join(Rails.root, '../fixtures', '_header_with_search.html')))
+      end
+	end
+
+	context 'without global_search flag turned on' do
+		it 'renders as expected' do
+			render
+			expect(response).to eq(File.read(File.join(Rails.root, '../fixtures', '_header.html')))
+		end
+	end
 
 end

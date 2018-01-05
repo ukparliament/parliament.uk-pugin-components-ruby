@@ -11,7 +11,7 @@ describe 'pugin/helpers/controller_helpers.rb' do
 
 	subject { TestClass.new }
 
-	context '#enable_status_banner' do 
+	context '#enable_status_banner' do
 		it 'enables the status banner' do 
 			subject.enable_status_banner
 			expect(Pugin::Feature::StatusBanner.enabled?).to equal(true)
@@ -27,6 +27,24 @@ describe 'pugin/helpers/controller_helpers.rb' do
 			expect(Pugin::Feature::StatusBanner.disabled?).to equal(false)
 			subject.disable_status_banner
 			expect(Pugin::Feature::StatusBanner.disabled?).to equal(true)
+		end
+	end
+	context '#enable_global_search' do
+		it 'enables the global search' do
+			subject.enable_global_search
+			expect(Pugin::Feature::GlobalSearch.enabled?).to equal(true)
+		end
+	end
+	context '#disable_global_search' do
+
+		before :each do
+			Pugin::Feature::GlobalSearch.enable
+		end
+
+		it 'disables the global search' do
+			expect(Pugin::Feature::GlobalSearch.disabled?).to equal(false)
+			subject.disable_global_search
+			expect(Pugin::Feature::GlobalSearch.disabled?).to equal(true)
 		end
 	end
 	context '#enable_top_navigation' do 
