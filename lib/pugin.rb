@@ -1,7 +1,7 @@
 require 'pugin/version'
 
 module Pugin
-  ASSET_VERSION = '1.7.2'.freeze
+  ASSET_VERSION = '1.7.3'.freeze
   ASSET_LOCATION_URL = ENV.fetch('ASSET_LOCATION_URL', 'https://s3-eu-west-1.amazonaws.com/web1live.pugin-website')
   STATIC_ASSET_LOCATION_URL = ENV.fetch('STATIC_ASSET_LOCATION_URL', 'https://s3-eu-west-1.amazonaws.com/web1live.static-assets')
   class << self
