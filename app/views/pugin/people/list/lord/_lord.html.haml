@@ -1,4 +1,3 @@
-- current_incumbency = lord.seat_incumbencies.sort{ |inc_a, inc_b| inc_b.start_date <=> inc_a.start_date }.first
 - if Pugin::Feature::Bandiera.show_list_images?
   %figure
     %a{href: "/people/#{lord.graph_id}", tabindex: "-1"}
@@ -9,20 +8,19 @@
           %img{ src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/images/placeholder_members_image.png", alt: "" }
 
 .list--details
-  - if !instance_variable_get("@parliament").nil? # parliament lord
+  %h2
+    %a{href: "/people/#{lord.graph_id}"}= lord.display_name
 
-  - elsif current_incumbency&.current? # current lord
-    %h2
-      %a{href: "/people/#{lord.graph_id}"}= lord.display_name
-    - unless lord.statuses[:house_membership_status].empty? && !lord.statuses[:house_membership_status].include?('Current MP')
-      %p= lord.statuses[:house_membership_status].join(' and ')
-    - unless lord.parties.empty?
-      - party_membership = lord.party_memberships.select(&:current?).first
-      - unless party_membership.nil?
-        %p= party_membership.party.name
+  -# Currently only takes the most recent incumbency as part of that parliamentary period
+  - most_recent_incumbency = lord.most_recent_seat_incumbency
+
+  - if @parliament # parliament lord
+    %p= "Member of the #{t('house_of_lords')}"
+    %p= lord&.parties&.first&.name
+
+  - elsif most_recent_incumbency&.current? # current lord
+    %p= lord.statuses[:house_membership_status].join(' and ')
+    %p= lord.try(:current_party).try(:name)
 
   - else # former lord
-    %h2
-      %a{href: "/people/#{lord.graph_id}"}= lord.display_name
-    - unless lord.statuses[:house_membership_status].empty? && !lord.statuses[:house_membership_status].include?('Current MP')
-      %p= lord.statuses[:house_membership_status].join(' and ')
+    %p= lord.statuses[:house_membership_status].join(' and ')

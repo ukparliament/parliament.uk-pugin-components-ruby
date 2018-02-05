@@ -1,5 +1,7 @@
 en:
-  time: 
+  #global people translations
+  house_of_lords: 'House of Lords'
+  time:
     formats:
       year_only: "%Y"
   pugin:
