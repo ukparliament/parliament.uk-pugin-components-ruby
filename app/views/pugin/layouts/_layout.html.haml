@@ -18,9 +18,9 @@
     - Pugin.alternates.each do |alternate|
       %link{rel: 'alternate', type: alternate[:type], href: alternate[:href].html_safe}
   %body
-    = render partial: 'pugin/javascript/has_js'
     - if ENV['GTM_KEY']
       = render partial: 'pugin/javascript/google_tag_manager_noscript'
+    = render partial: 'pugin/javascript/has_js'
     = render partial: 'pugin/elements/skip-content'
     = render partial: 'pugin/components/status-cookie'
     = render partial: 'pugin/components/status', locals: { status: nil } if Pugin::Feature::StatusBanner.enabled?
