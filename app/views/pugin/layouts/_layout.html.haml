@@ -1,7 +1,9 @@
+- page_title = content_for(:title).nil? ? I18n.t('pugin.layouts.pugin.website_brand') : "#{content_for(:title)} - #{ I18n.t('pugin.layouts.pugin.website_brand')}"
+
 !!! 5
 %html{lang:'en'}
   %head
-    %title= content_for(:title).nil? ? I18n.t('pugin.layouts.pugin.website_brand') : content_for(:title) + ' - ' + I18n.t('pugin.layouts.pugin.website_brand')
+    %title= page_title
     %link{rel: 'stylesheet', href: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/stylesheets/main.css" }
     - if Pugin::Feature::AssetOverrides.enabled?
       %link{rel: 'stylesheet', href: "https://s3-eu-west-1.amazonaws.com/web1live.static-assets-public/_hybrid-bills/stylesheets/main.css" }
@@ -17,6 +19,7 @@
       / ========================
     - Pugin.alternates.each do |alternate|
       %link{rel: 'alternate', type: alternate[:type], href: alternate[:href].html_safe}
+    = render partial: 'pugin/meta/opengraph', locals: { page_title: page_title }
   %body
     - if ENV['GTM_KEY']
       = render partial: 'pugin/javascript/google_tag_manager_noscript'
