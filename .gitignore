@@ -13,3 +13,4 @@ node_modules/
 *.gem
 
 /Gemfile.lock
+.DS_Store
