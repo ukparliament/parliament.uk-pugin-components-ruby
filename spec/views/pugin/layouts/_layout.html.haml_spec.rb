@@ -69,4 +69,63 @@ describe 'pugin/layouts/_layout.html.haml', type: :view do
       expect(rendered).not_to include('<link href=\'https://api.example.com/\' rel=\'alternate\' type=\'application/bar\'>')
     end
   end
+
+  context 'renders OpenGraph tags' do
+    before :each do
+      render
+    end
+
+    it 'renders og:title' do
+      expect(rendered).to include("<meta content='UK Parliament' property='og:title'>")
+    end
+    it 'renders og:type' do
+      expect(rendered).to include("<meta content='website' property='og:type'>")
+    end
+    it 'renders og:url' do
+      expect(rendered).to include("property='og:url'")
+    end
+
+    context 'correctly on person' do
+      let(:member) { Class.new }
+
+      before :each do
+        allow(member).to receive(:image_id).and_return('1234')
+        @person = member
+        render
+      end
+
+      it 'renders og:image' do
+        expect(response).to include("<meta content='https://api.parliament.uk/Staging/photo/1234.jpeg?crop=CU_1:1&width=400&quality=100' property='og:image'>")
+        expect(response).to include("<meta content='400' property='og:image:width'>")
+        expect(response).to include("<meta content='400' property='og:image:height'>")
+        expect(response).to include("<meta content='summary' name='twitter:card'>")
+      end
+    end
+
+    context 'correctly on media' do
+      let(:media) { Class.new }
+
+      before :each do
+        allow(media).to receive(:graph_id).and_return('5678')
+        @image = media
+        render
+      end
+
+      it 'renders og:image' do
+        expect(response).to include("<meta content='https://api.parliament.uk/Staging/photo/5678.jpeg?crop=CU_1:1&width=400&quality=100' property='og:image'>")
+        expect(response).to include("<meta content='400' property='og:image:width'>")
+        expect(response).to include("<meta content='400' property='og:image:height'>")
+        expect(response).to include("<meta content='summary' name='twitter:card'>")
+      end
+    end
+
+    context 'correctly on other pages' do
+      it 'renders og:image' do
+        expect(rendered).to include("<meta content='#{Pugin::STATIC_ASSET_PUBLIC_LOCATION_URL}/opengraph-oblong.png' property='og:image'>")
+        expect(response).to include("<meta content='1200' property='og:image:width'>")
+        expect(response).to include("<meta content='630' property='og:image:height'>")
+        expect(response).to include("<meta content='summary_large_image' name='twitter:card'>")
+      end
+    end
+  end
 end
