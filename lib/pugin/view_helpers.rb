@@ -11,9 +11,9 @@ module Pugin
     end
 
     def opengraph_image
-      image_hash = if @image
+      image_hash = if @image && @image.respond_to?('graph_id')
                      {url: "#{ENV['IMAGE_SERVICE_URL']}/#{@image.graph_id}.jpeg?crop=CU_1:1&width=400&quality=100"}
-                   elsif @person && !@image
+                   elsif @person && @person.respond_to?('image_id') && @person.image_id != 'placeholder' && !@image
                      {url: "#{ENV['IMAGE_SERVICE_URL']}/#{@person.image_id}.jpeg?crop=CU_1:1&width=400&quality=100"}
                    else
                      {width: '1200', height: '630', twitter_card: 'summary_large_image' }
