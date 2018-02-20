@@ -1,5 +1,5 @@
 %header
   .container
-    %a.uk_parliament{ href: '/' }
+    %a.uk_parliament{ href: '/', aria: { label: "#{I18n.t('pugin.components.header.parliament_header')}"  } }
       = render partial: 'pugin/icons/uk-parliament'
     = render partial: 'pugin/components/global-search' if Pugin::Feature::GlobalSearch.enabled?
