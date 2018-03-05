@@ -1,12 +1,16 @@
-.status--banner
+.status--banner__beta
   .container
-    %p
-      %img{ alt: "", class: "icon--inline", src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/icons/caution-circle-white.svg", aria:{ hidden: "true", label: "caution" } }
-      %span.sr-only= 'caution'
-      
-      = I18n.t('pugin.components.status.status_text_1')
-      %a{ href: 'http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/' }= I18n.t('pugin.components.status.give_feedback')
-      = I18n.t('pugin.components.status.status_text_2')
+    %span.hint= I18n.t('pugin.hints.beta')
+    %ul.list--flex
+      %li
+        = I18n.t('pugin.components.status.beta.pages_being_tested',
+        link: link_to(t('pugin.components.status.beta.give_feedback'),
+        'http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/')).html_safe
+      %li
+        = I18n.t('pugin.components.status.beta.go_to',
+        link: link_to(t('pugin.components.status.beta.current_website'),
+        'http://www.parliament.uk')).html_safe
+
       - if Pugin::Feature::Bandiera.dissolution?
         - if Pugin::Feature::Bandiera.register_to_vote?
           %a{ href: 'https://www.gov.uk/register-to-vote' }= I18n.t('pugin.components.status.register_to_vote')

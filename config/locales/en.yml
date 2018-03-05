@@ -5,6 +5,8 @@ en:
     formats:
       year_only: "%Y"
   pugin:
+    hints:
+      beta: 'beta'
     cards:
       person-list:
         current_mp_for: "Current MP for"
@@ -12,6 +14,11 @@ en:
       header:
         parliament_header: "UK Parliament"
       status:
+        beta:
+          pages_being_tested: 'These pages are being tested. %{link} to help improve them.'
+          give_feedback: 'Give feedback'
+          go_to: 'Go to %{link}'
+          current_website: 'current website'
         status_text_1: 'This is a test website, so may be inaccurate.'
         status_text_2: 'to help improve it.'
         election_text_1: 'in the general election by 22 May.'
