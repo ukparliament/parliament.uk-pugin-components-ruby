@@ -11,7 +11,8 @@ describe 'The bandiera client feature set' do
         'show-list-images': :show_list_images?,
         'show-committees': :show_committees?,
         'show-government-roles': :show_government_roles?,
-        'show-opposition-roles': :show_opposition_roles?
+        'show-opposition-roles': :show_opposition_roles?,
+        'show-activity-links': :show_activity_links?
     }
 
     method_hash.each do |flag_name, method_name|
