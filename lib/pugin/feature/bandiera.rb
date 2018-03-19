@@ -47,6 +47,11 @@ module Pugin
 					@features.fetch('show-activity-links', false)
 				end
 
+				def show_lords_ineligibility_banner?
+					get_features
+					@features.fetch('show-lords-ineligibility-banner', false)
+				end
+
 				# Reset cached features
 				def reset
 					@features = nil

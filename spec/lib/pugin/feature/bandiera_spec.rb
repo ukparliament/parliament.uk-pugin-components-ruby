@@ -12,7 +12,8 @@ describe 'The bandiera client feature set' do
         'show-committees': :show_committees?,
         'show-government-roles': :show_government_roles?,
         'show-opposition-roles': :show_opposition_roles?,
-        'show-activity-links': :show_activity_links?
+        'show-activity-links': :show_activity_links?,
+        'show-lords-ineligibility-banner': :show_lords_ineligibility_banner?
     }
 
     method_hash.each do |flag_name, method_name|
