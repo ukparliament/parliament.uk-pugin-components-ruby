@@ -5,8 +5,6 @@
   %head
     %title= page_title
     %link{rel: 'stylesheet', href: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/stylesheets/main.css" }
-    - if Pugin::Feature::AssetOverrides.enabled?
-      %link{rel: 'stylesheet', href: "https://s3-eu-west-1.amazonaws.com/web1live.static-assets-public/_hybrid-bills/stylesheets/main.css" }
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     %meta{'http-equiv': 'X-UA-Compatible', content: 'IE=edge'}
     %link{rel: 'shortcut icon', type: 'image/x-icon', href: "#{Pugin::STATIC_ASSET_LOCATION_URL}/favicon.ico"}
