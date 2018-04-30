@@ -1,3 +1,3 @@
 module Pugin
-  VERSION = '1.6.23'.freeze
+  VERSION = '1.7.0'.freeze
 end
