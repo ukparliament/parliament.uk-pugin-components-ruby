@@ -1,7 +1,7 @@
 .status--banner__beta
   .container
     %span.hint= I18n.t('pugin.hints.beta')
-    %ul.list--flex
+    %ul.list--inline
       %li
         = I18n.t('pugin.components.status.beta.pages_being_tested',
         link: link_to(t('pugin.components.status.beta.give_feedback'),
@@ -23,4 +23,3 @@
         = I18n.t('pugin.components.status.election_day_text')
         = succeed "." do
           %a{ href: 'http://www.parliament.uk/get-involved/elections/voting/' }= I18n.t('pugin.components.status.how_to_vote')
-

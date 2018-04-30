@@ -56,12 +56,14 @@ describe 'pugin/cards/_person-list.html.haml', type: :view do
 <<DATA
 <ol class='list--block'>
 <li>
-<div class='list--details'>
+<div class='card'>
+<div class='card__details'>
 <h2>
 <a href='/people/123'>Jane Smith</a>
 </h2>
 <p>Current MP for Hackney</p>
 <p>Labour</p>
+</div>
 </div>
 </li>
 </ol>
@@ -81,11 +83,13 @@ DATA
       expect(response).to eq(<<DATA
 <ol class='list--block'>
 <li>
-<div class='list--details'>
+<div class='card'>
+<div class='card__details'>
 <p>
 There are no results
 
 </p>
+</div>
 </div>
 </li>
 </ol>
@@ -162,12 +166,14 @@ DATA
 <<DATA
 <ol class='list--block'>
 <li>
-<div class='list--details'>
+<div class='card'>
+<div class='card__details'>
 <h2>
 <a href='/people/123'></a>
 </h2>
 <p>Current MP for Hackney</p>
 <p>Labour</p>
+</div>
 </div>
 </li>
 </ol>
@@ -210,11 +216,13 @@ DATA
 <<DATA
 <ol class='list--block'>
 <li>
-<div class='list--details'>
+<div class='card'>
+<div class='card__details'>
 <h2>
 <a href='/people/123'>Jane Smith</a>
 </h2>
 <p>Labour</p>
+</div>
 </div>
 </li>
 </ol>
@@ -256,11 +264,13 @@ DATA
 <<DATA
 <ol class='list--block'>
 <li>
-<div class='list--details'>
+<div class='card'>
+<div class='card__details'>
 <h2>
 <a href='/people/123'>Jane Smith</a>
 </h2>
 <p>Current MP for Hackney</p>
+</div>
 </div>
 </li>
 </ol>

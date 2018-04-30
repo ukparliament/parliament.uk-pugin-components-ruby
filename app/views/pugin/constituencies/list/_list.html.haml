@@ -1,25 +1,26 @@
 %li
-  .list--details
-    - if !instance_variable_get("@parliament").nil? # parliament member
-      %h2
-        %a{:href => "/constituencies/#{constituencies.graph_id}"}= constituencies.name
-      -# Constituency has a member? TRUE = Member's Name : FALSE = "Vacant" text
-      - unless constituencies.members.empty?
-        - constituencies.seat_incumbencies.each do |incumbency|
-          %p= "#{incumbency.member.display_name} #{t('pugin.constituencies.list.from')} #{l(incumbency.start_date, format: :default)} - #{l(incumbency.end_date, format: :default)}"
-          - incumbency.member.party_memberships.each do |member_party|
-            %p= member_party.party.name
-    - elsif constituencies.current?
-      %h2
-        %a{:href => "/constituencies/#{constituencies.graph_id}"}= constituencies.name
-      -# Constituency has a member? TRUE = Member's Name : FALSE = "Vacant" text
-      - if !constituencies.members.empty?
-        %p= constituencies.current_member_display_name
-        %p= constituencies.current_member_party_name
+  .card
+    .card__details
+      - if !instance_variable_get("@parliament").nil? # parliament member
+        %h2
+          %a{:href => "/constituencies/#{constituencies.graph_id}"}= constituencies.name
+        -# Constituency has a member? TRUE = Member's Name : FALSE = "Vacant" text
+        - unless constituencies.members.empty?
+          - constituencies.seat_incumbencies.each do |incumbency|
+            %p= "#{incumbency.member.display_name} #{t('pugin.constituencies.list.from')} #{l(incumbency.start_date, format: :default)} - #{l(incumbency.end_date, format: :default)}"
+            - incumbency.member.party_memberships.each do |member_party|
+              %p= member_party.party.name
+      - elsif constituencies.current?
+        %h2
+          %a{:href => "/constituencies/#{constituencies.graph_id}"}= constituencies.name
+        -# Constituency has a member? TRUE = Member's Name : FALSE = "Vacant" text
+        - if !constituencies.members.empty?
+          %p= constituencies.current_member_display_name
+          %p= constituencies.current_member_party_name
+        - else
+          %p= I18n.t('pugin.constituencies.list.current_constituency.vacant').capitalize
       - else
-        %p= I18n.t('pugin.constituencies.list.current_constituency.vacant').capitalize
-    - else
-      %h2
-        - date_string = " (#{l(constituencies.start_date, format: :year_only)} - #{l(constituencies.end_date, format: :year_only)})" if constituencies.respond_to?(:start_date) && constituencies.respond_to?(:end_date)
-        %a{:href => "/constituencies/#{constituencies.graph_id}"}= "#{constituencies.name}#{date_string}"
-      %p= "#{t('pugin.constituencies.list.former_constituency.former').capitalize} #{t('pugin.constituencies.list.former_constituency.constituency')}"
+        %h2
+          - date_string = " (#{l(constituencies.start_date, format: :year_only)} - #{l(constituencies.end_date, format: :year_only)})" if constituencies.respond_to?(:start_date) && constituencies.respond_to?(:end_date)
+          %a{:href => "/constituencies/#{constituencies.graph_id}"}= "#{constituencies.name}#{date_string}"
+        %p= "#{t('pugin.constituencies.list.former_constituency.former').capitalize} #{t('pugin.constituencies.list.former_constituency.constituency')}"

@@ -1,26 +1,27 @@
-- if Pugin::Feature::Bandiera.show_list_images?
-  %figure
-    %a{ href: "/people/#{lord.graph_id}", aria: { hidden: "true" }, tabindex: "-1" }
-      %picture
-        - if lord.image_id != "placeholder"
-          %img{ src: "#{ENV['IMAGE_SERVICE_URL']}/#{lord.image_id}.jpeg?crop=CU_1:1&width=186&quality=80", alt: "#{lord.display_name}" }
-        - else
-          %img{ src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/images/placeholder_members_image.png", alt: "" }
+.card
+  - if Pugin::Feature::Bandiera.show_list_images?
+    %figure
+      %a{ href: "/people/#{lord.graph_id}", aria: { hidden: "true" }, tabindex: "-1" }
+        %picture
+          - if lord.image_id != "placeholder"
+            %img{ src: "#{ENV['IMAGE_SERVICE_URL']}/#{lord.image_id}.jpeg?crop=CU_1:1&width=186&quality=80", alt: "#{lord.display_name}" }
+          - else
+            %img{ src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/images/placeholder_members_image.png", alt: "" }
 
-.list--details
-  %h2
-    %a{href: "/people/#{lord.graph_id}"}= lord.display_name
+  .card__details
+    %h2
+      %a{href: "/people/#{lord.graph_id}"}= lord.display_name
 
-  -# Currently only takes the most recent incumbency as part of that parliamentary period
-  - most_recent_incumbency = lord.most_recent_seat_incumbency
+    -# Currently only takes the most recent incumbency as part of that parliamentary period
+    - most_recent_incumbency = lord.most_recent_seat_incumbency
 
-  - if @parliament # parliament lord
-    %p= "Member of the #{t('house_of_lords')}"
-    %p= lord&.parties&.first&.name
+    - if @parliament # parliament lord
+      %p= "Member of the #{t('house_of_lords')}"
+      %p= lord&.parties&.first&.name
 
-  - elsif most_recent_incumbency&.current? # current lord
-    %p= lord.statuses[:house_membership_status].join(' and ')
-    %p= lord.try(:current_party).try(:name)
+    - elsif most_recent_incumbency&.current? # current lord
+      %p= lord.statuses[:house_membership_status].join(' and ')
+      %p= lord.try(:current_party).try(:name)
 
-  - else # former lord
-    %p= lord.statuses[:house_membership_status].join(' and ')
+    - else # former lord
+      %p= lord.statuses[:house_membership_status].join(' and ')
