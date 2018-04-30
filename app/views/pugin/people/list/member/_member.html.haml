@@ -1,6 +1,6 @@
 .card
   - if Pugin::Feature::Bandiera.show_list_images?
-    %figure
+    %figure.avatar--round
       %a{ href: "/people/#{member.graph_id}", aria: { hidden: "true" }, tabindex: "-1" }
         %picture
           - if member.image_id != "placeholder"
