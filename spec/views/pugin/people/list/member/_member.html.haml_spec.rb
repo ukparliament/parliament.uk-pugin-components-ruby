@@ -82,8 +82,8 @@ describe 'pugin/people/list/member/_member.html.haml', type: :view do
       allow(parliament_mp_constituency).to receive(:name).and_return('constituency1')
 
       allow(parliament_mp_seat_incumbency).to receive(:current?).and_return(false)
-      allow(parliament_mp_seat_incumbency).to receive(:start_date).and_return(DateTime.new(2017,2,3,4,5,6))
-      allow(parliament_mp_seat_incumbency).to receive(:end_date).and_return(DateTime.new(2017,2,3,4,5,6))
+      allow(parliament_mp_seat_incumbency).to receive(:start_date).and_return(DateTime.new(2017,2,3,4,0,0))
+      allow(parliament_mp_seat_incumbency).to receive(:end_date).and_return(DateTime.new(2018,3,16,3,0,0))
       allow(parliament_mp_seat_incumbency).to receive(:constituency).and_return(parliament_mp_constituency)
 
       allow(parliament_mp_party).to receive(:name).and_return('Green Party')
@@ -103,10 +103,27 @@ describe 'pugin/people/list/member/_member.html.haml', type: :view do
       render partial: "pugin/people/list/list", collection: @people, as: "people".to_sym
       expect(response).to include("<a href='/people/123'>parliamentmp1</a>")
       expect(response).to include("<p>
-constituency1 from Fri, 03 Feb 2017 04:05:06 +0000
-- Fri, 03 Feb 2017 04:05:06 +0000
+constituency1 from 3 Feb 2017
+- 16 Mar 2018
 </p>")
       expect(response).to include("<p>Green Party</p>")
+    end
+
+    context 'current' do
+      before :each do
+        allow(@people.first.current_seat_incumbency).to receive(:end_date).and_return(nil)
+      end
+
+      it "renders the parliament MP data" do
+        render partial: "pugin/people/list/list", collection: @people, as: "people".to_sym
+        expect(response).to include("<a href='/people/123'>parliamentmp1</a>")
+        expect(response).to include("<p>
+constituency1 from 3 Feb 2017
+to present
+</p>")
+        expect(response).to include("<p>Green Party</p>")
+      end
+
     end
   end
 end

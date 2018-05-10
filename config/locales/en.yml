@@ -4,6 +4,7 @@ en:
   time:
     formats:
       year_only: "%Y"
+      default: '%-d %b %Y'
   pugin:
     hints:
       beta: 'beta'
