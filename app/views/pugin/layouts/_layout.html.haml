@@ -6,9 +6,11 @@
     %title= page_title
     %link{rel: 'stylesheet', href: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/stylesheets/main.css" }
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
-    %meta{'http-equiv': 'X-UA-Compatible', content: 'IE=edge'}
+    %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=edge'}
     %link{rel: 'shortcut icon', type: 'image/x-icon', href: "#{Pugin::STATIC_ASSET_LOCATION_URL}/favicon.ico"}
     %link{rel: 'search', type: 'application/opensearchdescription+xml', href: opensearch_description_url, title: I18n.t('pugin.layouts.pugin.website_brand')}
+    - if @app_insights_request_id
+      = render partial: 'pugin/meta/application_insights', locals: { app_insights_request_id: @app_insights_request_id }
     - if ENV['GTM_KEY']
       = render partial: 'pugin/javascript/google_tag_manager'
     - unless Pugin.alternates.empty?

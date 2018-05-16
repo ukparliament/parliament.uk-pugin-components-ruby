@@ -128,4 +128,27 @@ describe 'pugin/layouts/_layout.html.haml', type: :view do
       end
     end
   end
+
+  describe 'ApplictaionInsights' do
+    context 'with request ID set' do
+      before :each do
+        assign(:app_insights_request_id, '|12345678abcdefgh.')
+        render
+      end
+
+      it 'render the expected meta tag' do
+        expect(rendered).to include("<meta content='|12345678abcdefgh.' name='applicationinsights-request-id'>")
+      end
+    end
+
+    context 'without request ID set' do
+      before :each do
+        render
+      end
+
+      it 'does not render the meta tag' do
+        expect(rendered).not_to include('name="applicationinsights-request-id"')
+      end
+    end
+  end
 end
