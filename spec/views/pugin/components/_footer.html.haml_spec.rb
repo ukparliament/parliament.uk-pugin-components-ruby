@@ -18,6 +18,7 @@ describe 'pugin/components/_footer.html.haml', type: :view do
 <ul class='list'>
 <li><a href="http://www.parliament.uk">Current Parliament.uk website</a></li>
 <li><a href="/meta/cookie-policy">Cookie Policy</a></li>
+<li><a href="https://www.parliament.uk/site-information/data-protection/data-protection-and-privacy-policy/">Data protection and privacy policy</a></li>
 </ul>
 </div>
 </footer>

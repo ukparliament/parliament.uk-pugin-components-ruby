@@ -40,6 +40,7 @@ en:
         uk_parliament: "UK Parliament"
         current_website: "Current Parliament.uk website"
         cookie_policy: "Cookie Policy"
+        privacy_notice: "Data protection and privacy policy"
       navigation-letter:
         aria_label: "Paged navigation"
         select_letter: "select a letter"
