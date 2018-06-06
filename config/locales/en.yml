@@ -11,7 +11,7 @@ en:
   time:
     formats:
       year_only: "%Y"
-      default: '%-d %b %Y'
+      default: '%-d %B %Y'
   pugin:
     hints:
       beta: 'beta'

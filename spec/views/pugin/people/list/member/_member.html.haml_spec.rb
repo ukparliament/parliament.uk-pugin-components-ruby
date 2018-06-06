@@ -103,8 +103,8 @@ describe 'pugin/people/list/member/_member.html.haml', type: :view do
       render partial: "pugin/people/list/list", collection: @people, as: "people".to_sym
       expect(response).to include("<a href='/people/123'>parliamentmp1</a>")
       expect(response).to include("<p>
-constituency1 from 3 Feb 2017
-- 16 Mar 2018
+constituency1 from 3 February 2017
+- 16 March 2018
 </p>")
       expect(response).to include("<p>Green Party</p>")
     end
@@ -118,7 +118,7 @@ constituency1 from 3 Feb 2017
         render partial: "pugin/people/list/list", collection: @people, as: "people".to_sym
         expect(response).to include("<a href='/people/123'>parliamentmp1</a>")
         expect(response).to include("<p>
-constituency1 from 3 Feb 2017
+constituency1 from 3 February 2017
 to present
 </p>")
         expect(response).to include("<p>Green Party</p>")
