@@ -14,7 +14,7 @@ en:
       default: '%-d %B %Y'
   pugin:
     hints:
-      beta: 'beta'
+      beta: 'Beta'
     cards:
       person-list:
         current_mp_for: "Current MP for"
