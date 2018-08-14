@@ -28,7 +28,6 @@
     = render partial: 'pugin/components/status-cookie'
     = render partial: 'pugin/components/status', locals: { status: nil } if Pugin::Feature::StatusBanner.enabled?
     = render 'pugin/components/header'
-    = render partial: 'pugin/components/navigation-main' if Pugin::Feature::TopNavigation.enabled?
     %main
       = yield
     = render 'pugin/components/footer'

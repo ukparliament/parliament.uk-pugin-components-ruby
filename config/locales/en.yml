@@ -46,12 +46,6 @@ en:
         select_letter: "select a letter"
         showing_results: "Showing results for"
         all: "all"
-      navigation-main:
-        aria_label: "navigation"
-        item_1: "MPs"
-        item_2: "Lords"
-        item_3: "Parties and groups"
-        item_4: "Constituencies"
       status-cookie:
         cookie_content: 'Parliament.uk uses cookies to make the site simpler. %{link}.'
         about_cookies: 'Find out more about cookies'

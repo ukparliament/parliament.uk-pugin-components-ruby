@@ -20,14 +20,6 @@ module Pugin
         Pugin::Feature.disable('GlobalSearch')
       end
 
-      def enable_top_navigation
-        Pugin::Feature.enable('TopNavigation')
-      end
-
-      def disable_top_navigation
-        Pugin::Feature.disable('TopNavigation')
-      end
-
       def enable_asset_overrides
         Pugin::Feature.enable('AssetOverrides')
       end

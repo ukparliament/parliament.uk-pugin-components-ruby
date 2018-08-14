@@ -48,25 +48,6 @@ describe 'pugin/helpers/controller_helpers.rb' do
 			expect(Pugin::Feature::GlobalSearch.disabled?).to equal(true)
 		end
 	end
-
-	context '#enable_top_navigation' do
-		it 'enables the top navigation' do
-			subject.enable_top_navigation
-			expect(Pugin::Feature::TopNavigation.enabled?).to equal(true)
-		end
-	end
-
-	context '#disable_top_navigation' do
-		before :each do
-			Pugin::Feature::TopNavigation.enable
-		end
-
-		it 'disables the top navigation' do
-			expect(Pugin::Feature::TopNavigation.disabled?).to equal(false)
-			subject.disable_top_navigation
-			expect(Pugin::Feature::TopNavigation.disabled?).to equal(true)
-		end
-	end
 	
 	context '#reset_bandiera_features' do
 		before :each do
