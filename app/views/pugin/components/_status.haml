@@ -1,25 +1,23 @@
 .status--banner__beta
   .container
-    %span.hint= I18n.t('pugin.hints.beta')
-    %ul.list--inline
-      %li
-        = I18n.t('pugin.components.status.beta.pages_being_tested',
-        link: link_to(t('pugin.components.status.beta.give_feedback'),
-        'http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/')).html_safe
-      %li
-        = I18n.t('pugin.components.status.beta.go_to',
-        link: link_to(t('pugin.components.status.beta.current_website'),
-        'http://www.parliament.uk')).html_safe
+    %p
+      = I18n.t('pugin.components.status.beta.pages_being_tested',
+      link: link_to(t('pugin.components.status.beta.give_feedback'),
+      'http://www.smartsurvey.co.uk/s/ukparliament-beta-website-feedback/')).html_safe
 
-      - if Pugin::Feature::Bandiera.dissolution?
-        - if Pugin::Feature::Bandiera.register_to_vote?
-          %a{ href: 'https://www.gov.uk/register-to-vote' }= I18n.t('pugin.components.status.register_to_vote')
-          = I18n.t('pugin.components.status.election_text_1')
-        - else
-          = I18n.t('pugin.components.status.election_text_2')
-          %a{ href: 'http://www.parliament.uk/get-involved/elections/voting/' }= I18n.t('pugin.components.status.how_to_vote')
-          = I18n.t('pugin.components.status.election_text_3')
-      - elsif Pugin::Feature::Bandiera.election?
-        = I18n.t('pugin.components.status.election_day_text')
-        = succeed "." do
-          %a{ href: 'http://www.parliament.uk/get-involved/elections/voting/' }= I18n.t('pugin.components.status.how_to_vote')
+      = I18n.t('pugin.components.status.beta.go_to',
+      link: link_to(t('pugin.components.status.beta.current_website'),
+      'http://www.parliament.uk')).html_safe
+
+    - if Pugin::Feature::Bandiera.dissolution?
+      - if Pugin::Feature::Bandiera.register_to_vote?
+        %a{ href: 'https://www.gov.uk/register-to-vote' }= I18n.t('pugin.components.status.register_to_vote')
+        = I18n.t('pugin.components.status.election_text_1')
+      - else
+        = I18n.t('pugin.components.status.election_text_2')
+        %a{ href: 'http://www.parliament.uk/get-involved/elections/voting/' }= I18n.t('pugin.components.status.how_to_vote')
+        = I18n.t('pugin.components.status.election_text_3')
+    - elsif Pugin::Feature::Bandiera.election?
+      = I18n.t('pugin.components.status.election_day_text')
+      = succeed "." do
+        %a{ href: 'http://www.parliament.uk/get-involved/elections/voting/' }= I18n.t('pugin.components.status.how_to_vote')
