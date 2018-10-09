@@ -1,10 +1,9 @@
-.search__global
-  %form{ action: '/search', method: 'get'}
-    .input-group
-      %label.sr-only{ for: 'search_global' } Enter a keyword
-      %input{ type: 'search', name: 'q', value: @query_parameter, id: 'search_global', maxlength: '1000', pattern: '^(?!.*<script|<Script).*$', required: '' }
-      %button{ class: 'btn--white', tabindex: '-1', type: 'submit', aria: { label: 'submit search'}, data: { tracking: 'search' } }
-        = render partial: 'pugin/icons/search'
-  %a{ href: '/search', class: 'search__global__toggle', aria: { label: 'open search' } }
-    = render partial: 'pugin/icons/search'
-    = render partial: 'pugin/icons/close'
+%form{ action: '/search', method: 'get'}
+  .input-group
+    %label.sr-only{ for: 'search_global' } Enter a keyword
+    %input{ type: 'search', name: 'q', value: @query_parameter, id: 'search_global', autocomplete: 'off', maxlength: '1000', pattern: '^(?!.*<script|<Script).*$', required: '' }
+    %button{ class: 'btn--white', tabindex: '-1', type: 'submit', aria: { label: 'submit search' } }
+      = render partial: 'pugin/icons/search'
+%a{ href: '/search', class: 'btn--toggle', aria: { label: 'open search' } }
+  = render partial: 'pugin/icons/search'
+  = render partial: 'pugin/icons/close'
