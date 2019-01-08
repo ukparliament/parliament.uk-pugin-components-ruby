@@ -95,7 +95,7 @@ describe 'pugin/layouts/_layout.html.haml', type: :view do
       end
 
       it 'renders og:image' do
-        expect(response).to include("<meta content='https://api.parliament.uk/Staging/photo/1234.jpeg?crop=CU_1:1&width=400&quality=100' property='og:image'>")
+        expect(response).to include("<meta content='https://api.parliament.uk/photo/1234.jpeg?crop=CU_1:1&width=400&quality=100' property='og:image'>")
         expect(response).to include("<meta content='400' property='og:image:width'>")
         expect(response).to include("<meta content='400' property='og:image:height'>")
         expect(response).to include("<meta content='summary' name='twitter:card'>")
@@ -112,7 +112,7 @@ describe 'pugin/layouts/_layout.html.haml', type: :view do
       end
 
       it 'renders og:image' do
-        expect(response).to include("<meta content='https://api.parliament.uk/Staging/photo/5678.jpeg?crop=CU_1:1&width=400&quality=100' property='og:image'>")
+        expect(response).to include("<meta content='https://api.parliament.uk/photo/5678.jpeg?crop=CU_1:1&width=400&quality=100' property='og:image'>")
         expect(response).to include("<meta content='400' property='og:image:width'>")
         expect(response).to include("<meta content='400' property='og:image:height'>")
         expect(response).to include("<meta content='summary' name='twitter:card'>")
