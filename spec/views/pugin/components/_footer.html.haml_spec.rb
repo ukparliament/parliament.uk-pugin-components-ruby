@@ -16,6 +16,7 @@ describe 'pugin/components/_footer.html.haml', type: :view do
 <div class='container'>
 <h2 class='logo'>UK Parliament</h2>
 <ul class='list'>
+<li><a href="https://www.parliament.uk/site-information/accessibility/">Accessibility Statement</a></li>
 <li><a href="http://www.parliament.uk">Current Parliament.uk website</a></li>
 <li><a href="/meta/cookie-policy">Cookie Policy</a></li>
 <li><a href="https://www.parliament.uk/site-information/data-protection/data-protection-and-privacy-policy/">Data protection and privacy policy</a></li>
